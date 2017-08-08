@@ -1,56 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
-    <actionOverrides>
-        <actionName>Accept</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>CancelEdit</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>Clone</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>Delete</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>Edit</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>List</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>New</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>SaveEdit</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>Tab</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>View</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <allowInChatterGroups>false</allowInChatterGroups>
-    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
-    <deploymentStatus>Deployed</deploymentStatus>
-    <enableActivities>true</enableActivities>
-    <enableBulkApi>true</enableBulkApi>
-    <enableFeeds>false</enableFeeds>
-    <enableHistory>false</enableHistory>
-    <enableReports>true</enableReports>
-    <enableSearch>true</enableSearch>
-    <enableSharing>true</enableSharing>
-    <enableStreamingApi>true</enableStreamingApi>
     <fieldSets>
         <fullName>MassEditVolunteerHours</fullName>
         <availableFields>
@@ -427,6 +376,24 @@
         <label>VolunteersReportHoursFS</label>
     </fieldSets>
     <fields>
+        <fullName>Clock_In_Time__c</fullName>
+        <description>The time stamp a volunteer begins their work</description>
+        <externalId>false</externalId>
+        <label>Clock In Time</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Clock_Out_Time__c</fullName>
+        <description>The time stamp a volunteer ends their work</description>
+        <externalId>false</externalId>
+        <label>Clock Out Time</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
         <fullName>Comments__c</fullName>
         <externalId>false</externalId>
         <label>Comments</label>
@@ -520,38 +487,40 @@
         <fullName>Status__c</fullName>
         <externalId>false</externalId>
         <label>Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Prospect</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Confirmed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No-Show</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Web Sign Up</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Canceled</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
         <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
-        <valueSet>
-            <valueSetDefinition>
-                <sorted>false</sorted>
-                <value>
-                    <fullName>Prospect</fullName>
-                    <default>false</default>
-                </value>
-                <value>
-                    <fullName>Confirmed</fullName>
-                    <default>false</default>
-                </value>
-                <value>
-                    <fullName>Completed</fullName>
-                    <default>false</default>
-                </value>
-                <value>
-                    <fullName>No-Show</fullName>
-                    <default>false</default>
-                </value>
-                <value>
-                    <fullName>Web Sign Up</fullName>
-                    <default>false</default>
-                </value>
-                <value>
-                    <fullName>Canceled</fullName>
-                    <default>false</default>
-                </value>
-            </valueSetDefinition>
-        </valueSet>
     </fields>
     <fields>
         <fullName>System_Note__c</fullName>
@@ -643,44 +612,6 @@
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
     </fields>
-    <label>Volunteer Hours</label>
-    <nameField>
-        <displayFormat>{00000}</displayFormat>
-        <label>HoursID</label>
-        <type>AutoNumber</type>
-    </nameField>
-    <pluralLabel>Volunteer Hours</pluralLabel>
-    <searchLayouts>
-        <customTabListAdditionalFields>Volunteer_Job__c</customTabListAdditionalFields>
-        <customTabListAdditionalFields>Shift_Start_Date_Time__c</customTabListAdditionalFields>
-        <customTabListAdditionalFields>Volunteer_Campaign_Name__c</customTabListAdditionalFields>
-        <customTabListAdditionalFields>Contact__c</customTabListAdditionalFields>
-        <customTabListAdditionalFields>Status__c</customTabListAdditionalFields>
-        <customTabListAdditionalFields>Hours_Worked__c</customTabListAdditionalFields>
-        <lookupDialogsAdditionalFields>Contact__c</lookupDialogsAdditionalFields>
-        <lookupDialogsAdditionalFields>Volunteer_Job__c</lookupDialogsAdditionalFields>
-        <lookupDialogsAdditionalFields>Shift_Start_Date_Time__c</lookupDialogsAdditionalFields>
-        <lookupDialogsAdditionalFields>Planned_Start_Date_Time__c</lookupDialogsAdditionalFields>
-        <lookupDialogsAdditionalFields>Status__c</lookupDialogsAdditionalFields>
-        <lookupPhoneDialogsAdditionalFields>Contact__c</lookupPhoneDialogsAdditionalFields>
-        <lookupPhoneDialogsAdditionalFields>Volunteer_Job__c</lookupPhoneDialogsAdditionalFields>
-        <lookupPhoneDialogsAdditionalFields>Shift_Start_Date_Time__c</lookupPhoneDialogsAdditionalFields>
-        <lookupPhoneDialogsAdditionalFields>Planned_Start_Date_Time__c</lookupPhoneDialogsAdditionalFields>
-        <lookupPhoneDialogsAdditionalFields>Status__c</lookupPhoneDialogsAdditionalFields>
-        <searchFilterFields>NAME</searchFilterFields>
-        <searchFilterFields>Contact__c</searchFilterFields>
-        <searchFilterFields>Volunteer_Job__c</searchFilterFields>
-        <searchFilterFields>Shift_Start_Date_Time__c</searchFilterFields>
-        <searchFilterFields>Planned_Start_Date_Time__c</searchFilterFields>
-        <searchFilterFields>Status__c</searchFilterFields>
-        <searchResultsAdditionalFields>Volunteer_Job__c</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>Shift_Start_Date_Time__c</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>Volunteer_Campaign_Name__c</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>Contact__c</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>Hours_Worked__c</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>Status__c</searchResultsAdditionalFields>
-    </searchLayouts>
-    <sharingModel>ControlledByParent</sharingModel>
     <validationRules>
         <fullName>HoursRequiredOnCompletion</fullName>
         <active>true</active>

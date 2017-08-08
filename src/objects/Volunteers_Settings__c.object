@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
-    <customSettingsType>Hierarchy</customSettingsType>
-    <description>Custom settings used by Volunteers for Salesforce.</description>
-    <enableFeeds>false</enableFeeds>
     <fields>
         <fullName>Contact_Match_Email_Fields__c</fullName>
         <externalId>false</externalId>
@@ -48,6 +45,15 @@
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Personal_Site_Edit_Hours__c</fullName>
+        <defaultValue>true</defaultValue>
+        <description>Leave this box checked if you want your volunteers to be able to specify and edit their hour entries</description>
+        <externalId>false</externalId>
+        <label>Personal Site Edit Hours</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
     </fields>
     <fields>
         <fullName>Personal_Site_Org_Wide_Email_Name__c</fullName>
@@ -123,6 +129,4 @@
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
-    <label>Volunteers Settings</label>
-    <visibility>Public</visibility>
 </CustomObject>
