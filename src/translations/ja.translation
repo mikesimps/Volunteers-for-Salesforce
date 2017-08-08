@@ -4,6 +4,10 @@
         <label>ボランティア</label>
         <name>Groundwire_Volunteers</name>
     </customApplications>
+    <customApplications>
+        <label><!-- Volunteers Lightning --></label>
+        <name>Groundwire_Volunteers_Lightning</name>
+    </customApplications>
     <customLabels>
         <label>成功</label>
         <name>PageMessagesConfirm</name>
@@ -19,6 +23,22 @@
     <customLabels>
         <label>警告</label>
         <name>PageMessagesWarning</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- PermissionCreateException --></label>
+        <name>PermissionCreateException</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- PermissionDeleteException --></label>
+        <name>PermissionDeleteException</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- PermissionReadException --></label>
+        <name>PermissionReadException</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- PermissionUpdateException --></label>
+        <name>PermissionUpdateException</name>
     </customLabels>
     <customLabels>
         <label>割り当て</label>
@@ -150,6 +170,14 @@ day:      &apos;日&apos;</label>
     <customLabels>
         <label><!-- labelChooseCriteria --></label>
         <name>labelChooseCriteria</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- label for Clock In Button --></label>
+        <name>labelClockInButton</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- label for Clock Out Button --></label>
+        <name>labelClockOutButton</name>
     </customLabels>
     <customLabels>
         <label><!-- list of browser color values for JobCalendar --></label>
