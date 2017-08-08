@@ -5,6 +5,14 @@
         <value>ボランティア時間</value>
     </caseValues>
     <fields>
+        <label><!-- Clock In Time --></label>
+        <name>Clock_In_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Clock Out Time --></label>
+        <name>Clock_Out_Time__c</name>
+    </fields>
+    <fields>
         <label>コメント</label>
         <name>Comments__c</name>
     </fields>
@@ -57,6 +65,10 @@
         <picklistValues>
             <masterLabel>Confirmed</masterLabel>
             <translation>確認済み</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Progress</masterLabel>
+            <translation><!-- In Progress --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>No-Show</masterLabel>

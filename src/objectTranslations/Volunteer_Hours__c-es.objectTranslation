@@ -9,6 +9,14 @@
         <value>Horas Voluntarias</value>
     </caseValues>
     <fields>
+        <label><!-- Clock In Time --></label>
+        <name>Clock_In_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Clock Out Time --></label>
+        <name>Clock_Out_Time__c</name>
+    </fields>
+    <fields>
         <label>Comentarios</label>
         <name>Comments__c</name>
     </fields>
@@ -61,6 +69,10 @@
         <picklistValues>
             <masterLabel>Confirmed</masterLabel>
             <translation>Confirmado</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Progress</masterLabel>
+            <translation><!-- In Progress --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>No-Show</masterLabel>
