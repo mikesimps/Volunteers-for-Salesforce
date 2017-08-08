@@ -32,7 +32,7 @@
 	<apex:composition template="{!$Site.Template}">
 		<apex:define name="body">
 			<h3>{!$Label.labelPersonalSiteReportHoursTitle}</h3>
-			<apex:include pageName="VolunteersReportHours"/>
+			<apex:include pageName="VolunteersTimecard"/>
    		</apex:define>
    	</apex:composition>
 </apex:page>
