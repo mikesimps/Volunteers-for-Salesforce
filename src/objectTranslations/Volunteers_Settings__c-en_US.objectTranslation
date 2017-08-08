@@ -29,6 +29,10 @@
         <name>Google_Maps_API_Key__c</name>
     </fields>
     <fields>
+        <label><!-- Personal Site Edit Hours --></label>
+        <name>Personal_Site_Edit_Hours__c</name>
+    </fields>
+    <fields>
         <help><!-- The Display Name of the Organization-Wide Email Address to use on the email sent from the PersonalSiteContactLookup Sites page. --></help>
         <label><!-- Personal Site Org-Wide Email Name --></label>
         <name>Personal_Site_Org_Wide_Email_Name__c</name>
