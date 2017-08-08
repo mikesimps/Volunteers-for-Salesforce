@@ -320,6 +320,22 @@ day:      &apos;day&apos;</value>
         <value>Choose Criteria</value>
     </labels>
     <labels>
+        <fullName>labelClockInButton</fullName>
+        <categories>PersonalSiteReportHours</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>label for Clock In Button</shortDescription>
+        <value>Clock In</value>
+    </labels>
+    <labels>
+        <fullName>labelClockOutButton</fullName>
+        <categories>PersonalSiteReportHours</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>label for Clock Out Button</shortDescription>
+        <value>Clock Out</value>
+    </labels>
+    <labels>
         <fullName>labelColorValues</fullName>
         <categories>JobCalendar</categories>
         <language>en_US</language>
