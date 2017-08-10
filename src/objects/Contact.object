@@ -1533,6 +1533,11 @@
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
+            <field>Phone</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
             <field>Salutation</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
@@ -1564,27 +1569,12 @@
         </availableFields>
         <description>This field set specifies the Contact fields displayed on the VolunteersJobListingFS visualforce page, which is exposed through Sites for hosting on public websites.</description>
         <displayedFields>
-            <field>Phone</field>
-            <isFieldManaged>false</isFieldManaged>
-            <isRequired>false</isRequired>
-        </displayedFields>
-        <displayedFields>
             <field>HomePhone</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
             <field>Volunteer_Organization__c</field>
-            <isFieldManaged>false</isFieldManaged>
-            <isRequired>false</isRequired>
-        </displayedFields>
-        <displayedFields>
-            <field>MailingState</field>
-            <isFieldManaged>false</isFieldManaged>
-            <isRequired>false</isRequired>
-        </displayedFields>
-        <displayedFields>
-            <field>MailingPostalCode</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
