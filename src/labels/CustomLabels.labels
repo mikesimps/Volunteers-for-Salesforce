@@ -1029,7 +1029,7 @@ day:      &apos;day&apos;</value>
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>title for the Job Calendar under Personal Site</shortDescription>
-        <value>Job Calendar</value>
+        <value>Event Calendar</value>
     </labels>
     <labels>
         <fullName>labelPersonalSiteJobListingTitle</fullName>
@@ -1037,7 +1037,7 @@ day:      &apos;day&apos;</value>
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>title for JobListing page in Personal Site</shortDescription>
-        <value>Volunteer Jobs</value>
+        <value>Volunteer Events</value>
     </labels>
     <labels>
         <fullName>labelPersonalSiteLastnameRequired</fullName>
@@ -1061,7 +1061,7 @@ day:      &apos;day&apos;</value>
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>title of the Report Hours page under Personal Site</shortDescription>
-        <value>Report Hours</value>
+        <value>Clock In/Out</value>
     </labels>
     <labels>
         <fullName>labelPersonalSiteTitle</fullName>
