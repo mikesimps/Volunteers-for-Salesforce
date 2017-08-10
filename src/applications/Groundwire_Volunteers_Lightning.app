@@ -15,4 +15,5 @@
     <tab>standard-Campaign</tab>
     <tab>standard-report</tab>
     <tab>standard-Dashboard</tab>
+    <tab>Process_Recurrence_Schedules</tab>
 </CustomApplication>
