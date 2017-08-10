@@ -14,4 +14,5 @@
     <tab>standard-Campaign</tab>
     <tab>standard-report</tab>
     <tab>standard-Dashboard</tab>
+    <tab>Volunteer_Hours__c</tab>
 </CustomApplication>
