@@ -1,0 +1,18 @@
+<apex:page standardcontroller="Volunteer_Hours__c" recordSetVar="hours" extensions="VOL_CTRL_VolunteersClockOutHours">
+    <apex:form >
+      <apex:pageBlock title="These Volunteers Will Be Clocked Out. Continue?" mode="edit" id="clout_volunteers">
+         <apex:pageMessages />
+         <apex:pageBlockButtons location="top">
+            <apex:commandButton value="Clock Out" action="{!clockOut}"/>
+            <apex:commandButton value="{!cancelLabel}" action="{!cancel}" id="clout_cancel"/>
+         </apex:pageBlockButtons>
+         <apex:pageBlockTable value="{!selected}" var="hrs">
+            <apex:column headerValue="Name" value="{!hrs.name}"/>
+            <apex:column headerValue="Status" value="{!hrs.Status__c}"/>
+            <apex:column headerValue="Clocked In" value="{!hrs.Clock_In_Time__c}"/>
+            <apex:column headerValue="Clocked Out" value="{!hrs.Clock_Out_Time__c}"/>
+            <apex:column headerValue="Hrs Worked" value="{!hrs.Hours_Worked__c}"/>
+         </apex:pageBlockTable>
+      </apex:pageBlock>
+   </apex:form>
+</apex:page>

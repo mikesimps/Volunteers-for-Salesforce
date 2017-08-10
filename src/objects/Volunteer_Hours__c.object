@@ -612,6 +612,25 @@
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
     </fields>
+    <listViews>
+        <fullName>Clocked_In_Users</fullName>
+        <columns>NAME</columns>
+        <columns>Contact__c</columns>
+        <columns>Clock_In_Time__c</columns>
+        <columns>Volunteer_Job__c</columns>
+        <columns>Volunteer_Shift__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Clock_In_Time__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>In Progress</value>
+        </filters>
+        <label>Clocked In Users</label>
+    </listViews>
     <validationRules>
         <fullName>HoursRequiredOnCompletion</fullName>
         <active>true</active>
