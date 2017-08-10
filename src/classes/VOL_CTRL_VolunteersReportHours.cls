@@ -453,7 +453,7 @@ global virtual with sharing class VOL_CTRL_VolunteersReportHours {
       //String timeStr = d.format('MMMM dd, yyyy h:mm:ss a','America/New_York');
       //strSaveResult = timeStr;
       vhours.Clock_Out_Time__c = d;
-      vhours.Hours_Worked__c = (endTime - startTime) / 1000/60/60; //milliseconds to seconds to minutes to hours
+      vhours.Hours_Worked__c = decimal.valueof(endTime - startTime) / 1000/60/60; //milliseconds to seconds to minutes to hours
       vhours.End_Date__c = d.date();
       vhours.Status__c = 'Completed';
       vhours.System_Note__c = 'Logged Out By Volunteer';
