@@ -3,7 +3,6 @@
     <defaultLandingTab>standard-home</defaultLandingTab>
     <label>Volunteers Lightning</label>
     <tab>standard-home</tab>
-    <tab>Volunteer_Login</tab>
     <tab>About_Volunteers</tab>
     <tab>Volunteers_Wizard</tab>
     <tab>Volunteer_Job__c</tab>
