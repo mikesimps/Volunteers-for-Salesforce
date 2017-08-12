@@ -684,4 +684,13 @@
         <protected>false</protected>
         <url>/apex/GW_Volunteers__SendBulkEmail?jobId={!Volunteer_Job__c.Id}</url>
     </webLinks>
+    <label>Volunteer Job</label>
+    <pluralLabel>Volunteer Jobs</pluralLabel>
+    <nameField>
+        <label>Volunteer Job Name</label>
+        <type>Text</type>
+    </nameField>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <sharingModel>ControlledByParent</sharingModel>
+    <enableReports>true</enableReports>
 </CustomObject>

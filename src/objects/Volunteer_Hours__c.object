@@ -371,6 +371,10 @@
         <label>VolunteersReportHoursFS</label>
     </fieldSets>
     <fields>
+        <fullName>Name</fullName>
+        <trackFeedHistory>true</trackFeedHistory>
+    </fields>
+    <fields>
         <fullName>Clock_In_Time__c</fullName>
         <description>The time stamp a volunteer begins their work</description>
         <externalId>false</externalId>
@@ -679,4 +683,15 @@ IF(ISNULL( Volunteer_Job__c.Id),
         URLFOR( $Action.Volunteer_Shift__c.View , Volunteer_Shift__c.Id )) 
 )}</url>
     </webLinks>
+    <label>Volunteer Hours</label>
+    <pluralLabel>Volunteer Hours</pluralLabel>
+    <nameField>
+        <label>HoursID</label>
+        <type>AutoNumber</type>
+        <displayFormat>{0000}</displayFormat>
+    </nameField>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <sharingModel>ControlledByParent</sharingModel>
+    <enableFeeds>true</enableFeeds>
+    <enableReports>true</enableReports>
 </CustomObject>

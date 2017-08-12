@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <description>Custom settings used by Volunteers for Salesforce.</description>
+    <enableFeeds>false</enableFeeds>
     <fields>
         <fullName>Contact_Match_Email_Fields__c</fullName>
         <externalId>false</externalId>
@@ -52,6 +55,15 @@
         <description>Leave this box checked if you want your volunteers to be able to specify and edit their hour entries</description>
         <externalId>false</externalId>
         <label>Personal Site Edit Hours</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Personal_Site_Filter_Todays_Jobs__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>When set, will limit the volunteer to only edit jobs with shifts that occur within the same day as the user</description>
+        <externalId>false</externalId>
+        <label>Personal Site Filter Todays Jobs</label>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
@@ -129,4 +141,6 @@
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
+    <label>Volunteers Settings</label>
+    <visibility>Public</visibility>
 </CustomObject>

@@ -191,4 +191,14 @@
         <protected>false</protected>
         <url>/apex/GW_Volunteers__JobCalendar?campaignId={!Volunteer_Job__c.CampaignId__c}&amp;volunteerJobId={!Volunteer_Shift__c.Volunteer_JobId__c}&amp;volunteerShiftId={!Volunteer_Shift__c.Id}</url>
     </webLinks>
+    <label>Volunteer Shift</label>
+    <pluralLabel>Volunteer Shifts</pluralLabel>
+    <nameField>
+        <label>ShiftID</label>
+        <type>AutoNumber</type>
+        <displayFormat>Shift-{00000}</displayFormat>
+    </nameField>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <sharingModel>ControlledByParent</sharingModel>
+    <enableReports>true</enableReports>
 </CustomObject>
