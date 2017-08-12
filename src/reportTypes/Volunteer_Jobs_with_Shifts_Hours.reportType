@@ -51,11 +51,6 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>LastActivityDate</field>
-            <table>Volunteer_Job__c</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
             <field>LastModifiedBy</field>
             <table>Volunteer_Job__c</table>
         </columns>

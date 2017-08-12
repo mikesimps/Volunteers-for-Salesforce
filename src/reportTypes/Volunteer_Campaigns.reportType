@@ -280,11 +280,6 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>LastActivityDate</field>
-            <table>Campaign.Volunteer_Jobs__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
             <field>Number_of_Volunteers_Still_Needed__c</field>
             <table>Campaign.Volunteer_Jobs__r</table>
         </columns>
