@@ -62,6 +62,7 @@ global virtual with sharing class VOL_CTRL_VolunteersReportHours {
         //Get the setting for allowing volunteers to log their own time or NotFoundException
         boolVolEditHrs = VOL_SharedCode.VolunteersSettings.Personal_Site_Edit_Hours__c;
         boolFilterTodaysJobs = VOL_SharedCode.VolunteersSettings.Personal_Site_Filter_Todays_Jobs__c;
+        boolHideClockOut = false;
     }
 
     // holds the contact fields on the page
@@ -129,6 +130,7 @@ global virtual with sharing class VOL_CTRL_VolunteersReportHours {
     global boolean fPersonalSite { get; set; }
     global boolean boolVolEditHrs { get; set; }
     global boolean boolFilterTodaysJobs { get; set; }
+    global boolean boolHideClockOut { get; set; }
 
     // status string for reporting the results of saving.
     global String strSaveResult { get; set; }
@@ -383,6 +385,7 @@ global virtual with sharing class VOL_CTRL_VolunteersReportHours {
             vhours = null;
 
             strSaveResult = system.label.labelVolunteerReportHoursThankYou;
+
         } catch (DMLException ex) {
             //Added check for FIELD_CUSTOM_VALIDATION_EXCEPTION to return user friendly error.
             strSaveResult = ex.getMessage();
@@ -401,7 +404,7 @@ global virtual with sharing class VOL_CTRL_VolunteersReportHours {
     global void ClockIn() {
         DateTime d = datetime.now();
 
-        Id contactId = contactIdPersonalSite; //'0036A000007B9IeQAK';
+        Id contactId = contactIdPersonalSite;
         Volunteer_Hours__c regHourId = null;
 
         regHourId = [select Id, Clock_In_Time__c
@@ -419,27 +422,15 @@ global virtual with sharing class VOL_CTRL_VolunteersReportHours {
         regHourId.System_Note__c = 'Logged In By Volunteer';
 
         update regHourId;
-/*
-        Volunteer_Hours__c newvHour = new Volunteer_Hours__c (
-          Contact__c = contactIdPersonalSite,
-          Volunteer_Job__c = volunteerJobId,
-          Volunteer_Shift__c = volunteerShiftId,
-          Clock_In_Time__c = d,
-          Comments__c = '',
-          Status__c = 'In Progress',
-          Start_Date__c = date.today(),
-          System_Note__c = 'Logged In By Volunteer',
-          //Number_of_Volunteers__c = 1
-        );
 
-        update newvHour;
-*/
       // clear current job & shift info
         volunteerJobId = null;
         ChangeVolunteerJob();
         vhours = null;
 
         strSaveResult = 'You are now logged in, thank you for volunteering!';
+        //Hide the Clock Out button immediately after logging in to prvent confusion
+        boolHideClockOut = true;
     }
 
     global void ClockOut() {

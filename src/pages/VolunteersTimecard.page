@@ -52,7 +52,7 @@
               <apex:outputLabel rendered="{!hasVolunteerJobs && NOT(IsClockedIn)}" value="Volunteer Event*" />
             </td>
             <td class="cssInputFieldsColumn" >
-                <apex:outputText rendered="{!NOT(hasVolunteerJobs)}" value="{!$Label.labelPersonalSiteNoJobsForContact}" />
+                <apex:outputText rendered="{!NOT(hasVolunteerJobs) && NOT(IsClockedIn)}" value="{!$Label.labelPersonalSiteNoJobsForContact}" />
               <apex:selectList rendered="{!hasVolunteerJobs  && NOT(IsClockedIn)}" value="{!volunteerJobId}" size="1" id="ddlVolunteerJobs">
                   <apex:actionSupport immediate="false" event="onchange" rerender="formReportHours" status="retrieveStatus" action="{!ChangeVolunteerJob}" />
                   <apex:selectOptions value="{!listSOVolunteerJobs}" />
@@ -125,7 +125,7 @@
                     <apex:actionFunction name="DoSave2" action="{!ClockIn}" />
                     <!--Show only if already clocked in-->
                     <apex:commandButton value="{!$Label.labelClockOutButton}" id="btnClockOut"
-                        rendered="{!IsClockedIn}"
+                        rendered="{!IsClockedIn && NOT(boolHideClockOut)}"
                         onclick="document.getElementById('{!$Component.btnClockOut}').disabled=true;DoSave3();" rerender="formReportHours"/>
                     <apex:actionFunction name="DoSave3" action="{!ClockOut}" />
               </td>
