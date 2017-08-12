@@ -445,7 +445,6 @@ global virtual with sharing class VOL_CTRL_VolunteersReportHours {
     global void ClockOut() {
       vhours = GetOpenHours();
 
-
       DateTime d = datetime.now();
       Long endTime = d.gettime();
       Long startTime = vhours.Clock_In_Time__c.gettime();
