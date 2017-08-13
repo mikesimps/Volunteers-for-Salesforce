@@ -42,7 +42,7 @@ public with sharing class VOL_CTRL_PersonalSiteTemplate_TEST {
         
         //instantiate the controller for this page
         VOL_CTRL_PersonalSiteTemplate ctrl = new VOL_CTRL_PersonalSiteTemplate();
-		system.assertNotEquals(null, ctrl.strURLtoCSSFile);
-    }    	
+        system.assertNotEquals(null, ctrl.strURLtoCSSFile);
+    }       
 
 }

@@ -42,31 +42,31 @@ public with sharing class VOL_StateCountryPicklists {
     * @return void
     */ 
     public static void copyAddressStdSObj(sobject sobjSrc, string strFieldPrefixSrc, sobject sobjDst, string strFieldPrefixDst) {
-    	string strVal;
-    	if ((strVal = (string)sobjSrc.get(strFieldPrefixSrc + 'Street')) != null)
-	        sobjDst.put(strFieldPrefixDst + 'Street', strVal);
-    	if ((strVal = (string)sobjSrc.get(strFieldPrefixSrc + 'City')) != null)
-	        sobjDst.put(strFieldPrefixDst + 'City', strVal);
-    	if ((strVal = (string)sobjSrc.get(strFieldPrefixSrc + 'PostalCode')) != null)
-	        sobjDst.put(strFieldPrefixDst + 'PostalCode', strVal);
-    	
-    	/****
-    	string strMsg;	
-		strMsg = 'before copy Country: ' + sobjSrc.get(strFieldPrefixSrc + 'Country') + ' State: ' + sobjSrc.get(strFieldPrefixSrc + 'State');	
-		if (isStateCountryPicklistsEnabled)	    		
-			strMsg += ' CountryCode: ' + sobjSrc.get(strFieldPrefixSrc + 'CountryCode') + ' StateCode: ' + sobjSrc.get(strFieldPrefixSrc + 'StateCode');   		
+        string strVal;
+        if ((strVal = (string)sobjSrc.get(strFieldPrefixSrc + 'Street')) != null)
+            sobjDst.put(strFieldPrefixDst + 'Street', strVal);
+        if ((strVal = (string)sobjSrc.get(strFieldPrefixSrc + 'City')) != null)
+            sobjDst.put(strFieldPrefixDst + 'City', strVal);
+        if ((strVal = (string)sobjSrc.get(strFieldPrefixSrc + 'PostalCode')) != null)
+            sobjDst.put(strFieldPrefixDst + 'PostalCode', strVal);
+        
+        /****
+        string strMsg;  
+        strMsg = 'before copy Country: ' + sobjSrc.get(strFieldPrefixSrc + 'Country') + ' State: ' + sobjSrc.get(strFieldPrefixSrc + 'State');  
+        if (isStateCountryPicklistsEnabled)             
+            strMsg += ' CountryCode: ' + sobjSrc.get(strFieldPrefixSrc + 'CountryCode') + ' StateCode: ' + sobjSrc.get(strFieldPrefixSrc + 'StateCode');        
         ****/
 
         if (!isStateCountryPicklistsEnabled) {
-	    	if ((strVal = (string)sobjSrc.get(strFieldPrefixSrc + 'State')) != null)
-		        sobjDst.put(strFieldPrefixDst + 'State', strVal);
-	    	if ((strVal = (string)sobjSrc.get(strFieldPrefixSrc + 'Country')) != null)
-		        sobjDst.put(strFieldPrefixDst + 'Country', strVal);
+            if ((strVal = (string)sobjSrc.get(strFieldPrefixSrc + 'State')) != null)
+                sobjDst.put(strFieldPrefixDst + 'State', strVal);
+            if ((strVal = (string)sobjSrc.get(strFieldPrefixSrc + 'Country')) != null)
+                sobjDst.put(strFieldPrefixDst + 'Country', strVal);
         } else {
-        	// try to deal gracefully with Country
-        	string strCountry = (string)sobjSrc.get(strFieldPrefixSrc + 'Country');
-        	if (strCountry == null)
-        		strCountry = 'United States';
+            // try to deal gracefully with Country
+            string strCountry = (string)sobjSrc.get(strFieldPrefixSrc + 'Country');
+            if (strCountry == null)
+                strCountry = 'United States';
             if (validCountriesByLabel.containsKey(strCountry)) {
                 sobjDst.put(strFieldPrefixDst + 'Country', strCountry);
                 sobjDst.put(strFieldPrefixDst + 'CountryCode', validCountriesByLabel.get(strCountry));
@@ -78,8 +78,8 @@ public with sharing class VOL_StateCountryPicklists {
                 sobjDst.put(strFieldPrefixDst + 'Country', strCountry);
             }
 
-			// try to deal gracefully with State            
-        	string strState = (string)sobjSrc.get(strFieldPrefixSrc + 'State');        	
+            // try to deal gracefully with State            
+            string strState = (string)sobjSrc.get(strFieldPrefixSrc + 'State');         
             if (strState != null) {
                 // best to make sure first letter is capitalized.
                 strState = strState.capitalize();
@@ -87,19 +87,19 @@ public with sharing class VOL_StateCountryPicklists {
                     sobjDst.put(strFieldPrefixDst + 'State', strState);
                     sobjDst.put(strFieldPrefixDst + 'StateCode', validStatesByLabel.get(strState));
                 } else {
-                	// too expensive for us to create the map of CountryCode|StateCode to StateLabel
-                	// so we will just try to save any state that isn't a label as a code.
-                	sobjDst.put(strFieldPrefixDst + 'StateCode', strState.toUpperCase());
+                    // too expensive for us to create the map of CountryCode|StateCode to StateLabel
+                    // so we will just try to save any state that isn't a label as a code.
+                    sobjDst.put(strFieldPrefixDst + 'StateCode', strState.toUpperCase());
                 }
             }
         }
         
         /****        
-		strMsg += ' after copy Country: ' + sobjDst.get(strFieldPrefixDst + 'Country') + ' State: ' + sobjDst.get(strFieldPrefixDst + 'State');	
-		if (isStateCountryPicklistsEnabled)	    		
-			strMsg += ' CountryCode: ' + sobjDst.get(strFieldPrefixDst + 'CountryCode') + ' StateCode: ' + sobjDst.get(strFieldPrefixDst + 'StateCode');   		
-    	ApexPages.addMessage(new ApexPages.Message(ApexPages.Severity.FATAL, strMsg));
-    	****/		    		
+        strMsg += ' after copy Country: ' + sobjDst.get(strFieldPrefixDst + 'Country') + ' State: ' + sobjDst.get(strFieldPrefixDst + 'State'); 
+        if (isStateCountryPicklistsEnabled)             
+            strMsg += ' CountryCode: ' + sobjDst.get(strFieldPrefixDst + 'CountryCode') + ' StateCode: ' + sobjDst.get(strFieldPrefixDst + 'StateCode');        
+        ApexPages.addMessage(new ApexPages.Message(ApexPages.Severity.FATAL, strMsg));
+        ****/                   
     }
 
     /*******************************************************************************************************
@@ -108,7 +108,7 @@ public with sharing class VOL_StateCountryPicklists {
     */ 
     public static Boolean isStateCountryPicklistsEnabled {
         get {
-        	if (isStateCountryPicklistsEnabled == null)
+            if (isStateCountryPicklistsEnabled == null)
                 isStateCountryPicklistsEnabled = initValidStateCountryCodes();
             return isStateCountryPicklistsEnabled;
         }

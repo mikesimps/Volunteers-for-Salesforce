@@ -33,8 +33,8 @@ global with sharing class VOL_CTRL_PersonalSiteJobCalendar {
     // constructor
     global VOL_CTRL_PersonalSiteJobCalendar() {
 
-		// initial values for potential parameters
-    	strLanguage = 'en-us'; 
+        // initial values for potential parameters
+        strLanguage = 'en-us'; 
 
         // handle optional page parameters (must use string, not ID, to handle null)
         map<string, string> params = ApexPages.currentPage().getParameters();

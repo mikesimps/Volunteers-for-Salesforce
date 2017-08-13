@@ -102,7 +102,7 @@ public with sharing class VOL_CTRL_VolunteersReportHours_TEST {
         ctrl.volunteerJobId = job.Id;
         ctrl.volunteerShiftId = shift.Id;
         ctrl.ChangeVolunteerShift();
-		ctrl.vhours.Hours_Worked__c = 2;
+        ctrl.vhours.Hours_Worked__c = 2;
         ctrl.Save();
         System.AssertEquals(system.label.labelVolunteerReportHoursThankYou, ctrl.strSaveResult);
         vh2 = [select Id, Status__c, Hours_Worked__c from Volunteer_Hours__c where Volunteer_Shift__c = :shift.Id];

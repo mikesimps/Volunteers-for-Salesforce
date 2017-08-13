@@ -40,7 +40,7 @@ public with sharing class VOL_CTRL_SendBulkEmail_TEST {
         Contact con = new Contact(Lastname='Testy', Email='testy@foo.com', AccountId=acc.Id);
         insert con;
         Campaign cmp = new Campaign(recordtypeid=VOL_SharedCode.recordtypeIdVolunteersCampaign, 
-        	name='Test Campaign', IsActive=true);
+            name='Test Campaign', IsActive=true);
         insert cmp;
         Volunteer_Job__c job = new Volunteer_Job__c(name='Job1', campaign__c=cmp.Id);
         insert job;
@@ -85,27 +85,27 @@ public with sharing class VOL_CTRL_SendBulkEmail_TEST {
         ctrl.hourStatus.Status__c = 'Confirmed';
         ctrl.StatusChanged();
         System.assertEquals(1, ctrl.numberOfContacts);
-		
-		PageReference p1 = ctrl.Cancel();
-		system.assert(p1 != null);
-		
-		ctrl.fLogActivity = false; // upgraders might not have Activities on for Jobs and Shifts
-		PageReference p2 = ctrl.SendMail();
-		system.assertEquals(null, p2);
+        
+        PageReference p1 = ctrl.Cancel();
+        system.assert(p1 != null);
+        
+        ctrl.fLogActivity = false; // upgraders might not have Activities on for Jobs and Shifts
+        PageReference p2 = ctrl.SendMail();
+        system.assertEquals(null, p2);
 
-		// test no template
-		ctrl.templateId = null;
+        // test no template
+        ctrl.templateId = null;
         ctrl.LoadEmailTemplate();
         System.assert(ctrl.strSubject == null);
         System.assert(ctrl.strMessage == null);
-		system.assertEquals(null, ctrl.SendMail());
-		
-		// test no contacts found
-		ctrl.hourStatus.Status__c = 'Bogus';
+        system.assertEquals(null, ctrl.SendMail());
+        
+        // test no contacts found
+        ctrl.hourStatus.Status__c = 'Bogus';
         ctrl.StatusChanged();
         System.assertEquals(0, ctrl.numberOfContacts);
-		system.assertEquals(null, ctrl.SendMail()); 	
-		
+        system.assertEquals(null, ctrl.SendMail());     
+        
     }
         
     public static testmethod void TestJobOnly() {
@@ -116,7 +116,7 @@ public with sharing class VOL_CTRL_SendBulkEmail_TEST {
         Contact con = new Contact(Lastname='Testy', Email='testy@foo.com', AccountId=acc.Id);
         insert con;
         Campaign cmp = new Campaign(recordtypeid=VOL_SharedCode.recordtypeIdVolunteersCampaign, 
-        	name='Test Campaign', IsActive=true);
+            name='Test Campaign', IsActive=true);
         insert cmp;
         Volunteer_Job__c job = new Volunteer_Job__c(name='Job1', campaign__c=cmp.Id);
         insert job;
@@ -157,23 +157,23 @@ public with sharing class VOL_CTRL_SendBulkEmail_TEST {
         ctrl.hourStatus.Status__c = 'Confirmed';
         ctrl.StatusChanged();
         System.assertEquals(1, ctrl.numberOfContacts);
-		
-		PageReference p1 = ctrl.Cancel();
-		system.assert(p1 != null);
-		
-		ctrl.fLogActivity = false; // upgraders might not have Activities on for Jobs and Shifts
-		PageReference p2 = ctrl.SendMail();
-		system.assertEquals(null, p2);
-		
-		// test bounced email handling
-		con.EmailBouncedReason = 'testing';
-		con.EmailBouncedDate = system.Today();
-		update con;
-		system.assertEquals(null, ctrl.SendMail());		
-		
+        
+        PageReference p1 = ctrl.Cancel();
+        system.assert(p1 != null);
+        
+        ctrl.fLogActivity = false; // upgraders might not have Activities on for Jobs and Shifts
+        PageReference p2 = ctrl.SendMail();
+        system.assertEquals(null, p2);
+        
+        // test bounced email handling
+        con.EmailBouncedReason = 'testing';
+        con.EmailBouncedDate = system.Today();
+        update con;
+        system.assertEquals(null, ctrl.SendMail());     
+        
     }
     
-	public static testmethod void TestCampaign() {
+    public static testmethod void TestCampaign() {
     
         // set up intial test data
         Account acc = new Account(name='Individual Test Account');
@@ -181,7 +181,7 @@ public with sharing class VOL_CTRL_SendBulkEmail_TEST {
         Contact con = new Contact(Lastname='Testy', Email='testy@foo.com', AccountId=acc.Id);
         insert con;
         Campaign cmp = new Campaign(recordtypeid=VOL_SharedCode.recordtypeIdVolunteersCampaign, 
-        	name='Test Campaign', IsActive=true);
+            name='Test Campaign', IsActive=true);
         insert cmp;
         Volunteer_Job__c job = new Volunteer_Job__c(name='Job1', campaign__c=cmp.Id);
         insert job;
@@ -219,22 +219,22 @@ public with sharing class VOL_CTRL_SendBulkEmail_TEST {
         System.assert(ctrl.strMessage != null);
         
         // find contacts
-		ctrl.fEmailContactsOnlyOnce = false;
+        ctrl.fEmailContactsOnlyOnce = false;
         ctrl.hourStatus.Status__c = 'Confirmed';
         ctrl.StatusChanged();
         System.assertEquals(cHours, ctrl.numberOfContacts);
-		
-		PageReference p1 = ctrl.Cancel();
-		system.assert(p1 != null);
-		
-		ctrl.fLogActivity = false; // upgraders might not have Activities on for Jobs and Shifts
-		PageReference p2 = ctrl.SendMail();
-		system.assertEquals(null, p2);
-		
-		// test fEmailContactsOnlyOnce
-		ctrl.fEmailContactsOnlyOnce = true;
+        
+        PageReference p1 = ctrl.Cancel();
+        system.assert(p1 != null);
+        
+        ctrl.fLogActivity = false; // upgraders might not have Activities on for Jobs and Shifts
+        PageReference p2 = ctrl.SendMail();
+        system.assertEquals(null, p2);
+        
+        // test fEmailContactsOnlyOnce
+        ctrl.fEmailContactsOnlyOnce = true;
         ctrl.StatusChanged();
-        System.assertEquals(1, ctrl.numberOfContacts);		
+        System.assertEquals(1, ctrl.numberOfContacts);      
     }   
 
 }

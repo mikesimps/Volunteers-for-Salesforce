@@ -482,7 +482,7 @@ global with sharing class VOL_SharedCode {
         }
         strSoql += ' from Contact ';
         string strAnd = ' where ';
-		system.debug(strSoql);
+        system.debug(strSoql);
         // make sure their settings haven't been completely cleared
         if (VolunteersSettings.Contact_Matching_Rule__c == null || VolunteersSettings.Contact_Matching_Rule__c == '') {
             VolunteersSettings.Contact_Matching_Rule__c = 'Firstname;Lastname;Email';

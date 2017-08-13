@@ -31,9 +31,9 @@
 @isTest
 public with sharing class VOL_CTRL_VolunteersCampaignWizard_TEST {
 
-	/*******************************************************************************************************
-	* TEST METHODS
-	********************************************************************************************************/
+    /*******************************************************************************************************
+    * TEST METHODS
+    ********************************************************************************************************/
     static testmethod void CodeCoverageTests() {
         PageReference pageRef=Page.VolunteersCampaignWizard; 
         Test.setCurrentPage(pageRef); 
@@ -66,7 +66,7 @@ public with sharing class VOL_CTRL_VolunteersCampaignWizard_TEST {
         System.AssertEquals(ctrl.cSampleJobs, cmp2.Volunteer_Jobs__c);
         System.AssertEquals(ctrl.cSampleShifts * ctrl.cSampleJobs, cmp2.Volunteer_Shifts__c);        
         list<Volunteer_Shift__c> listShift = [select Id, Name, Volunteer_Job__r.Campaign__c, Start_Date_Time__c 
-        	from Volunteer_Shift__c where Volunteer_Job__r.Campaign__c = :cmp2.Id];
+            from Volunteer_Shift__c where Volunteer_Job__r.Campaign__c = :cmp2.Id];
         system.assertEquals(2 * 3, listShift.size()); 
         system.assertEquals(cmp2.StartDate, listShift[0].Start_Date_Time__c.date());
         
@@ -74,13 +74,13 @@ public with sharing class VOL_CTRL_VolunteersCampaignWizard_TEST {
         Contact c1 = new Contact(Lastname='My Volunteer Contact');
         insert c1;
         Volunteer_Hours__c hours = new Volunteer_Hours__c(
-        	Contact__c = c1.Id,
-        	Volunteer_Job__c = listShift[0].Volunteer_Job__c,
-        	Volunteer_Shift__c = listShift[0].Id,
-        	Start_Date__c = listShift[0].Start_Date_Time__c.Date(),
-        	Planned_Start_Date_Time__c = listShift[0].Start_Date_Time__c,
-        	Status__c = 'Confirmed'        	
-        	);
+            Contact__c = c1.Id,
+            Volunteer_Job__c = listShift[0].Volunteer_Job__c,
+            Volunteer_Shift__c = listShift[0].Id,
+            Start_Date__c = listShift[0].Start_Date_Time__c.Date(),
+            Planned_Start_Date_Time__c = listShift[0].Start_Date_Time__c,
+            Status__c = 'Confirmed'         
+            );
         insert hours;
         
         // scenario 3: create a campaign with a cloned set of Shifts and Jobs and Volunteer Hours
@@ -99,7 +99,7 @@ public with sharing class VOL_CTRL_VolunteersCampaignWizard_TEST {
         System.AssertEquals(cmp2.Volunteer_Jobs__c, cmp3.Volunteer_Jobs__c);
         System.AssertEquals(cmp2.Volunteer_Shifts__c, cmp3.Volunteer_Shifts__c);
         Volunteer_Hours__c hours3 = [select Id, Start_Date__c, Volunteer_Job__c, Volunteer_Shift__c, Planned_Start_Date_Time__c,
-        	Status__c, Contact__c from Volunteer_Hours__c where Contact__c = :c1.id and Volunteer_Job__r.Campaign__c = :cmp3.id];
+            Status__c, Contact__c from Volunteer_Hours__c where Contact__c = :c1.id and Volunteer_Job__r.Campaign__c = :cmp3.id];
         system.assertEquals('Prospect', hours3.Status__c);
         system.assertEquals(system.today().addmonths(1), hours3.Start_Date__c);
         system.assertEquals(system.today().addmonths(1), hours3.Planned_Start_Date_Time__c.Date());

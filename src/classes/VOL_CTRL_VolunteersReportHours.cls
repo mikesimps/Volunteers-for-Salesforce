@@ -423,7 +423,6 @@ global virtual with sharing class VOL_CTRL_VolunteersReportHours {
 
         update regHourId;
 
-      // clear current job & shift info
         volunteerJobId = null;
         ChangeVolunteerJob();
         vhours = null;
