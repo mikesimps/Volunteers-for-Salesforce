@@ -54,6 +54,11 @@
         <name>Duration__c</name>
     </fields>
     <fields>
+        <help><!-- The max number of days in advanced an event should be scheduled and made available for the public --></help>
+        <label><!-- Max Days In Advance --></label>
+        <name>Max_Days_In_Advance__c</name>
+    </fields>
+    <fields>
         <label>Schema Eind Datum</label>
         <name>Schedule_End_Date__c</name>
     </fields>
