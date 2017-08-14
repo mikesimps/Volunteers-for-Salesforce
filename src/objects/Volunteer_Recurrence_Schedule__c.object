@@ -173,30 +173,37 @@
                 <value>
                     <fullName>Sunday</fullName>
                     <default>false</default>
+                    <label>Sunday</label>
                 </value>
                 <value>
                     <fullName>Monday</fullName>
                     <default>false</default>
+                    <label>Monday</label>
                 </value>
                 <value>
                     <fullName>Tuesday</fullName>
                     <default>false</default>
+                    <label>Tuesday</label>
                 </value>
                 <value>
                     <fullName>Wednesday</fullName>
                     <default>false</default>
+                    <label>Wednesday</label>
                 </value>
                 <value>
                     <fullName>Thursday</fullName>
                     <default>false</default>
+                    <label>Thursday</label>
                 </value>
                 <value>
                     <fullName>Friday</fullName>
                     <default>false</default>
+                    <label>Friday</label>
                 </value>
                 <value>
                     <fullName>Saturday</fullName>
                     <default>false</default>
+                    <label>Saturday</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -257,18 +264,22 @@
                 <value>
                     <fullName>Prospect</fullName>
                     <default>false</default>
+                    <label>Prospect</label>
                 </value>
                 <value>
                     <fullName>Confirmed</fullName>
                     <default>true</default>
+                    <label>Confirmed</label>
                 </value>
                 <value>
                     <fullName>Completed</fullName>
                     <default>false</default>
+                    <label>Completed</label>
                 </value>
                 <value>
                     <fullName>Canceled</fullName>
                     <default>false</default>
+                    <label>Canceled</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -298,30 +309,37 @@
                 <value>
                     <fullName>Every</fullName>
                     <default>false</default>
+                    <label>Every</label>
                 </value>
                 <value>
                     <fullName>Alternate</fullName>
                     <default>false</default>
+                    <label>Alternate</label>
                 </value>
                 <value>
                     <fullName>1st</fullName>
                     <default>false</default>
+                    <label>1st</label>
                 </value>
                 <value>
                     <fullName>2nd</fullName>
                     <default>false</default>
+                    <label>2nd</label>
                 </value>
                 <value>
                     <fullName>3rd</fullName>
                     <default>false</default>
+                    <label>3rd</label>
                 </value>
                 <value>
                     <fullName>4th</fullName>
                     <default>false</default>
+                    <label>4th</label>
                 </value>
                 <value>
                     <fullName>5th</fullName>
                     <default>false</default>
+                    <label>5th</label>
                 </value>
             </valueSetDefinition>
         </valueSet>

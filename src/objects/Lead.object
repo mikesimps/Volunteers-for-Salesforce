@@ -13,22 +13,27 @@
                 <value>
                     <fullName>Weekdays</fullName>
                     <default>false</default>
+                    <label>Weekdays</label>
                 </value>
                 <value>
                     <fullName>Weekends</fullName>
                     <default>false</default>
+                    <label>Weekends</label>
                 </value>
                 <value>
                     <fullName>Morning</fullName>
                     <default>false</default>
+                    <label>Morning</label>
                 </value>
                 <value>
                     <fullName>Afternoon</fullName>
                     <default>false</default>
+                    <label>Afternoon</label>
                 </value>
                 <value>
                     <fullName>Weekly</fullName>
                     <default>false</default>
+                    <label>Weekly</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -57,26 +62,32 @@
                 <value>
                     <fullName>Computer usage</fullName>
                     <default>false</default>
+                    <label>Computer usage</label>
                 </value>
                 <value>
                     <fullName>Manual labor</fullName>
                     <default>false</default>
+                    <label>Manual labor</label>
                 </value>
                 <value>
                     <fullName>Marketing</fullName>
                     <default>false</default>
+                    <label>Marketing</label>
                 </value>
                 <value>
                     <fullName>Fundraising</fullName>
                     <default>false</default>
+                    <label>Fundraising</label>
                 </value>
                 <value>
                     <fullName>Event Planning</fullName>
                     <default>false</default>
+                    <label>Event Planning</label>
                 </value>
                 <value>
                     <fullName>Landscaping</fullName>
                     <default>false</default>
+                    <label>Landscaping</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -95,6 +106,7 @@
                 <value>
                     <fullName>New Sign Up</fullName>
                     <default>false</default>
+                    <label>New Sign Up</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
