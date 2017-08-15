@@ -166,7 +166,6 @@ global virtual with sharing class VOL_CTRL_VolunteersReportHours {
                                         where Campaign__r.IsActive = true and Inactive__c = false
                                         and id in (
                                         select Volunteer_Job__c from Volunteer_Hours__c
-                                        //  where Volunteer_Shift__r.Start_Date_Time__c >= NEXT_N_DAYS:1
                                           where Volunteer_Shift__r.Start_Date_Time__c > YESTERDAY
                                           and Volunteer_Shift__r.Start_Date_Time__c < TOMORROW
                                           and Contact__c = :contactIdPersonalSite
@@ -439,8 +438,6 @@ global virtual with sharing class VOL_CTRL_VolunteersReportHours {
       Long endTime = d.gettime();
       Long startTime = vhours.Clock_In_Time__c.gettime();
 
-      //String timeStr = d.format('MMMM dd, yyyy h:mm:ss a','America/New_York');
-      //strSaveResult = timeStr;
       vhours.Clock_Out_Time__c = d;
       vhours.Hours_Worked__c = decimal.valueof(endTime - startTime) / 1000/60/60; //milliseconds to seconds to minutes to hours
       vhours.End_Date__c = d.date();
