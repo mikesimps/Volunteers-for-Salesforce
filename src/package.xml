@@ -224,7 +224,12 @@
         <name>CustomMetadata</name>
     </types>
     <types>
-        <members>*</members>
+    	<members>Job_Recurrence_Schedule__c</members>
+        <members>Volunteer_Hours__c</members>
+        <members>Volunteer_Job__c</members>
+        <members>Volunteer_Recurrence_Schedule__c</members>
+        <members>Volunteer_Shift__c</members>
+        <members>Volunteers_Settings__c</members>
         <name>CustomObject</name>
     </types>
     <types>
