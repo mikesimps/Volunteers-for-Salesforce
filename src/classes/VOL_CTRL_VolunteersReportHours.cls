@@ -403,13 +403,13 @@ global virtual with sharing class VOL_CTRL_VolunteersReportHours {
     global void ClockIn() {
         DateTime d = datetime.now();
 
-        Id contactId = contactIdPersonalSite;
+        ID contactId = VOL_SharedCode.CreateOrUpdateContactFS(contactIdPersonalSite, contact, contact.Volunteer_Organization__c, listStrFields, false);
         Volunteer_Hours__c regHourId = null;
 
         regHourId = [select Id, Clock_In_Time__c
                      from Volunteer_Hours__c
                      where
-                       Contact__c = :contactIdPersonalSite and
+                       Contact__c = :contactId and
                        Volunteer_Job__c = :volunteerJobId and
                        Volunteer_Shift__c = :volunteerShiftId
                        order by Start_Date__c limit 1
@@ -450,21 +450,17 @@ global virtual with sharing class VOL_CTRL_VolunteersReportHours {
     }
 
     global Volunteer_Hours__c GetOpenHours() {
-
-        //ID contactId = VOL_SharedCode.CreateOrUpdateContactFS(contactIdPersonalSite, contact, contact.Volunteer_Organization__c, listStrFields, false);
-        Id contactId = contactIdPersonalSite; //'0036A000007B9IeQAK';
+        ID contactId = VOL_SharedCode.CreateOrUpdateContactFS(contactIdPersonalSite, contact, contact.Volunteer_Organization__c, listStrFields, false);
         list<Volunteer_Hours__c> openHourId = null;
-
-        openHourId = [select Id, Clock_In_Time__c from Volunteer_Hours__c where Contact__c = :contactIdPersonalSite and
+        
+        openHourId = [select Id, Clock_In_Time__c from Volunteer_Hours__c where Contact__c = :contactId and
                     (Status__c = 'In Progress') order by Clock_In_Time__c asc limit 1 ];  //change 'In Progress' to label
 
         if (openHourId.IsEmpty()){
           return null;
         } else {
           return openHourId[0];
-
         }
-
     }
 
     // specifies whether the volunteer is currently logged into the system
