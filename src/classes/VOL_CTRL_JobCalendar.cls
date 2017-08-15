@@ -88,7 +88,7 @@ global with sharing class VOL_CTRL_JobCalendar {
                     Volunteer_Job__c, Volunteer_Job__r.Campaign__c 
                     from Volunteer_Shift__c where Id = :p];
                 if (listShift.size() > 0) {
-                    initialDate = Date.valueOf(listShift[0].Start_Date_Time__c);
+                    initialDate = Datetime.valueOf(listShift[0].Start_Date_Time__c);
                     // let caller control whether to filter by campaign & job or not.
                     //volunteerJobId = listShift[0].Volunteer_Job__c;
                     //campaignId = listShift[0].Volunteer_Job__r.Campaign__c;
