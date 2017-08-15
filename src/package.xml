@@ -343,10 +343,6 @@
         <name>PermissionSet</name>
     </types>
     <types>
-        <members>Volunteer Portal Profile</members>
-        <name>Profile</name>
-    </types>
-    <types>
         <members>Campaign.Volunteers_Campaign</members>
         <name>RecordType</name>
     </types>
