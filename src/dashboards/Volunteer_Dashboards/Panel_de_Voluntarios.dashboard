@@ -146,7 +146,6 @@
             <useReportChart>false</useReportChart>
         </components>
     </rightSection>
-    <runningUser>davidhabibvol@groundwire.org</runningUser>
     <textColor>#000000</textColor>
     <title>Panel de Voluntarios</title>
     <titleColor>#000000</titleColor>
