@@ -1,10 +1,10 @@
 {
   "packageDirectories": [
     {
-      "path": "src",
+      "path": "force-v4s",
       "default": true
     }
   ],
   "namespace": "",
-  "sourceApiVersion": "38.0"
+  "sourceApiVersion": "40.0"
 }
