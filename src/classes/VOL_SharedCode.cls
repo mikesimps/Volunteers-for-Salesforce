@@ -309,7 +309,8 @@ global with sharing class VOL_SharedCode {
             Contact_Match_First_Name_Fields__c = mySettings.Contact_Match_First_Name_Fields__c,
             Contact_Matching_Rule__c = mySettings.Contact_Matching_Rule__c,
             Personal_Site_Org_Wide_Email_Name__c = mySettings.Personal_Site_Org_Wide_Email_Name__c,
-            Personal_Site_Report_Hours_Filtered__c = mySettings.Personal_Site_Report_Hours_Filtered__c
+            Personal_Site_Report_Hours_Filtered__c = mySettings.Personal_Site_Report_Hours_Filtered__c,
+            Personal_Site_Filter_Todays_Jobs__c = mySettings.Personal_Site_Filter_Todays_Jobs__c
             );
 
         insert VolunteersSettings;
