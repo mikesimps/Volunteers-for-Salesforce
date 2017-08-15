@@ -1,0 +1,4 @@
+<apex:page>
+	User-agent: *
+	Disallow: /
+</apex:page>
