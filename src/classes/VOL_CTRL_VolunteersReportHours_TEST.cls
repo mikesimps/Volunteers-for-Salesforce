@@ -116,9 +116,43 @@ public with sharing class VOL_CTRL_VolunteersReportHours_TEST {
         ctrl.volunteerJobId = job.Id;
         ctrl.ChangeVolunteerJob();
         System.Assert(ctrl.listSOVolunteerShifts != null);
-        system.assertEquals(true, ctrl.hasShifts);
-        
-               
-    }       
+        system.assertEquals(true, ctrl.hasShifts);  
 
+        //Test Todays Jobs Filter setting
+        settings.Personal_Site_Filter_Todays_Jobs__c = true;
+        settings.Personal_Site_Report_Hours_Filtered__c = true;
+        VOL_SharedCode.getVolunteersSettingsForTests(settings);
+        Volunteer_Hours__c shift_hour = new Volunteer_Hours__c(Volunteer_Job__c=job.Id, VOlunteer_Shift__c=shift.id
+                                                            ,Contact__c=contact.id,Number_of_Volunteers__c=1
+                                                            ,Start_Date__c=date.valueOf(shift.Start_Date_Time__c)
+                                                            ,Status__c='Confirmed');
+        insert shift_hour;
+        System.Assert(ctrl.listSOVolunteerShifts != null);
+        System.Assert(ctrl.GetOpenHours() == null);
+
+        shift_hour.Status__c='In Progress';
+        Datetime clockInTime = system.now();
+        shift_hour.Clock_In_Time__c = clockInTime;
+        update shift_hour; //simulate clock in
+        Volunteer_Hours__c open_hour = ctrl.GetOpenHours();
+        System.assertEquals(open_hour.Clock_In_Time__c, clockInTime);
+        system.assert(ctrl.IsClockedIn);
+        System.assertEquals(ctrl.GetOpenHours().Clock_In_Time__c, clockInTime);
+
+        ctrl.listSOVolunteerShifts = null;
+        ctrl.boolFilterTodaysJobs = true;
+        ctrl.listSOVolunteerShifts = ctrl.listSOVolunteerShifts;
+        System.Assert(ctrl.listSOVolunteerShifts != null); //confirm it will regenerate list of options
+
+        //Test Clocking in/out functions
+        shift_hour.Status__c='Confirmed';
+        shift_hour.Clock_In_Time__c = null;
+        update shift_hour; //reset record back to "registered"
+        ctrl.ClockIn();
+        system.Assert(ctrl.IsClockedIn);
+        system.AssertEquals(system.label.labelClockInMessage,ctrl.strSaveResult);
+        ctrl.ClockOut();
+        System.AssertEquals(ctrl.vhours.Status__c,'Completed');
+        system.Assert(ctrl.vhours.Hours_Worked__c > 0);
+    }
 }
