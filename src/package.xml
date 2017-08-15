@@ -212,6 +212,7 @@
         <members>Volunteers_Settings__c.Signup_Bucket_Account_On_Create__c</members>
         <members>Volunteers_Settings__c.Signup_Creates_Contacts_If_No_Match__c</members>
         <members>Volunteers_Settings__c.Signup_Matches_Existing_Contacts__c</members>
+        <members>Volunteers_Settings__c.Personal_Site_Filter_Todays_Jobs__c</members>
         <name>CustomField</name>
     </types>
     <types>
