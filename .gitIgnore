@@ -1,5 +1,7 @@
 .appcloud/.project
 .settings
+.sfdx
+.vscode
 /browser_tests
 /test_results.xml
 build.properties
@@ -11,4 +13,3 @@ src/profiles/Partner Community Login User.profile
 src/profiles/Partner Community User.profile
 src/workflows/User.workflow
 Thumbs.db
-.sfdx
