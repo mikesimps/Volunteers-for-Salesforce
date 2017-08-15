@@ -240,6 +240,7 @@
         <members>Volunteer_Job__c</members>
         <members>Volunteer_Recurrence_Schedule__c</members>
         <members>Volunteers_Wizard</members>
+        <members>Volunteer_Hours__c</members>
         <name>CustomTab</name>
     </types>
     <types>
