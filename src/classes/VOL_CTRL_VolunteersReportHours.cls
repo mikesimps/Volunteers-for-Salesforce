@@ -426,7 +426,7 @@ global virtual with sharing class VOL_CTRL_VolunteersReportHours {
         ChangeVolunteerJob();
         vhours = null;
 
-        strSaveResult = 'You are now logged in, thank you for volunteering!';
+        strSaveResult = system.label.labelClockInMessage;
         //Hide the Clock Out button immediately after logging in to prvent confusion
         boolHideClockOut = true;
     }
@@ -452,7 +452,7 @@ global virtual with sharing class VOL_CTRL_VolunteersReportHours {
     global Volunteer_Hours__c GetOpenHours() {
         ID contactId = VOL_SharedCode.CreateOrUpdateContactFS(contactIdPersonalSite, contact, contact.Volunteer_Organization__c, listStrFields, false);
         list<Volunteer_Hours__c> openHourId = null;
-        
+
         openHourId = [select Id, Clock_In_Time__c from Volunteer_Hours__c where Contact__c = :contactId and
                     (Status__c = 'In Progress') order by Clock_In_Time__c asc limit 1 ];  //change 'In Progress' to label
 

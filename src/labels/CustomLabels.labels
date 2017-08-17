@@ -336,6 +336,14 @@ day:      &apos;day&apos;</value>
         <value>Clock Out</value>
     </labels>
     <labels>
+        <fullName>labelClockInMessage</fullName>
+        <categories>PersonalSiteReportHours</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Confirmation message after volunteer clocks in for a shift</shortDescription>
+        <value>You are now clocked in. Thank you for volunteering!</value>
+    </labels>
+    <labels>
         <fullName>labelColorValues</fullName>
         <categories>JobCalendar</categories>
         <language>en_US</language>
