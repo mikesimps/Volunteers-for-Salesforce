@@ -107,6 +107,10 @@ public with sharing class VOL_CTRL_VolunteersSignupFS_TEST {
         System.Assert(('425-123-4567' == contact.Phone) || ('206-123-4567' == contact.Phone));
 
         // anything else
+        Document doc = new Document();
+        doc.Name = 'VolunteersSignupCSS.css';
+        doc.FolderId = [select id from Folder where name = 'Volunteers Documents'].id;
+        insert doc;
         System.Assert(ctrl.strURLtoCSSFile == ctrl.strURLtoCSSFile);
 
         // attachments
