@@ -79,4 +79,13 @@ public with sharing class VOL_CTRL_BatchProgress_TEST {
         System.assertEquals(Label.PageMessagesWarning, messages[0].getSeverityLabel(), 'The label should be WARNING.');
         System.assertEquals('warning', messages[0].getSeverityTheme(), 'The theme should be warning.');
     }
+    
+    public static testMethod void testCancel() {
+        VOL_CTRL_BatchProgress controller = new VOL_CTRL_BatchProgress();
+        PageReference cPage = controller.cancel();
+        system.Test.setCurrentPage(cPage);
+        system.assertEquals(ApexPages.currentPage().getUrl(),'/home/home.jsp');
+
+        
+    }
 }
