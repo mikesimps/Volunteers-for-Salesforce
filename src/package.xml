@@ -34,6 +34,7 @@
         <members>VOL_CTRL_VolunteersCampaignWizard</members>
         <members>VOL_CTRL_VolunteersCampaignWizard_TEST</members>
         <members>VOL_CTRL_VolunteersClockOutHours</members>
+        <members>VOL_CTRL_VolunteersClockOutHours_TEST</members>        
         <members>VOL_CTRL_VolunteersFind</members>
         <members>VOL_CTRL_VolunteersFind_TEST</members>
         <members>VOL_CTRL_VolunteersJobListing</members>
@@ -57,7 +58,6 @@
         <members>VOL_TEST_VolunteerHours_Trigger</members>
         <members>VOL_VRS</members>
         <members>VOL_VRS_TEST</members>
-        <members>VOL_CTRL_VolunteersClockOutHours_TEST</members>
         <name>ApexClass</name>
     </types>
     <types>
