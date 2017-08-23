@@ -57,6 +57,7 @@
         <members>VOL_TEST_VolunteerHours_Trigger</members>
         <members>VOL_VRS</members>
         <members>VOL_VRS_TEST</members>
+        <members>VOL_CTRL_VolunteersClockOutHours_TEST</members>
         <name>ApexClass</name>
     </types>
     <types>
