@@ -34,7 +34,7 @@
         <members>VOL_CTRL_VolunteersCampaignWizard</members>
         <members>VOL_CTRL_VolunteersCampaignWizard_TEST</members>
         <members>VOL_CTRL_VolunteersClockOutHours</members>
-        <members>VOL_CTRL_VolunteersClockOutHours_TEST</members>        
+        <members>VOL_CTRL_VolunteersClockOutHours_TEST</members>
         <members>VOL_CTRL_VolunteersFind</members>
         <members>VOL_CTRL_VolunteersFind_TEST</members>
         <members>VOL_CTRL_VolunteersJobListing</members>
