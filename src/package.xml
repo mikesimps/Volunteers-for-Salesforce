@@ -76,6 +76,7 @@
         <members>KramdenPersonalSiteTemplateExternal</members>
         <members>KramdenVolunteersJobListingFS</members>
         <members>KramdenVolunteersSignupFS</members>
+        <members>robotstxt</members>
         <members>NewAndEditVRS</members>
         <members>OpenReport</members>
         <members>PersonalSiteContactInfo</members>
@@ -448,6 +449,10 @@
     <types>
         <members>*</members>
         <name>Profile</name>
+    </types>
+    <types>
+        <members>Volunteer_Hours_Auto_Confirm_Web_Sign_Ups-1</members>
+        <name>Flow</name>
     </types>
     <version>40.0</version>
 </Package>
