@@ -73,6 +73,7 @@
         <members>KramdenPersonalSiteContactInfo</members>
         <members>KramdenPersonalSiteJobListing</members>
         <members>KramdenPersonalSiteTemplateInternal</members>
+        <members>KramdenPersonalSiteTemplateExternal</members>
         <members>KramdenVolunteersJobListingFS</members>
         <members>KramdenVolunteersSignupFS</members>
         <members>NewAndEditVRS</members>
