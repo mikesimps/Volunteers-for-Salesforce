@@ -444,5 +444,9 @@
         <members>Volunteers_Settings__c</members>
         <name>Workflow</name>
     </types>
+    <types>
+        <members>*</members>
+        <name>Profile</name>
+    </types>
     <version>40.0</version>
 </Package>
