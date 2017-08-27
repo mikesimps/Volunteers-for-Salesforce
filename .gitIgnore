@@ -2,7 +2,7 @@
 .settings
 .sfdx
 .vscode
-force-v4s
+/force-v4s
 testoutput
 /browser_tests
 /test_results.xml
@@ -16,3 +16,4 @@ src/profiles/Partner Community User.profile
 src/workflows/User.workflow
 Thumbs.db
 /Referenced Packages
+/pulled
