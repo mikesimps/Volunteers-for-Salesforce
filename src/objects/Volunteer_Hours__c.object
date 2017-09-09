@@ -242,9 +242,19 @@
                     <label>Prospect</label>
                 </value>
                 <value>
+                    <fullName>Web Sign Up</fullName>
+                    <default>false</default>
+                    <label>Web Sign Up</label>
+                </value>
+                <value>
                     <fullName>Confirmed</fullName>
                     <default>false</default>
                     <label>Confirmed</label>
+                </value>
+                <value>
+                    <fullName>In Progress</fullName>
+                    <default>false</default>
+                    <label>In Progress</label>
                 </value>
                 <value>
                     <fullName>Completed</fullName>
@@ -257,19 +267,9 @@
                     <label>No-Show</label>
                 </value>
                 <value>
-                    <fullName>Web Sign Up</fullName>
-                    <default>false</default>
-                    <label>Web Sign Up</label>
-                </value>
-                <value>
                     <fullName>Canceled</fullName>
                     <default>false</default>
                     <label>Canceled</label>
-                </value>
-                <value>
-                    <fullName>In Progress</fullName>
-                    <default>false</default>
-                    <label>In Progress</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -443,7 +443,7 @@ IF(ISNULL( Volunteer_Job__c.Id),
         URLFOR( $Action.Volunteer_Job__c.View , Volunteer_Job__c.Id ),
         URLFOR( $Action.Volunteer_Shift__c.View , Volunteer_Shift__c.Id ))
 )}</url>
-    </webLinks> 
+    </webLinks>
     <searchLayouts>
         <listViewButtons>Clock_Out</listViewButtons>
     </searchLayouts>
