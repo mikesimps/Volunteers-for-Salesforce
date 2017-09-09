@@ -790,6 +790,18 @@
         <type>Text</type>
     </nameField>
     <deploymentStatus>Deployed</deploymentStatus>
+    <searchLayouts/>
+    <enableSharing>true</enableSharing>
     <sharingModel>ControlledByParent</sharingModel>
     <enableReports>true</enableReports>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableSearch>true</enableSearch>
+    <enableStreamingApi>true</enableStreamingApi>
+    <visibility>Public</visibility>
 </CustomObject>
