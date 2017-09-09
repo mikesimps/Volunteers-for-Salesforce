@@ -412,6 +412,19 @@
         <errorMessage>Please specify a Status value.</errorMessage>
     </validationRules>
     <webLinks>
+        <fullName>Clock_Out</fullName>
+        <availability>online</availability>
+        <description>Enables an employee to clock out all active volunteers in a single action</description>
+        <displayType>massActionButton</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Clock Out</masterLabel>
+        <openType>sidebar</openType>
+        <page>VolunteersClockOutHours</page>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+    </webLinks>
+    <webLinks>
         <fullName>Mass_Edit_Volunteer_Hours</fullName>
         <availability>online</availability>
         <displayType>massActionButton</displayType>
