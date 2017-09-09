@@ -450,9 +450,5 @@
         <members>Kramden Volunteer Admin</members>
         <name>Profile</name>
     </types>
-    <types>
-        <members>Volunteer_Hours_Auto_Confirm_Web_Sign_Ups-1</members>
-        <name>Flow</name>
-    </types>
     <version>40.0</version>
 </Package>
