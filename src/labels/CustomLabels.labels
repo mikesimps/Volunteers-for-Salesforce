@@ -672,6 +672,13 @@ day:      &apos;day&apos;</value>
         <value>Removed from Job Recurrence Schedule:</value>
     </labels>
     <labels>
+        <fullName>labelKramdenPersonalSiteTitle</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>labelKramdenPersonalSiteTitle</shortDescription>
+        <value>Kramden Volunteer Personal Site</value>
+    </labels>
+    <labels>
         <fullName>labelLinkAddMoreRows</fullName>
         <categories>MassEditVolunteerHours</categories>
         <language>en_US</language>
