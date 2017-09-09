@@ -239,6 +239,18 @@
         <displayFormat>Shift-{00000}</displayFormat>
     </nameField>
     <deploymentStatus>Deployed</deploymentStatus>
+    <searchLayouts/>
+    <enableSharing>true</enableSharing>
     <sharingModel>ControlledByParent</sharingModel>
     <enableReports>true</enableReports>
+    <visibility>Public</visibility>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableSearch>false</enableSearch>
+    <enableStreamingApi>true</enableStreamingApi>
 </CustomObject>
