@@ -467,8 +467,18 @@ IF(ISNULL( Volunteer_Job__c.Id),
         <type>AutoNumber</type>
         <displayFormat>{0000}</displayFormat>
     </nameField>
-    <deploymentStatus>Deployed</deploymentStatus>
     <sharingModel>ControlledByParent</sharingModel>
-    <enableFeeds>true</enableFeeds>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableHistory>false</enableHistory>
     <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <enableFeeds>true</enableFeeds>
+    <visibility>Public</visibility>
 </CustomObject>
