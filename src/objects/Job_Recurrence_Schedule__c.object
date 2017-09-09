@@ -286,4 +286,5 @@
         <errorDisplayField>Weekly_Occurrence__c</errorDisplayField>
         <errorMessage>You must specify at least one value for Weekly Occurrence</errorMessage>
     </validationRules>
+    <visibility>Public</visibility>
 </CustomObject>
