@@ -443,20 +443,7 @@ IF(ISNULL( Volunteer_Job__c.Id),
         URLFOR( $Action.Volunteer_Job__c.View , Volunteer_Job__c.Id ),
         URLFOR( $Action.Volunteer_Shift__c.View , Volunteer_Shift__c.Id ))
 )}</url>
-    </webLinks>
-    <webLinks>
-        <fullName>Clock_Out</fullName>
-        <availability>online</availability>
-        <description>Enables an employee to clock out all active volunteers in a single action</description>
-        <displayType>massActionButton</displayType>
-        <height>600</height>
-        <linkType>page</linkType>
-        <masterLabel>Clock Out</masterLabel>
-        <openType>sidebar</openType>
-        <page>VolunteersClockOutHours</page>
-        <protected>false</protected>
-        <requireRowSelection>true</requireRowSelection>
-    </webLinks>    
+    </webLinks> 
     <searchLayouts>
         <listViewButtons>Clock_Out</listViewButtons>
     </searchLayouts>
