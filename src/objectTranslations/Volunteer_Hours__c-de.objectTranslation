@@ -172,6 +172,10 @@
         <name>StatusMustBeSet</name>
     </validationRules>
     <webLinks>
+        <label><!-- Clock_Out --></label>
+        <name>Clock_Out</name>
+    </webLinks>
+    <webLinks>
         <label>Freiwilligenstunden für Massenbearbeitung</label>
         <name>Mass_Edit_Volunteer_Hours</name>
     </webLinks>

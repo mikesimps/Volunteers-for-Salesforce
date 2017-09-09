@@ -140,6 +140,10 @@
         <name>StatusMustBeSet</name>
     </validationRules>
     <webLinks>
+        <label><!-- Clock_Out --></label>
+        <name>Clock_Out</name>
+    </webLinks>
+    <webLinks>
         <label>Meerdere Aanpassen Vrijwilligersuren</label>
         <name>Mass_Edit_Volunteer_Hours</name>
     </webLinks>

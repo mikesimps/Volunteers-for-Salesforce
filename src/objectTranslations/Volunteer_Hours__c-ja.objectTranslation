@@ -135,6 +135,10 @@
         <name>StatusMustBeSet</name>
     </validationRules>
     <webLinks>
+        <label><!-- Clock_Out --></label>
+        <name>Clock_Out</name>
+    </webLinks>
+    <webLinks>
         <label>ボランティア時間の一括編集</label>
         <name>Mass_Edit_Volunteer_Hours</name>
     </webLinks>

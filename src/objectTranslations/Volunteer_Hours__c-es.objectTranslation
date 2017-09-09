@@ -140,6 +140,10 @@
         <name>StatusMustBeSet</name>
     </validationRules>
     <webLinks>
+        <label><!-- Clock_Out --></label>
+        <name>Clock_Out</name>
+    </webLinks>
+    <webLinks>
         <label>Edición Masiva de las Horas Voluntarias</label>
         <name>Mass_Edit_Volunteer_Hours</name>
     </webLinks>
