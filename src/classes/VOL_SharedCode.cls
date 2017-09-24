@@ -188,17 +188,29 @@ global with sharing class VOL_SharedCode {
           }
         }
 
+        boolean isDupe = false;
+
         for (Volunteer_Hours__c vs : listVolunteerHours) {
 
-                SelectOption so = new SelectOption(vs.Volunteer_Shift__r.id,
-                    (useDateTimeFixup && vs.Volunteer_Shift__r.System_Note__c != null ? vs.Volunteer_Shift__r.System_Note__c : vs.Volunteer_Shift__r.Start_Date_Time__c.format()) +
-                    (fIncludeShiftName ? '&nbsp;&nbsp;&nbsp;&nbsp;(' + vs.name + ')' : '' ) +
-                    (fIncludeNumberNeeded ? '&nbsp;&nbsp;' +
-                        (vs.Volunteer_Shift__r.Number_of_Volunteers_Still_Needed__c > 0 ?
-                            system.label.labelCalendarStillNeeded + vs.Volunteer_Shift__r.Number_of_Volunteers_Still_Needed__c : system.label.labelCalendarShiftFull) +
-                        ' ' : '' ));
-                so.setEscapeItem(false);
+            SelectOption so = new SelectOption(vs.Volunteer_Shift__r.id,
+                (useDateTimeFixup && vs.Volunteer_Shift__r.System_Note__c != null ? vs.Volunteer_Shift__r.System_Note__c : vs.Volunteer_Shift__r.Start_Date_Time__c.format()) +
+                (fIncludeShiftName ? '&nbsp;&nbsp;&nbsp;&nbsp;(' + vs.name + ')' : '' ) +
+                (fIncludeNumberNeeded ? '&nbsp;&nbsp;' +
+                    (vs.Volunteer_Shift__r.Number_of_Volunteers_Still_Needed__c > 0 ?
+                        system.label.labelCalendarStillNeeded + vs.Volunteer_Shift__r.Number_of_Volunteers_Still_Needed__c : system.label.labelCalendarShiftFull) +
+                    ' ' : '' ));
+            so.setEscapeItem(false);
+
+            //Only add unique shifts to the drop down
+            for (SelectOption opt : listSO) {
+                if (opt == so) {
+                    isDupe = true;
+                }
+            }
+            if (!isDupe) {
                 listSO.add(so);
+            }
+            isDupe = false;
         }
         return listSO;
     }
