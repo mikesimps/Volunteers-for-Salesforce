@@ -17,3 +17,9 @@ src/workflows/User.workflow
 Thumbs.db
 /Referenced Packages
 /pulled
+.DS_Store
+/IlluminatedCloud
+/projectFilesBackup
+.idea
+*.iml
+/bin
