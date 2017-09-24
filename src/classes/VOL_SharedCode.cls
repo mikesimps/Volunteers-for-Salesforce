@@ -117,8 +117,6 @@ global with sharing class VOL_SharedCode {
     public static list<SelectOption> listSORegisteredVolunteerShiftsOfVolunteerJobIdFormat(ID volunteerJobId, Date dtStart, Date dtEnd,
             boolean fIncludeShiftName, boolean fIncludeNumberNeeded, string strDateFormat, string strTimeFormat) {
 
-    //  list<Volunteer_Job__c> listVolunteerJobs = new List<Volunteer_Job__c>();
-      //
         list<Volunteer_Hours__c> listVolunteerHours = new List<Volunteer_Hours__c>();
 
         list<SelectOption> listSO = new list<SelectOption>();
