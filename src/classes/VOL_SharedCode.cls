@@ -264,6 +264,7 @@ global with sharing class VOL_SharedCode {
                     VolunteersSettings.Personal_Site_Org_Wide_Email_Name__c = null;
                     VolunteersSettings.Contact_Matching_Rule__c = 'Firstname;Lastname;Email';
                     VolunteersSettings.Personal_Site_Report_Hours_Filtered__c = false;
+                    VolunteersSettings.Default_Login_PersonalSite_Page__c = 'PersonalSiteContactInfo';
                     upsert VolunteersSettings;
                 } else if (VolunteersSettings.Contact_Matching_Rule__c == null) {
                     VolunteersSettings.Contact_Matching_Rule__c = 'Firstname;Lastname;Email';

@@ -141,6 +141,15 @@
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
+    <fields>
+        <fullName>Default_Login_PersonalSite_Page__c</fullName>
+        <length>50</length>
+        <externalId>false</externalId>
+        <inlineHelpText>Which page should load after a volunteer logs in</inlineHelpText>
+        <label>Default Login PersonalSite Page</label>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+    </fields>
     <label>Volunteers Settings</label>
     <visibility>Public</visibility>
 </CustomObject>

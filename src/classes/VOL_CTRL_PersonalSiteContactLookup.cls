@@ -88,7 +88,7 @@ global with sharing class VOL_CTRL_PersonalSiteContactLookup {
         } else if (boolSendEmail == false) {
             // Ensure the user has access to the object and fields before querying
             UTIL_Describe.checkReadAccess('Contact', new Set<String>{'Id', 'Name', 'Email'});
-            pageRef = new PageReference('/KramdenPersonalSiteContactInfo?contactId=' + listCon[0].Id + '&Email=' + listCon[0].Email);
+            pageRef = new PageReference('/'+VOL_SharedCode.VolunteersSettings.Default_Login_PersonalSite_Page__c + '?contactId=' + listCon[0].Id + '&Email=' + listCon[0].Email);
             pageRef.setRedirect(true);
         } else {
             SendEmailToContact(listCon[0]);

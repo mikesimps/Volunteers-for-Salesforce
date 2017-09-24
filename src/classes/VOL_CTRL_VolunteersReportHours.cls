@@ -49,6 +49,33 @@ global virtual with sharing class VOL_CTRL_VolunteersReportHours {
         if (p != null && p != '') strDateFormat = p;
         p = params.get('TimeFormat');
         if (p != null && p != '') strTimeFormat = p;
+        p = params.get('contactId');
+        if (p != null && p != '') {
+            try {
+                contactIdPersonalSite = p;
+            } catch (Exception ex) {
+                contactIdPersonalSite = null;
+            }
+
+            // now get new email parameter for extra validation
+            // note that the validation routine only uses it if the setting for this extra validation is set
+            if (!VOL_SharedCode.isValidContactIdAndEmail(contactIdPersonalSite, params.get('Email')))
+                contactIdPersonalSite = null;
+
+            // cache the contactId for all pages to use.
+            Cookie cId = new cookie('contactIdPersonalSite', contactIdPersonalSite, null, -1, false);
+            ApexPages.currentPage().setCookies(new Cookie[] {cId});
+        } else {
+            // check for cached Id
+            Cookie cId = ApexPages.currentPage().getCookies().get('contactIdPersonalSite');
+            if (cId != null) contactIdPersonalSite = cId.getValue();
+        }
+
+        // if we still don't know who we are editing, need to bail out.
+        if (contactIdPersonalSite == null) {
+            ApexPages.addMessage(new ApexPages.Message(ApexPages.Severity.FATAL,'Please pass in a valid contactId and Email with the URL.'));
+            return;
+        }
 
         // we now get the fields from the fieldset
         listStrFields = VOL_SharedCode.listStrFieldsFromContactFieldSet(Schema.SObjectType.Contact.fieldSets.VolunteersReportHoursFS);
@@ -72,7 +99,7 @@ global virtual with sharing class VOL_CTRL_VolunteersReportHours {
                 contact = new Contact();
 
                 // when used within the Personal Site, we should use the appropriate Contact
-                contactIdPersonalSite = null;
+
                 Cookie cId = ApexPages.currentPage().getCookies().get('contactIdPersonalSite');
                 if (cId != null) contactIdPersonalSite = cId.getValue();
                 if (contactIdPersonalSite != null && contactIdPersonalSite != '') {
