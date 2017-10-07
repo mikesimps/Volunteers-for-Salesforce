@@ -71,12 +71,6 @@ global virtual with sharing class VOL_CTRL_VolunteersReportHours {
             if (cId != null) contactIdPersonalSite = cId.getValue();
         }
 
-        // if we still don't know who we are editing, need to bail out.
-        if (contactIdPersonalSite == null) {
-            ApexPages.addMessage(new ApexPages.Message(ApexPages.Severity.FATAL,'Please pass in a valid contactId and Email with the URL.'));
-            return;
-        }
-
         // we now get the fields from the fieldset
         listStrFields = VOL_SharedCode.listStrFieldsFromContactFieldSet(Schema.SObjectType.Contact.fieldSets.VolunteersReportHoursFS);
 
