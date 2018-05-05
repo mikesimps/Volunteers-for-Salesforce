@@ -18,8 +18,10 @@ public class VOL_CTRL_VolunteersClockOutHours {
             hr.End_Date__c = system.today();
             hr.Hours_Worked__c = decimal.valueOf(coTime.getTime() - hr.Clock_In_Time__c.getTime())/3600000;
             hr.System_Note__c = 'Logged Out By '+ UserInfo.getName() +' using mass Clock Out';
-            update hr;
         }
+
+        update selectedHrs;
+
         cancelLabel = 'Done';
         return null;
     }
