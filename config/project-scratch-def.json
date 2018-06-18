@@ -1,6 +1,6 @@
 {
     "orgName": "Kramden Institute",
-    "edition": "Developer",
+    "edition": "Enterprise",
     "orgPreferences" : {
         "enabled": ["S1DesktopEnabled","Translation","ChatterEnabled"]
     }

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Geben Sie in diesem Feld zusätzliche Informationen wie Anfahrtsweg oder einen URL zu einer Karte ein, die in automatischen E-Mail-Erinnerungen eingefügt werden.</help>
+    <label>Standortinformationen</label>
+    <name>Location_Information__c</name>
+</CustomFieldTranslation>

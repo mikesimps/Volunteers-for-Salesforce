@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Est fixé automatiquement par le planificateur système pour montrer les programmes récurrents d&#39;activité avec lequel cette plage horaire est associée.</help>
+    <label>Horaires de Récurrence des Postes</label>
+    <name>Job_Recurrence_Schedule__c</name>
+    <relationshipLabel>Quarts de Travail de Bénévolat</relationshipLabel>
+</CustomFieldTranslation>

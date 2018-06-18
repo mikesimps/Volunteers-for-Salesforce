@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <layouts>
+        <layout>Volunteers Campaign Layout</layout>
+        <sections>
+            <label>Links personalizados</label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label>Voluntarios</label>
+            <section>Volunteers</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label>Campaña de Voluntarios</label>
+        <name>Volunteers_Campaign</name>
+    </recordTypes>
+    <webLinks>
+        <label>Lista de Voluntarios</label>
+        <name>CampaignRoster</name>
+    </webLinks>
+    <webLinks>
+        <label>Calendario de Jornadas</label>
+        <name>Campaign_Shift_Calendar</name>
+    </webLinks>
+    <webLinks>
+        <label>Buscador de Voluntarios</label>
+        <name>Find_Volunteers</name>
+    </webLinks>
+    <webLinks>
+        <label>Email Masivo a Voluntarios</label>
+        <name>Mass_Email_Volunteers</name>
+    </webLinks>
+    <webLinks>
+        <label>Nueva Campaña de Voluntarios</label>
+        <name>New_Volunteer_Campaign</name>
+    </webLinks>
+</CustomObjectTranslation>

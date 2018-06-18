@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FieldSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VolunteersJobListingFS</fullName>
+    <description>This field set specifies the Volunteer Hours fields displayed on the VolunteersJobListingFS visualforce page, which is exposed through Sites for hosting on public websites.</description>
+    <label>VolunteersJobListingFS</label>
+</FieldSet>

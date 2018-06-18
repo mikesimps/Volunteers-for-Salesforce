@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Jornada Voluntaria</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Jornadas Voluntarias</value>
+    </caseValues>
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Volunteer Shift Layout</layout>
+        <sections>
+            <label>Links personalizados</label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label>Campos del Sistema - NO EDITAR</label>
+            <section>System Fields - DO NOT EDIT</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>ShiftID</nameFieldLabel>
+    <webLinks>
+        <label>Buscador de Voluntarios</label>
+        <name>Find_Volunteers</name>
+    </webLinks>
+    <webLinks>
+        <label>Email Masivo a Voluntarios</label>
+        <name>Mass_Email_Volunteers</name>
+    </webLinks>
+    <webLinks>
+        <label>Lista de Voluntarios</label>
+        <name>Roster</name>
+    </webLinks>
+    <webLinks>
+        <label>Calendario de Jornadas</label>
+        <name>Shift_Calendar</name>
+    </webLinks>
+</CustomObjectTranslation>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <workflowTasks>
+        <description>Un correo electrónico automático de agradcimiento ha sido enviado al contacto por registrarse como voluntario</description>
+        <name>Volunteer_Signup_Thank_You_Sent_Contact</name>
+        <subject>Agradecimiento enviado por el registro del Contacto</subject>
+    </workflowTasks>
+</CustomObjectTranslation>

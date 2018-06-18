@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Zeitplan für wiederkehrende Freiwillige</label>
+    <name>Volunteer_Recurrence_Schedule__c</name>
+    <relationshipLabel>Freiwilligenstunden</relationshipLabel>
+</CustomFieldTranslation>

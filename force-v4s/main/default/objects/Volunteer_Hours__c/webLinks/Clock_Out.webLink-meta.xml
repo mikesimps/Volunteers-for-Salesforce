@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Clock_Out</fullName>
+    <availability>online</availability>
+    <description>Enables an employee to clock out all active volunteers in a single action</description>
+    <displayType>massActionButton</displayType>
+    <height>600</height>
+    <linkType>page</linkType>
+    <masterLabel>Clock Out</masterLabel>
+    <openType>sidebar</openType>
+    <page>VolunteersClockOutHours</page>
+    <protected>false</protected>
+    <requireRowSelection>true</requireRowSelection>
+</WebLink>

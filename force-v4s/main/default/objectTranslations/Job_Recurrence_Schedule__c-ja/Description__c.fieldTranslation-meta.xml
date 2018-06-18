@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>このスケジュールで作成されたシフトレコードにコピーする説明テキスト。</help>
+    <label>説明</label>
+    <name>Description__c</name>
+</CustomFieldTranslation>

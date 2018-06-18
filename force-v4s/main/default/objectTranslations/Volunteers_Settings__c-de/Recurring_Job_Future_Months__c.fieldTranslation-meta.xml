@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Wie viele Monate sollen die Schichten für einen wiederk. Auftrag vorausgeplant werden? Ist diese Zahl zu hoch, greift evtl. die Salesforce CPU-Zeitbeschränkung. Dies würde die vollst. Ausführung d. Auftragsplaners verhindern.  Wir empfehlen max. 4 Monate.</help>
+    <label>Zukünftige Monate für wiederk. Auftrag</label>
+    <name>Recurring_Job_Future_Months__c</name>
+</CustomFieldTranslation>

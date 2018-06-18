@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Die Fertigkeiten, die der Freiwillige zur Ausführung dieses Auftrags haben sollte</help>
+    <label>Erforderliche Fertigkeiten</label>
+    <name>Skills_Needed__c</name>
+    <picklistValues>
+        <masterLabel>Computer usage</masterLabel>
+        <translation>Computernutzung</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Event Planning</masterLabel>
+        <translation>Veranstaltungsplanung</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fundraising</masterLabel>
+        <translation>Spendenaktion</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Landscaping</masterLabel>
+        <translation>Landschaftsbau</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Manual Labor</masterLabel>
+        <translation>Körperliche Arbeit</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Marketing</masterLabel>
+        <translation><!-- Marketing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>basic accounting</masterLabel>
+        <translation>Basisbuchführung</translation>
+    </picklistValues>
+</CustomFieldTranslation>

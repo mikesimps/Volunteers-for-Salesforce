@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Spécifie quelle règle à suivre lorsqu&#39;on essaie de faire correspondre avec des contacts existants depuis les pages bénévoles du site. Une suite de caractères séparés par des points-virgules qui contiennent plus que le prénom, le nom et l&#39;email.</help>
+    <label>Règle de correspondance pour le contact</label>
+    <name>Contact_Matching_Rule__c</name>
+</CustomFieldTranslation>

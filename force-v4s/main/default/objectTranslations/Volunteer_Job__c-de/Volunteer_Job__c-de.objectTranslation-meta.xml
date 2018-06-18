@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>Schicht des Freiwilligen</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>Freiwilligenaufträge</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value>Schicht des Freiwilligen</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <value>Freiwilligenaufträge</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value>Schicht des Freiwilligen</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <value>Freiwilligenaufträge</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value>Schicht des Freiwilligen</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <value>Freiwilligenaufträge</value>
+    </caseValues>
+    <gender>Neuter</gender>
+    <layouts>
+        <layout>Volunteer Job Layout</layout>
+        <sections>
+            <label>Benutzerdefinierte Links</label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label>Beschreibung</label>
+            <section>Description</section>
+        </sections>
+        <sections>
+            <label>Standort</label>
+            <section>Location</section>
+        </sections>
+        <sections>
+            <label>Standortinformationen</label>
+            <section>Location Information</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Name der Freiwillegenarbeit</nameFieldLabel>
+    <webLinks>
+        <label>Freiwillige suchen</label>
+        <name>Find_Volunteers</name>
+    </webLinks>
+    <webLinks>
+        <label>Freiwilligendienstplan</label>
+        <name>JobRoster</name>
+    </webLinks>
+    <webLinks>
+        <label>Schichtkalender</label>
+        <name>Job_Shift_Calendar</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Mass_Edit_Volunteer_Hours --></label>
+        <name>Mass_Edit_Volunteer_Hours</name>
+    </webLinks>
+    <webLinks>
+        <label>Massen-E-Mail an Freiwillige</label>
+        <name>Mass_Email_Volunteers</name>
+    </webLinks>
+</CustomObjectTranslation>

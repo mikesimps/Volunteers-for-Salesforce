@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Total number of Hours that are Completed. Hours with other status values are not included. --></help>
+    <label><!-- Volunteer Hours --></label>
+    <name>Volunteer_Hours__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>このボランティアの仕事が応募可能なボランティアの仕事サイトページに含まれている場合、この項目をオンにします。</help>
+    <label>Web サイトに表示</label>
+    <name>Display_on_Website__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Combien d&#39;heures est ce quart de travail?</help>
+    <label>Durée (heures)</label>
+    <name>Duration__c</name>
+</CustomFieldTranslation>

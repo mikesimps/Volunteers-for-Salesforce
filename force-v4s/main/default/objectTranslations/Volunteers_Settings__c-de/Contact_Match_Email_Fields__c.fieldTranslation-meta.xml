@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Durch Semikolon getrennte Liste der zusätzlichen Kontakt-E-Mail-Felder, beim Kontaktabgleich zu berücksichtigen. Felder werden durch den vollständigen Entwicklernamen einschließlich Namenspräfix angegeben. NPSP-E-Mail-Felder werden automatisch aktiviert.</help>
+    <label>Kontakt-E-Mail-Felder für den Abgleich</label>
+    <name>Contact_Match_Email_Fields__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>¿En cuánto meses a futuro se debe programar el turno del trabajo recurrente?</help>
+    <label>Trabajos recurrentes en los Meses Futuro</label>
+    <name>Recurring_Job_Future_Months__c</name>
+</CustomFieldTranslation>

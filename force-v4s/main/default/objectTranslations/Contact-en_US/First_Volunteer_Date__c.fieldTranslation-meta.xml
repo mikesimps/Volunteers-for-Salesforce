@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- The first Volunteer Hours Start Date --></help>
+    <label><!-- First Volunteer Date --></label>
+    <name>First_Volunteer_Date__c</name>
+</CustomFieldTranslation>

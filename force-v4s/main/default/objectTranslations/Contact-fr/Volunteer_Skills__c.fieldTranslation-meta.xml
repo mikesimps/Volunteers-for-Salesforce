@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Sélectionnez la ou les compétence(s) que le contact qui devraient être utilisées pour trouver un poste de bénévole.</help>
+    <label>Compétences Bénévoles</label>
+    <name>Volunteer_Skills__c</name>
+    <picklistValues>
+        <masterLabel>Computer usage</masterLabel>
+        <translation>Utilisation d&#39;ordinateur</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Event Planning</masterLabel>
+        <translation>Planification d&#39;événements</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fundraising</masterLabel>
+        <translation>Levée de fonds</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Landscaping</masterLabel>
+        <translation>Aménagement paysager</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Manual labor</masterLabel>
+        <translation>Travail manuel</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Marketing</masterLabel>
+        <translation>Marketing</translation>
+    </picklistValues>
+</CustomFieldTranslation>

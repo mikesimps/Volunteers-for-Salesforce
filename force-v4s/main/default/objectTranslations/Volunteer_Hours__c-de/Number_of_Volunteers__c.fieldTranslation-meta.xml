@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Der Standardwert ist 1. Erhöhen Sie diesen Wert, wenn diese Person weitere Personen mitbringt, die Sie nicht direkt als Kontakte verfolgen und für die Sie keine einzelnen Freiwilligenstunden protokollieren.</help>
+    <label>Anzahl der Freiwilligen</label>
+    <name>Number_of_Volunteers__c</name>
+</CustomFieldTranslation>

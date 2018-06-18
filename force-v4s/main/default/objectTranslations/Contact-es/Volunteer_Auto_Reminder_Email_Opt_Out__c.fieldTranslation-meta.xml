@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Verifique si este contacto no desea recibir correos electrónicos  automáticos sobre sus próximos turnos. Se utiliza en la regla de flujo de trabajo del Email recordatorio de horas de trabajo voluntario</help>
+    <label>Email recordatorio</label>
+    <name>Volunteer_Auto_Reminder_Email_Opt_Out__c</name>
+</CustomFieldTranslation>

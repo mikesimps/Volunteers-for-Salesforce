@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Vrijwilliger Beschikbaarheid</label>
+    <name>Volunteer_Availability__c</name>
+    <picklistValues>
+        <masterLabel>Afternoon</masterLabel>
+        <translation>&#39;s Middags</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Morning</masterLabel>
+        <translation>&#39;s Ochtends</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Weekdays</masterLabel>
+        <translation>Doordeweeks</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Weekends</masterLabel>
+        <translation><!-- Weekends --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Weekly</masterLabel>
+        <translation>Wekelijks</translation>
+    </picklistValues>
+</CustomFieldTranslation>

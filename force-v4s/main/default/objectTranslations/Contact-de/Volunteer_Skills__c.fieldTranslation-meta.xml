@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Wählen Sie die Fertigkeiten dieses Kontakts aus, die zum Suchen von Freiwilligenaufträgen verwendet werden sollten.</help>
+    <label>Fertigkeiten des Freiwilligen</label>
+    <name>Volunteer_Skills__c</name>
+    <picklistValues>
+        <masterLabel>Computer usage</masterLabel>
+        <translation>Computernutzung</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Event Planning</masterLabel>
+        <translation>Veranstaltungsplanung</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fundraising</masterLabel>
+        <translation>Spendenaktion</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Landscaping</masterLabel>
+        <translation>Landschaftsbau</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Manual labor</masterLabel>
+        <translation>Körperliche Arbeit</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Marketing</masterLabel>
+        <translation><!-- Marketing --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

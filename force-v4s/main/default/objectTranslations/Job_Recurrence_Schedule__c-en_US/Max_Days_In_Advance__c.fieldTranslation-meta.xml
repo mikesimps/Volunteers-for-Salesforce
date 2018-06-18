@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- The max number of days in advanced an event should be scheduled and made available for the public --></help>
+    <label><!-- Max Days In Advance --></label>
+    <name>Max_Days_In_Advance__c</name>
+</CustomFieldTranslation>

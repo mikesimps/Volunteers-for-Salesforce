@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>指定されている場合、ユーザがページのサインアップリンクをクリックしたときに VolunteersJobListingFS ページがこの Web サイトにリダイレクトされます。これにより、別の Web サイトで登録する必要のある仕事を公募できます。</help>
+    <label>外部サインアップ URL</label>
+    <name>External_Signup_Url__c</name>
+</CustomFieldTranslation>

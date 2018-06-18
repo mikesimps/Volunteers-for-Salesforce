@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>このシフトが関連付けられた仕事の定期的なスケジュールを表示するシステムスケジューラによって自動的に設定されます。</help>
+    <label>仕事の定期的なスケジュール</label>
+    <name>Job_Recurrence_Schedule__c</name>
+    <relationshipLabel>ボランティアシフト</relationshipLabel>
+</CustomFieldTranslation>

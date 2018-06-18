@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>完了した時間の総数。その他の状況値の時間は含まれません。</help>
+    <label>ボランティア完了時間</label>
+    <name>Volunteer_Completed_Hours__c</name>
+</CustomFieldTranslation>

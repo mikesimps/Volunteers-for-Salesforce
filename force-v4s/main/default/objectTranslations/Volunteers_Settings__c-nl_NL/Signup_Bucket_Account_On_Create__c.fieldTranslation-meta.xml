@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>De naam van het account die gebruikt moet worden bij het maken van nieuwe Contacten tijdens de aanmelding. Als je het NPSP 1-to-1 model gebruikt, laat deze leeg. Als je het bucket model gebruikt, stel in voor het naam van de account, meestal “Individu”.</help>
+    <label>Aanmelden Bucket Account op te maken</label>
+    <name>Signup_Bucket_Account_On_Create__c</name>
+</CustomFieldTranslation>

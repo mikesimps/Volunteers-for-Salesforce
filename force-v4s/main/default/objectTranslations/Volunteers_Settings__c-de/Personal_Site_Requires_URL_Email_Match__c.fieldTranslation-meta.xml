@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Bei Aktivierung dieser Option muss für die persönliche Site der E-Mail-URL-Parameter hinzugefügt und mit dem E-Mail-Feld des angegebenen Kontakts abgeglichen werden.</help>
+    <label>URL-E-Mail-Abgl. F. pers. Site erford.</label>
+    <name>Personal_Site_Requires_URL_Email_Match__c</name>
+</CustomFieldTranslation>

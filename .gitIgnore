@@ -2,7 +2,6 @@
 .settings
 .sfdx
 .vscode
-/force-v4s
 testoutput
 /browser_tests
 /test_results.xml

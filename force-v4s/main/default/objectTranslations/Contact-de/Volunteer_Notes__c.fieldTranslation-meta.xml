@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Hinweise des Freiwilligen  Beachten Sie, dass das Webanmeldeformular die Freiwilligenkommentare in diesem Feld anfügt.</help>
+    <label>Freiwilligenhinweise</label>
+    <name>Volunteer_Notes__c</name>
+</CustomFieldTranslation>

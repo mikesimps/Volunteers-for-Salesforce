@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Default_Login_PersonalSite_Page__c</fullName>
+    <length>50</length>
+    <externalId>false</externalId>
+    <inlineHelpText>Which page should load after a volunteer logs in</inlineHelpText>
+    <label>Default Login PersonalSite Page</label>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+</CustomField>

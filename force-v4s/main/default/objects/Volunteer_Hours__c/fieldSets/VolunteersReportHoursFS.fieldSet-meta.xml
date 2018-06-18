@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FieldSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VolunteersReportHoursFS</fullName>
+    <description>used in the VolunteerReportHours page - include fields such as comments</description>
+    <displayedFields>
+        <field>Comments__c</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>false</isRequired>
+    </displayedFields>
+    <label>VolunteersReportHoursFS</label>
+</FieldSet>

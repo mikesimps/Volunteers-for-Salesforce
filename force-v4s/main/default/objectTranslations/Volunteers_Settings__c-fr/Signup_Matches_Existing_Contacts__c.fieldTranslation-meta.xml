@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Si la page Inscription des bénévoles essaie de faire correspondre la personne à un contact existant (par nom, prénom, email).</help>
+    <label>Inscription correspond Contacts existant</label>
+    <name>Signup_Matches_Existing_Contacts__c</name>
+</CustomFieldTranslation>

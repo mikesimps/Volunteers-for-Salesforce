@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>定期的な仕事のシフトをスケジュールする将来の月数。この値が大きすぎる場合、Salesforce CPU 時間制限を超え、ジョブスケジューラが完全に実行できない可能性があります。4 か月以下にすることをお勧めします。</help>
+    <label>定期的に仕事ができる期間（月単位）</label>
+    <name>Recurring_Job_Future_Months__c</name>
+</CustomFieldTranslation>

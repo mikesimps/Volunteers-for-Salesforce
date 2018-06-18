@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FieldSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VolunteersSignupFS</fullName>
+    <description>This field set specifies the Contact fields displayed on the VolunteersSignupFS visualforce page, which is exposed through Sites for hosting on public websites.</description>
+    <displayedFields>
+        <field>HomePhone</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>false</isRequired>
+    </displayedFields>
+    <displayedFields>
+        <field>Phone</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>false</isRequired>
+    </displayedFields>
+    <label>VolunteersSignupFS</label>
+</FieldSet>

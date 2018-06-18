@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Nombre visualizado de la dirección de correo electrónico de la Organization-Wide que debe utilicarse en el correo electrónico enviado desde la página web de Busqueda de Contactos Sitio Personal</help>
+    <label>Sitio Personal Org-Wide Email</label>
+    <name>Personal_Site_Org_Wide_Email_Name__c</name>
+</CustomFieldTranslation>

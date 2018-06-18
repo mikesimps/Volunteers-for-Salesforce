@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>La date de l&#39;inscription des bénévoles les plus récentes à partir du Web. Utilisé pour déclencher le flux de travail pour les notifications et les e-mails de remerciement.</help>
+    <label>Dernière Date d&#39;Inscription Web</label>
+    <name>Volunteer_Last_Web_Signup_Date__c</name>
+</CustomFieldTranslation>
