@@ -1,0 +1,9 @@
+Steps to new version of unlocked package
+1) Pull latest version from kramden-master
+2) Make and test changes to code in package via scratch org
+3) create new version of package
+    sfdx force:package:version:create -p v4s-kramden -d force-v4s --wait 10 -v kramden -x
+4) Install package to sandbox
+    sfdx force:package:install -u <sandbox alias> -w 5 -r --package v4s-kramden
+5) Promote package as ready for production
+    sfdx force:package:promote -p v4s-kramden
