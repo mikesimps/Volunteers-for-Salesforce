@@ -6,18 +6,18 @@
     <formFactors>Large</formFactors>
     <label>Volunteers Lightning</label>
     <navType>Standard</navType>
-    <tab>standard-home</tab>
-    <tab>About_Volunteers</tab>
-    <tab>Volunteers_Wizard</tab>
-    <tab>Volunteer_Job__c</tab>
-    <tab>Volunteer_Hours__c</tab>
-    <tab>Shift_Calendar</tab>
-    <tab>Find_Volunteers</tab>
-    <tab>standard-Lead</tab>
-    <tab>standard-Contact</tab>
-    <tab>standard-Campaign</tab>
-    <tab>standard-report</tab>
-    <tab>standard-Dashboard</tab>
-    <tab>Process_Recurrence_Schedules</tab>
+    <tabs>standard-home</tabs>
+    <tabs>About_Volunteers</tabs>
+    <tabs>Volunteers_Wizard</tabs>
+    <tabs>Volunteer_Job__c</tabs>
+    <tabs>Volunteer_Hours__c</tabs>
+    <tabs>Shift_Calendar</tabs>
+    <tabs>Find_Volunteers</tabs>
+    <tabs>standard-Lead</tabs>
+    <tabs>standard-Contact</tabs>
+    <tabs>standard-Campaign</tabs>
+    <tabs>standard-report</tabs>
+    <tabs>standard-Dashboard</tabs>
+    <tabs>Process_Recurrence_Schedules</tabs>
     <uiType>Lightning</uiType>
 </CustomApplication>
