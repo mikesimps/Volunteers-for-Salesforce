@@ -11,6 +11,7 @@
     "namespace": "",
     "sourceApiVersion": "43.0",
     "packageAliases": {
-        "v4s-kramden": "0Ho36000000XZARCA4"
+        "v4s-kramden": "0Ho36000000XZARCA4",
+        "v4s-kramden@0.1.0-1": "04t36000000wgLXAAY"
     }
 }
