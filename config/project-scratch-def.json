@@ -1,7 +1,8 @@
 {
     "orgName": "Kramden Institute",
     "edition": "Enterprise",
+    "features": ["Sites","PersonAccounts"],
     "orgPreferences" : {
-        "enabled": ["S1DesktopEnabled","Translation","ChatterEnabled"]
+        "enabled": ["S1DesktopEnabled","ChatterEnabled","DisableParallelApexTesting"]
     }
 }
