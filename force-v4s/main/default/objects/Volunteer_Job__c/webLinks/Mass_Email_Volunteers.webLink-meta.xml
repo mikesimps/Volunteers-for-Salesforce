@@ -9,5 +9,5 @@
     <masterLabel>Mass Email Volunteers</masterLabel>
     <openType>sidebar</openType>
     <protected>false</protected>
-    <url>/apex/GW_Volunteers__SendBulkEmail?jobId={!Volunteer_Job__c.Id}</url>
+    <url>/apex/SendBulkEmail?jobId={!Volunteer_Job__c.Id}</url>
 </WebLink>

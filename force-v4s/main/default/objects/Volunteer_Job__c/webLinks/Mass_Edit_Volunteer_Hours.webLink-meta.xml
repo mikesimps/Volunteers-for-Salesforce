@@ -9,5 +9,5 @@
     <masterLabel>(not used)</masterLabel>
     <openType>sidebar</openType>
     <protected>false</protected>
-    <url>"/"</url>
+    <url>&quot;/&quot;</url>
 </WebLink>
