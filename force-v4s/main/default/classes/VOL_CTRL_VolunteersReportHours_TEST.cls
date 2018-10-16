@@ -29,10 +29,30 @@
 */
 
 @isTest
-public with sharing class VOL_CTRL_VolunteersReportHours_TEST {
+private with sharing class VOL_CTRL_VolunteersReportHours_TEST {
 
     //==================== TEST METHOD(s) ======================================
-    public static testmethod void CodeCoverageTests() {
+
+    /*******************************************************************************************************
+    * @description test the visualforce page controller, running as the Sites Guest User, if such as user
+    * exists.  if not, will run under the current user.
+    * @return void
+    ********************************************************************************************************/
+    private static testmethod void testPageWithSitesGuestUser() {
+        list<User> listU = [Select Username, UserType, Name, IsActive, Id From User where IsActive = true and UserType = 'Guest' and
+        Name like '%Site Guest User%'];
+        if (listU.size() > 0) {
+            system.debug('Running test as Sites Guest User: ' + listU[0]);
+            system.runAs(listU[0]) {
+                CodeCoverageTests();
+            }
+        } else {
+            system.debug('Running test as system.');
+            CodeCoverageTests();
+        }
+    }
+
+    private static void CodeCoverageTests() {
 
         // create test bucket account
         Account acc = new Account(Name='Test Individual Bucket Account');
@@ -102,7 +122,7 @@ public with sharing class VOL_CTRL_VolunteersReportHours_TEST {
         ctrl.volunteerJobId = job.Id;
         ctrl.volunteerShiftId = shift.Id;
         ctrl.ChangeVolunteerShift();
-        ctrl.vhours.Hours_Worked__c = 2;
+		ctrl.vhours.Hours_Worked__c = 2;
         ctrl.Save();
         System.AssertEquals(system.label.labelVolunteerReportHoursThankYou, ctrl.strSaveResult);
         vh2 = [select Id, Status__c, Hours_Worked__c from Volunteer_Hours__c where Volunteer_Shift__c = :shift.Id];
@@ -116,9 +136,27 @@ public with sharing class VOL_CTRL_VolunteersReportHours_TEST {
         ctrl.volunteerJobId = job.Id;
         ctrl.ChangeVolunteerJob();
         System.Assert(ctrl.listSOVolunteerShifts != null);
-        system.assertEquals(true, ctrl.hasShifts);  
+        system.assertEquals(true, ctrl.hasShifts);
+
+        // test permissions handling
+        // UTIL_Describe.throwException = true;
+        // Integer cContact = [SELECT COUNT() FROM Contact];
+        // contact = ctrl.contact;
+        // System.Assert(contact != null);
+        // contact.FirstName = 'TestFirstName2';
+        // contact.LastName = 'TestLastName2';
+        // contact.Email = 'foovolunteer2@bar.com';
+        // ctrl.volunteerJobId = job.Id;
+        // ctrl.vhours.Start_Date__c = System.Today();
+        // ctrl.vhours.End_Date__c = System.Today();
+        // ctrl.vhours.Hours_Worked__c = 1;
+        // ctrl.Save();
+        // System.assertNotEquals(system.label.labelVolunteerReportHoursThankYou, ctrl.strSaveResult);
+        // system.debug(cContact);
+        // System.assertEquals(cContact, [SELECT COUNT() FROM Contact]);
 
         //Test Todays Jobs Filter setting
+        contact = [select Id, Volunteer_Status__c, Phone from Contact where Email='foovolunteer@bar.com' and Firstname='TestFirstName' limit 1];
         settings.Personal_Site_Filter_Todays_Jobs__c = true;
         settings.Personal_Site_Report_Hours_Filtered__c = true;
         VOL_SharedCode.getVolunteersSettingsForTests(settings);

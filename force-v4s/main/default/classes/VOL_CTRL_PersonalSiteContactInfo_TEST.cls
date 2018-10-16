@@ -29,18 +29,17 @@
 */
 
 @isTest
-public with sharing class VOL_CTRL_PersonalSiteContactInfo_TEST {
+private with sharing class VOL_CTRL_PersonalSiteContactInfo_TEST {
 
     //******************************************************************************************************
     // Test Code
-    public static testmethod void TestPage() {
-        // run our tests as the Site Guest User
-        // documentation says The runAs method doesn't enforce user permissions or field-level permissions, only record sharing.
-        // However, the test would fail if I set up the test data as system, and then only did the page controller testing
-        // as guest, because under the Site's Guest User Profile, it didn't see any completed volunteer hours.  This is
-        // inconsistent with the real behavior we see with this page that correctly allows the guest profile to view and edit
-        // information previously created by a different user.
-        // anyways, I figured doing the whole test under the Sites Guest User Profile was better than not trying at all!
+
+    /*******************************************************************************************************
+    * @description test the visualforce page controller, running as the Sites Guest User, if such as user
+    * exists.  if not, will run under the current user.
+    * @return void
+    ********************************************************************************************************/
+    private static testMethod void testPageWithSitesGuestUser() {
         list<User> listU = [Select Username, UserType, Name, IsActive, Id From User where IsActive = true and UserType = 'Guest' and 
             Name like '%Site Guest User%'];
         if (listU.size() > 0) {
@@ -136,7 +135,62 @@ public with sharing class VOL_CTRL_PersonalSiteContactInfo_TEST {
         VOL_CTRL_PersonalSiteReportHours ctrlRH = new VOL_CTRL_PersonalSiteReportHours();
         system.assertNotEquals(null, ctrlRH);
         system.assertEquals('en-us', ctrlRH.strLanguage);
-                
+
+        // test permissions
+        UTIL_Describe.throwException = true;
+        ctrl.contactEdit.LastName = 'PermTest';
+        ctrl.save();
+        con = [select Id, LastName from Contact where Id = :ctrl.contactId];
+        system.assertEquals('TestIsNowTesty', con.LastName);
+
     }
-    
+
+    /*******************************************************************************************************
+    * @description test timezone handling for Shifts under LA timezone
+    * @return void
+    */
+    private static testMethod void testTimeZoneHandlingFromLA() {
+        testTimeZoneHandling('America/Los_Angeles');
+    }
+
+    /*******************************************************************************************************
+    * @description test timezone handling for Shifts under Sydney timezone
+    * @return void
+    */
+    private static testMethod void testTimeZoneHandlingFromSydney() {
+        testTimeZoneHandling('Australia/Sydney');
+    }
+
+    /*******************************************************************************************************
+    * @description test timezone handling for Shifts
+    * @param timezone what timezone to run under while creating and querying shifts
+    * @return void
+    */
+    private static void testTimeZoneHandling(String timezone) {
+
+        // String uniqueUserName = 'admin' + DateTime.now().getTime() + '@testorg.com';
+        // Profile p = [SELECT Id FROM Profile WHERE Name='System Administrator'];
+        // User u = new User(Alias = 'admin', Email='admin@testorg.com',
+        //     EmailEncodingKey='UTF-8', LastName='Testing', LanguageLocaleKey='en_US',
+        //     LocaleSidKey='en_US', ProfileId = p.Id,
+        //     TimeZoneSidKey=timezone,
+        //     UserName=uniqueUserName);
+
+        // system.runAs(u) {
+            Id conId = VOL_SharedCode_TEST.setupTimeZoneTestData();
+
+            // setup page
+            PageReference pageRef = Page.PersonalSiteContactInfo;
+            pageRef.getParameters().put('contactId', conId);
+            Test.setCurrentPage(pageRef);
+
+            //instantiate the controller
+            VOL_CTRL_PersonalSiteContactInfo ctrl = new VOL_CTRL_PersonalSiteContactInfo();
+            System.AssertEquals(conId, ctrl.contactId);
+            ctrl.cRowsUpcoming = 100;
+            System.AssertEquals(0, ctrl.listCompletedVolunteerHours.size());
+            System.AssertEquals(48, ctrl.listUpcomingVolunteerHours.size());//, 'we should always get back today and tomorrow shifts');
+        // }
+    }
+
 }

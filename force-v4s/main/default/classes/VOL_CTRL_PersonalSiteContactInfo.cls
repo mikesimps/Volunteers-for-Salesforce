@@ -80,36 +80,6 @@ global with sharing class VOL_CTRL_PersonalSiteContactInfo {
             return;
         }
 
-        /**********
-        // let's see if we can find any matching Contacts.
-        // we need to use dynamic soql, since we allow the user to modify the FieldSet of fields to edit.
-        string strSoql = 'select ';
-        string strComma = '';
-        for (string strF : listStrContactFields) {
-            strSoql += strComma + strF;
-            strComma = ', ';
-        }
-        strSoql += ' from Contact where Id=:contactId';
-        strSoql += ' limit 1';      
-        listCon = Database.Query(strSoql); 
-        
-        if (listCon.size() > 0) {           
-            Contact con = listCon[0];
-            contactId = con.Id;
-            //  now copy over all the non-null fields from the form's contact to the existing contact.
-            for (string strF : listStrContactFields) {
-                if (con.get(strF) != null) {
-                    try {
-                        contactEdit.put(strF, con.get(strF));
-                    } catch(exception ex) {
-                        
-                    }
-                }
-            }
-            // also maintain a readonly version of the contact to display rollup summary fields.
-            contactReadOnly = con;
-        }
-        ********/
         list<String> listStrFieldsPanel1FS = VOL_SharedCode.listStrFieldsFromFieldSet(Schema.SObjectType.Contact.FieldSets.PersonalSiteContactInfoPanel1FS);
         list<String> listStrFieldsPanel2FS = VOL_SharedCode.listStrFieldsFromFieldSet(Schema.SObjectType.Contact.FieldSets.PersonalSiteContactInfoPanel2FS);
         list<String> listStrFieldsExtraFS = VOL_SharedCode.listStrFieldsFromFieldSet(Schema.SObjectType.Contact.FieldSets.PersonalSiteContactInfoExtraFS);
@@ -144,7 +114,6 @@ global with sharing class VOL_CTRL_PersonalSiteContactInfo {
     
     global Contact contactReadOnly { 
         get {
-            //if (contactReadOnly == null) contactReadOnly = new Contact();
             return contactReadOnly;
         }       
         set; 
@@ -153,7 +122,6 @@ global with sharing class VOL_CTRL_PersonalSiteContactInfo {
     global ID contactId { get; set; }
     global boolean isEditing { get; set; }
     global ID hoursId { get; set; } // to hold the ID of the hours record an action is being performed on.
-    //public list<Contact> listCon { get; set; }    // to hold the loaded contact record
     global integer cRowsCompleted { get; set; }
     global integer cRowsUpcoming { get; set; }
     global string strDateFormat { get; set; }
@@ -232,8 +200,10 @@ global with sharing class VOL_CTRL_PersonalSiteContactInfo {
         get {
             try {
                 // Ensure the user has access to the object and fields before querying
-                UTIL_Describe.checkReadAccess('Volunteer_Hours__c', 
-                                            new Set<String>{'Status__c', 'Shift_Start_Date_Time__c'});    
+                UTIL_Describe.checkReadAccess(UTIL_Describe.StrTokenNSPrefix('Volunteer_Hours__c'),
+                    new Set<String>{
+                        UTIL_Describe.StrTokenNSPrefix('Status__c'),
+                        UTIL_Describe.StrTokenNSPrefix('Shift_Start_Date_Time__c')});
            
                 if (listUpcomingVolunteerHours == null) {
                     string strSoql = 'select Volunteer_Job__r.Name, Volunteer_Job__r.Volunteer_Website_Time_Zone__c, ' +
@@ -243,9 +213,9 @@ global with sharing class VOL_CTRL_PersonalSiteContactInfo {
                         strSoql += strComma + strF;
                         strComma = ', ';
                     }
+                    DateTime dtToday = datetime.newInstance(system.today(), time.newInstance(0, 0, 0, 0));
                     strSoql += ' from Volunteer_Hours__c where Contact__c = :contactId ';
                     strSoql += ' and Status__c <> \'Canceled\' and Status__c <>  \'Completed\' ';
-                    Date dtToday = system.today();
                     strSoql += ' and Shift_Start_Date_Time__c >= :dtToday ';
                     strSoql += ' order by Shift_Start_Date_Time__c ASC ';        
                     strSoql += ' limit ' + cRowsUpcoming;
@@ -309,23 +279,33 @@ global with sharing class VOL_CTRL_PersonalSiteContactInfo {
         return null;
     }
 
-    global PageReference save() { 
-        if (contactReadOnly != null) {          
-            //Contact con = listCon[0];         
-            //  now copy over all the non-null fields from the form's contact to the existing contact.
-            for (string strF : listStrContactFields) {
-                if (contactEdit.get(strF) != null) {
-                    try {
-                        contactReadOnly.put(strF, contactEdit.get(strF));
-                    } catch(exception ex) {
-                        
+    global PageReference save() {
+        try {
+            if (contactReadOnly != null) {
+                Set<String> contactFieldsToUpdate = new Set<String>();
+
+                //  now copy over all the non-null fields from the form's contact to the existing contact.
+                for (string strF : listStrContactFields) {
+                    if (contactEdit.get(strF) != null) {
+                        try {
+                            contactReadOnly.put(strF, contactEdit.get(strF));
+                            contactFieldsToUpdate.add(strF);
+                        } catch (exception ex) {
+                            // we need this catch because some of the fields in listStrContactFields
+                            // are readonly formula fields.  We can't use describes for isCreatable,
+                            // because we won't know the difference between a formula field vs. one
+                            // they don't have permissions to (which we will check below).
+                        }
                     }
                 }
+
+                VOL_SharedCode.checkUpdateAccessSites('Contact', contactFieldsToUpdate);
+                update contactReadOnly;
             }
-            // save the changes
-            update contactReadOnly;
+            isEditing = false;
+        } catch (Exception ex) {
+            ApexPages.addMessage(new ApexPages.Message(ApexPages.Severity.FATAL, ex.getMessage()));
         }
-        isEditing = false;
         return null;
     }
     
@@ -340,10 +320,10 @@ global with sharing class VOL_CTRL_PersonalSiteContactInfo {
                 Volunteer_Hours__c hr = [select Id, Status__c, Hours_Worked__c from Volunteer_Hours__c where Id = :hoursId];
                 hr.Status__c = 'Canceled';
                 hr.Hours_Worked__c = 0;
-                
-                // Ensure the user can update the object's fields 
-                UTIL_Describe.checkUpdateAccess('Volunteer_Hours__c', new Set<String>{'Status__c', 'Hours_Worked__c'});    
-
+                UTIL_Describe.checkUpdateAccess(UTIL_Describe.StrTokenNSPrefix('Volunteer_Hours__c'),
+                    new Set<String>{
+                        UTIL_Describe.StrTokenNSPrefix('Status__c'),
+                        UTIL_Describe.StrTokenNSPrefix('Hours_Worked__c')});
                 update hr;
                 hoursId = null; 
                 listUpcomingVolunteerHours = null; // to force it to be refreshed.

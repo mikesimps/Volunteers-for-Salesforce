@@ -29,10 +29,10 @@
 */
 
 @isTest
-public with sharing class VOL_CTRL_BatchProgress_TEST {
+private with sharing class VOL_CTRL_BatchProgress_TEST {
 
     //--------------------TEST METHOD------------------------
-    public static testMethod void batchStatusBarTest(){
+    private static testMethod void batchStatusBarTest(){
         UTIL_JobProgress_CTRL controller = new UTIL_JobProgress_CTRL();
         controller.getBatchJobs();
         controller.numberOfJobs = 10;
@@ -46,8 +46,8 @@ public with sharing class VOL_CTRL_BatchProgress_TEST {
         system.assertEquals(false, controller.hasExtendedStatus);
         system.assertEquals(true, controller.allCompleted);
     }
-    
-    public static testMethod void testRollup() {
+
+    private static testMethod void testRollup() {
         VOL_CTRL_BatchProgress controller = new VOL_CTRL_BatchProgress();
         system.assertEquals(true, controller.batching);
         system.assertEquals(false, controller.batchRunning);
@@ -78,14 +78,5 @@ public with sharing class VOL_CTRL_BatchProgress_TEST {
         System.assertEquals(1, messages.size(), 'There should be one error on the page.');
         System.assertEquals(Label.PageMessagesWarning, messages[0].getSeverityLabel(), 'The label should be WARNING.');
         System.assertEquals('warning', messages[0].getSeverityTheme(), 'The theme should be warning.');
-    }
-    
-    public static testMethod void testCancel() {
-        VOL_CTRL_BatchProgress controller = new VOL_CTRL_BatchProgress();
-        PageReference cPage = controller.cancel();
-        system.Test.setCurrentPage(cPage);
-        system.assertEquals(ApexPages.currentPage().getUrl(),'/home/home.jsp');
-
-        
     }
 }

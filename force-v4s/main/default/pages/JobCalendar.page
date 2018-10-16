@@ -37,10 +37,10 @@
     cache="false"
     title="{!$Label.labelCalendarPageTitle}">
 
-    <script src="{!URLFOR($Resource.jQueryFiles, 'js/jquery-1.4.4.min.js')}"/>
-    <script src="{!URLFOR($Resource.jQueryFiles, 'js/jquery-ui-1.8.7.custom.min.js')}"/>
-    <script src="{!URLFOR($Resource.FullCalendar, 'fullcalendar/fullcalendar.js')}"/>
-    <script src="{!URLFOR($Resource.wtooltip, 'wtooltip.min.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.jQueryFiles, 'js/jquery-3.2.1.min.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.jQueryFiles, 'js/jquery-ui-1.12.1.custom.min.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.FullCalendar, 'fullcalendar/fullcalendar.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.wtooltip, 'wtooltip.min.js')}"/>
     <apex:stylesheet value="{!URLFOR($Resource.FullCalendar, 'fullcalendar/fullcalendar.css')}"/>
     <apex:stylesheet value="{!strURLtoCSSFile}"/>
     <apex:variable var="slds" value="slds" rendered="{!!fWeb}">
@@ -54,6 +54,11 @@
     var colors = new Array({!$Label.labelColorValues});
 
     j$(function() {
+
+        // define curCSS for fullCalendar, which newer version of jquery doesn't include
+        j$.curCSS = function(element, prop, val) {
+            return j$(element).css(prop, val);
+        };
     
         // initialize the Calendar
         j$('#calendar').fullCalendar({
@@ -113,7 +118,7 @@
                     '{!$RemoteAction.VOL_CTRL_JobCalendar.getListShiftsWeb2}',
                     campaignId, jobId, strApexDateLocale(start, false), strApexDateLocale(end, false), {!fWeb}, {!fShowCampaignHierarchy}, function(result, event) {
                     if (event.type == 'exception') {
-                        alert(event.message);
+                        document.getElementById("errorMessage").innerText = event.message;
                     } else {
                         if (result != null) {
                             var shifts = [];
@@ -156,9 +161,9 @@
                                     strUrl = '/' + strShiftId;
                                 }                                
 
-                                // note that we lop off the timezone, to avoid FullCalendar from translating it to the current browser locale.                                                
+                                // note that we lop off the timezone, to avoid FullCalendar from translating it to the current browser locale.
                                 shifts.push({
-                                    title: result[i].{!ns}Volunteer_Job__r.Name + (intStillNeeded == 0 ? ' ' + 
+                                    title: result[i].{!ns}Volunteer_Job__r.Name + (intStillNeeded == 0 ? ' ' +
                                         '{!$Label.labelCalendarShiftFull}' : ''),
                                     description: result[i].{!ns}Description__c,
                                     strNumbers: strShiftNumbers,
@@ -177,7 +182,7 @@
                             callback(shifts);
                         }
                     }
-                }, {escape:false});
+                }, {escape:true});
             },             
             
             // the callback to handle any customization of the event's display 
@@ -188,7 +193,7 @@
                 if ({!fWeb}) {
                     newinfo.html(
                         ({!fShowNumberAvailable} ? '<br/>' + event.strNumbers : '') +
-                        (event.description != null ? '<br/> ' + event.description  : '') 
+                        (event.description != null ? '<br/> ' + event.description  : '')
                         );
                 } else {
                     newinfo.html('<i>' + event.strNumbers + '</i>' +
@@ -199,6 +204,8 @@
                 }
                 element.find('.fc-event-content').css('padding',2);
                 element.find('.fc-event-content').append(newinfo);
+                // we override the title ourselves so its html encoding will get rendered correctly.
+                element.find('.fc-event-title').html(event.title);
                 
                 // also add info to a tooltip
                 if ({!NOT(fWeb) || fShowNumberAvailable}) {
@@ -273,6 +280,18 @@
     
 </script>
 
+<style type="text/css">
+    div.message-panel {
+        color: red;
+        text-align: center;
+        font-size: 15px; 
+        padding: 5px;
+    }
+    div.message-panel:empty {
+        display: none;
+    }
+</style>
+
     <apex:outputPanel id="panelPrint" layout="block" style="float:right;margin-right:10px;margin-top:10px;" rendered="{!AND(NOT(fPrint),NOT(fWeb))}">
         <a href="javascript:printWin('/apex/{!ns}JobCalendar?Print=1' +
             '&campaignId={!campaignId}' +
@@ -309,6 +328,7 @@
                 </div>
             </apex:outputText>
             <!-- PAGE BODY -->
+            <div id="errorMessage" role="alert" class="message-panel"></div>
             <apex:outputText rendered="{!NOT(fWeb)}" >
                 <div class="slds-container--small slds-p-top--large slds-p-bottom--small">
                     <div class="slds-form--horizontal">

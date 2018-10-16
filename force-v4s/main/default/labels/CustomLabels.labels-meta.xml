@@ -38,7 +38,7 @@
         <language>en_US</language>
         <protected>true</protected>
         <shortDescription>PermissionCreateException</shortDescription>
-        <value>User does not have permissions to create {0}.</value>
+        <value>You don&#39;&#39;t have the permissions required to create {0}. Please contact the system administrator.</value>
     </labels>
     <labels>
         <fullName>PermissionDeleteException</fullName>
@@ -46,7 +46,7 @@
         <language>en_US</language>
         <protected>true</protected>
         <shortDescription>PermissionDeleteException</shortDescription>
-        <value>User does not have permissions to delete {0}.</value>
+        <value>You don&#39;&#39;t have the permissions required to delete {0}. Please contact the system administrator.</value>
     </labels>
     <labels>
         <fullName>PermissionReadException</fullName>
@@ -54,7 +54,7 @@
         <language>en_US</language>
         <protected>true</protected>
         <shortDescription>PermissionReadException</shortDescription>
-        <value>User does not have permissions to view {0}.</value>
+        <value>You don&#39;&#39;t have the permissions required to view {0}. Please contact the system administrator.</value>
     </labels>
     <labels>
         <fullName>PermissionUpdateException</fullName>
@@ -62,7 +62,7 @@
         <language>en_US</language>
         <protected>true</protected>
         <shortDescription>PermissionUpdateException</shortDescription>
-        <value>User does not have permissions to update {0}.</value>
+        <value>You don&#39;&#39;t have the permissions required to update {0}. Please contact the system administrator.</value>
     </labels>
     <labels>
         <fullName>labelButtonAssign</fullName>
@@ -293,7 +293,7 @@ day:      &#39;day&#39;</value>
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>calendar label for Title Format</shortDescription>
-        <value>month: &#39;MMMM yyyy&#39;, week: "MMM d[ yyyy]{ &#39;&amp;#8212;&#39;[ MMM] d yyyy}", day: &#39;dddd, MMM d, yyyy&#39;</value>
+        <value>month: &#39;MMMM yyyy&#39;, week: &quot;MMM d[ yyyy]{ &#39;&amp;#8212;&#39;[ MMM] d yyyy}&quot;, day: &#39;dddd, MMM d, yyyy&#39;</value>
     </labels>
     <labels>
         <fullName>labelChoiceAllActiveCampaigns</fullName>
@@ -349,7 +349,7 @@ day:      &#39;day&#39;</value>
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>list of browser color values for JobCalendar</shortDescription>
-        <value>"MediumBlue","Green","DarkRed", "Purple", "DarkSlateGray", "MidnightBlue"</value>
+        <value>&quot;MediumBlue&quot;,&quot;Green&quot;,&quot;DarkRed&quot;, &quot;Purple&quot;, &quot;DarkSlateGray&quot;, &quot;MidnightBlue&quot;</value>
     </labels>
     <labels>
         <fullName>labelContactInfoCancelMessage</fullName>
@@ -1004,7 +1004,7 @@ day:      &#39;day&#39;</value>
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>help text for Number of Contacts</shortDescription>
-        <value>The number of emails that will be sent. Changing the "Include Contacts only once" checkbox may change this number.</value>
+        <value>The number of emails that will be sent. Changing the &quot;Include Contacts only once&quot; checkbox may change this number.</value>
     </labels>
     <labels>
         <fullName>labelPersonalSiteContactInfoTitle</fullName>
@@ -1274,7 +1274,7 @@ day:      &#39;day&#39;</value>
         <language>en_US</language>
         <protected>true</protected>
         <shortDescription>labelVolunteersHelpDescription</shortDescription>
-        <value>Getting started with Volunteers for Salesforce (V4S) is easy. For more resources, go to the &lt;a href="https://powerofus.force.com" target="_blank"&gt;Power of Us HUB&lt;/a&gt;.</value>
+        <value>Getting started with Volunteers for Salesforce (V4S) is easy. For more resources, go to the &lt;a href=&quot;https://powerofus.force.com&quot; target=&quot;_blank&quot;&gt;Power of Us HUB&lt;/a&gt;.</value>
     </labels>
     <labels>
         <fullName>labelVolunteersHelpStep1</fullName>

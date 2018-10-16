@@ -30,20 +30,21 @@
 
 public with sharing class VOL_CTRL_SendBulkEmail {
 
-    public string strSubject { get; set; }
-    public string strMessage { get; set; }
+    public String subject { get; set; }
+    public String message { get; set; }
     public Volunteer_Hours__c hourStatus { get; set; }
-    public ID templateId { get; set; }
-    public integer numberOfContacts { get; set; }
-    public ID fromEmailId { get; set; }
-    public string strJobName { get; set; }
-    public boolean fLogActivity { get; set; }
-    public boolean fEmailContactsOnlyOnce { get; set; }
+    public Id templateId { get; set; }
+    public Boolean isHtmlTemplate { get; private set; }
+    public Integer numberOfContacts { get; set; }
+    public Id fromEmailId { get; set; }
+    public String strJobName { get; set; }
+    public Boolean fLogActivity { get; set; }
+    public Boolean fEmailContactsOnlyOnce { get; set; }
 
-    public ID folderId { get; set; }
-    public ID campaignId { get; set; }
-    public ID shiftId { get; set; }
-    public ID jobId { get; set; }
+    public Id folderId { get; set; }
+    public Id campaignId { get; set; }
+    public Id shiftId { get; set; }
+    public Id jobId { get; set; }
     
     // constructor
     public VOL_CTRL_SendBulkEmail() { 
@@ -56,14 +57,16 @@ public with sharing class VOL_CTRL_SendBulkEmail {
             
             if (shiftId != null) {
                 // Ensure the user has access to the object and fields before querying
-                UTIL_Describe.checkReadAccess('Volunteer_Shift__c', new Set<String>{'Id', 'Name'});    
+                UTIL_Describe.checkReadAccess(UTIL_Describe.StrTokenNSPrefix('Volunteer_Shift__c'),
+                    new Set<String>{'Id', 'Name'});
                     
                 Volunteer_Shift__c shift = [select Name, Volunteer_Job__r.Name from Volunteer_Shift__c where Id = :shiftId];
                 strJobName = shift.Volunteer_Job__r.Name + ' - ' + shift.Name;  
                 templateObject = 'Shift';       
             } else if (jobId != null) {
                 // Ensure the user has access to the object and fields before querying
-                UTIL_Describe.checkReadAccess('Volunteer_Job__c', new Set<String>{'Id','Name'});    
+                UTIL_Describe.checkReadAccess(UTIL_Describe.StrTokenNSPrefix('Volunteer_Job__c'),
+                    new Set<String>{'Id','Name'});
                 
                 Volunteer_Job__c job = [select Name from Volunteer_Job__c where Id = :jobId];
                 strJobName = job.Name;
@@ -115,27 +118,120 @@ public with sharing class VOL_CTRL_SendBulkEmail {
         return listSO;
     }
     
-    public string templateObject { get; set; }
-    
-    // action method to load up the email template the user has chosen
-    public PageReference LoadEmailTemplate() {
-        try {
-            if (templateId != null) {
-                // Ensure the user has access to the object and fields before querying
-                UTIL_Describe.checkReadAccess('EmailTemplate', new Set<String>{'Id','Name', 'Subject', 'HtmlValue', 'Body'});    
-                    
-                EmailTemplate et = [select Id, Name, Subject, HtmlValue, Body from EmailTemplate where Id = :templateId];
-                strSubject = et.Subject;
-                strMessage = (et.HtmlValue != null) ? et.HtmlValue : et.Body;
-            } else {
-                strSubject = null;
-                strMessage = null;      
-            }
-            return null;
-        } catch (Exception e) {
-            ApexPages.addMessages(e);  
+    public String templateObject { get; set; }
+
+    /*******************************************************************************************************************
+    * @description Sets the email body and subject from the template matching the template Id selected
+    * @return null
+    */
+    public PageReference loadEmailTemplate() {
+        isHtmlTemplate = false;
+        subject = null;
+        message = null;
+
+        if (templateId == null) {
             return null;
         }
+
+        try {
+            // Ensure the user has access to the object and fields before querying
+            UTIL_Describe.checkReadAccess(
+                'EmailTemplate',
+                new Set<String>{ 'Id', 'Name', 'Subject', 'HtmlValue', 'Body' }
+            );
+
+            EmailTemplate template = [
+                SELECT Id, Name, Subject, HtmlValue, Body, TemplateType
+                FROM EmailTemplate
+                WHERE Id = :templateId
+            ];
+
+            loadEmailTemplate(template);
+            return null;
+
+        } catch (Exception e) {
+            ApexPages.addMessages(e);
+            return null;
+        }
+    }
+
+    /*******************************************************************************************************************
+    * @description Sets the email body and subject from the template provided
+    * @return null
+    */
+    @TestVisible
+    private void loadEmailTemplate(EmailTemplate template) {
+        subject = template.Subject;
+
+        if (template.HtmlValue != null) {
+            isHtmlTemplate = true;
+            // Salesforce escapes html type email templates, we must escape when displaying html value from other types
+            message = template.TemplateType.equalsIgnoreCase('html')
+                ? template.HtmlValue
+                : escapeHtml(template.HtmlValue);
+
+        } else {
+            message = template.Body;
+        }
+    }
+
+    /*******************************************************************************************************************
+    * @description Escape the html values by doing a temporary commit to a Rich Text Area field to allow
+    * Salesforce to strip the non whitelisted tags for us (NOTE: You cannot rerender rich text input fields on
+    * Visualforce pages, https://success.salesforce.com/ideaview?id=08730000000BpHiAAK)
+    * @param htmlValue - the value to escape
+    * @return Volunteer_Job__c the job associated with this page
+    */
+    @TestVisible
+    private String escapeHtml(String htmlValue) {
+        Savepoint savepoint = Database.setSavePoint();
+        String escapedHtml = '';
+        Volunteer_Job__c job = getRelatedJob();
+
+        try {
+            job.Description__c = htmlValue;
+            upsert job;
+            escapedHtml = [SELECT Description__c FROM Volunteer_Job__c WHERE Id = :job.Id LIMIT 1].Description__c;
+
+        } catch (Exception ex) {
+            // Catch errors and rollback in the finally block
+        } finally {
+            Database.rollback(savepoint);
+        }
+
+        return escapedHtml;
+    }
+
+    /*******************************************************************************************************************
+    * @description Retrieves the job associated with this page, either via shift, job or campaign
+    * @return Volunteer_Job__c the job associated with this page
+    */
+    @TestVisible
+    private Volunteer_Job__c getRelatedJob() {
+        Volunteer_Job__c relatedJob = new Volunteer_Job__c();
+
+        if (shiftId != null) {
+            relatedJob.Id = [SELECT Volunteer_Job__c FROM Volunteer_Shift__c WHERE Id = :shiftId LIMIT 1].Volunteer_Job__c;
+            return relatedJob;
+        }
+
+        if (jobId != null) {
+            relatedJob.Id = jobId;
+            return relatedJob;
+        }
+
+        if (campaignId != null) {
+            List<Volunteer_Job__c> jobs = [SELECT Id FROM Volunteer_Job__c WHERE Campaign__c = :campaignId LIMIT 1];
+            if (jobs.isEmpty()) {
+                relatedJob.Campaign__c = campaignId;
+            } else {
+                relatedJob = jobs[0];
+            }
+
+            return relatedJob;
+        }
+
+        return null;
     }
 
     // action method called when status picklist has changed.  requery for number of contacts to email.
@@ -144,7 +240,12 @@ public with sharing class VOL_CTRL_SendBulkEmail {
             list<Volunteer_Hours__c> listHr;
             
             // Ensure the user has access to the object and fields before querying
-            UTIL_Describe.checkReadAccess('Volunteer_Hours__c', new Set<String>{'contact__c','Status__c', 'Volunteer_Shift__c', 'Volunteer_Job__c'});    
+            UTIL_Describe.checkReadAccess(UTIL_Describe.StrTokenNSPrefix('Volunteer_Hours__c'),
+                new Set<String>{
+                    UTIL_Describe.StrTokenNSPrefix('Contact__c'),
+                    UTIL_Describe.StrTokenNSPrefix('Status__c'),
+                    UTIL_Describe.StrTokenNSPrefix('Volunteer_Shift__c'),
+                    UTIL_Describe.StrTokenNSPrefix('Volunteer_Job__c')});
                 
             if (shiftId != null) {
                 listHr = [select contact__c from Volunteer_Hours__c where Status__c = :hourStatus.Status__c and Volunteer_Shift__c = :shiftId];         
@@ -195,7 +296,7 @@ public with sharing class VOL_CTRL_SendBulkEmail {
             // specific campaign, with or without jobs, with or without shifts
             
             string strSoql = 'select Contact__c, Volunteer_Shift__c, Volunteer_Job__c, Volunteer_Job__r.Campaign__c from Volunteer_Hours__c ' + 
-                            ' where Status__c = \'' + hourStatus.Status__c + '\' and ' + 
+                            ' where Status__c = \'' + VOL_SharedCode.StrEscape(hourStatus.Status__c) + '\' and ' +
                                 ' Contact__r.Email != null ';           
             
             if (shiftId != null) {
@@ -220,18 +321,19 @@ public with sharing class VOL_CTRL_SendBulkEmail {
                     // if we are doing contacts only once, then always use the job, which seems more useful than the campaign.
                     //mail.setWhatId(fEmailContactsOnlyOnce ? hr.Volunteer_Job__c : 
                     //  (hr.Volunteer_Shift__c != null ? hr.Volunteer_Shift__c : hr.Volunteer_Job__c));
-                        
-                    ID whatId = null;
-                    if (templateObject == 'Campaign') {
-                        whatId = hr.Volunteer_Job__r.Campaign__c;
-                    } else if (templateObject == 'Job') {
-                        whatId = hr.Volunteer_Job__c;
-                    } else if (templateObject == 'Shift') {
-                        whatId = (hr.Volunteer_Shift__c != null ? hr.Volunteer_Shift__c : hr.Volunteer_Job__c);
-                    } else if (templateObject == 'Hours') {
-                        whatId = hr.Id;
-                    }
-                    mail.setWhatId(whatId);
+                    
+                    /* Removed - not sure how this ever worked https://developer.salesforce.com/forums/?id=906F0000000MJpkIAG
+                    // ID whatId = null;
+                    // if (templateObject == 'Campaign') {
+                    //     whatId = hr.Volunteer_Job__r.Campaign__c;
+                    // } else if (templateObject == 'Job') {
+                    //     whatId = hr.Volunteer_Job__c;
+                    // } else if (templateObject == 'Shift') {
+                    //     whatId = (hr.Volunteer_Shift__c != null ? hr.Volunteer_Shift__c : hr.Volunteer_Job__c);
+                    // } else if (templateObject == 'Hours') {
+                    //     whatId = hr.Id;
+                    // }
+                    // mail.setWhatId(whatId);
                     
                     
                     mail.setSaveAsActivity(fLogActivity);
@@ -306,5 +408,5 @@ public with sharing class VOL_CTRL_SendBulkEmail {
         p.setRedirect(true);
         return p;
     }
-    
+
 }

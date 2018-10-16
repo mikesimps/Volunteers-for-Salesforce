@@ -29,10 +29,31 @@
 */
 
 @isTest
-public with sharing class VOL_CTRL_VolunteersJobListingFS_TEST {
+private with sharing class VOL_CTRL_VolunteersJobListingFS_TEST {
 
     //==================== TEST METHOD(s) ======================================
-    public static testmethod void UnitTest1() {
+
+
+    /*******************************************************************************************************
+    * @description test the visualforce page controller, running as the Sites Guest User, if such as user
+    * exists.  if not, will run under the current user.
+    * @return void
+    ********************************************************************************************************/
+    private static testmethod void testPageWithSitesGuestUser() {
+        list<User> listU = [Select Username, UserType, Name, IsActive, Id From User where IsActive = true and UserType = 'Guest' and
+        Name like '%Site Guest User%'];
+        if (listU.size() > 0) {
+            system.debug('Running test as Sites Guest User: ' + listU[0]);
+            system.runAs(listU[0]) {
+                UnitTest1();
+            }
+        } else {
+            system.debug('Running test as system.');
+            UnitTest1();
+        }
+    }
+
+    private static void UnitTest1() {
 
         // set up intial test data
         Account acc = new Account(name='Test Individual Bucket Account');
@@ -96,15 +117,15 @@ public with sharing class VOL_CTRL_VolunteersJobListingFS_TEST {
         ctrl.contact.FirstName = 'Test';
         ctrl.contact.LastName = 'Testy';
         ctrl.contact.Email = 'test@testy.com';
-        ctrl.contact.MailingState='wa';        
+		ctrl.contact.MailingState='wa';        
         ctrl.jobIdSignUp = job.id;
         ctrl.shiftIdSignUp = shift.id;     
         ctrl.VolunteerShiftSignUp();
         System.AssertEquals(con.Id, ctrl.contactIdSignUp);
         System.Assert(ctrl.volunteerHoursIdSignUp != null);
         Volunteer_Hours__c vh = [select Volunteer_Job__c, Volunteer_Shift__c, Hours_Worked__c, Contact__c from Volunteer_Hours__c 
-            where Volunteer_Job__c = :job.Id];
-        //system.assertEquals(shift.Duration__c, vh.Hours_Worked__c);
+        	where Volunteer_Job__c = :job.Id];
+        system.assertEquals(shift.Duration__c, vh.Hours_Worked__c);
         
         // pass cmp.Id as filter, verify only 2 jobs.
         // pass Show params with 0, verify values.
@@ -146,29 +167,88 @@ public with sharing class VOL_CTRL_VolunteersJobListingFS_TEST {
         System.AssertEquals(hoursId, ctrl.volunteerHoursIdSignUp);
         vh = [select Number_Of_Volunteers__c from Volunteer_Hours__c where Id = :hoursId];
         System.AssertEquals(2, vh.Number_Of_Volunteers__c);
+
+        // test permissions checks
+        Integer cContact = [SELECT COUNT() FROM CONTACT];
+        UTIL_Describe.throwException = true;
+        ctrl.ClearVolunteerHoursIdSignUp();
+        ctrl.contact.FirstName = 'New person2';
+        ctrl.contact.LastName = 'New person2 for my test';
+        ctrl.contact.Email = 'newperson2@volunteersjoblisting.com';
+        ctrl.jobIdSignUp = job.id;
+        ctrl.VolunteerShiftSignUp();
+        System.assertEquals(null, ctrl.contactIdSignUp);
+        System.assertEquals(null, ctrl.volunteerHoursIdSignUp);
+        System.assertEquals(cContact, [SELECT COUNT() FROM CONTACT]);
+
     }
 
     public static testmethod void testCampaignHierarchies() {
 
-        //create our test data
-        map<string, Campaign> mapCmp = VOL_SharedCode_TEST.mapCampaignTestHierarchy();
-        ID cmpIdGrandparent = mapCmp.get('Grandparent').Id;
-        system.assertNotEquals(null, cmpIdGrandparent);
+		//create our test data
+		map<string, Campaign> mapCmp = VOL_SharedCode_TEST.mapCampaignTestHierarchy();
+		ID cmpIdGrandparent = mapCmp.get('Grandparent').Id;
+		system.assertNotEquals(null, cmpIdGrandparent);
     
-        // verify w/ no hierarchy
+		// verify w/ no hierarchy
         PageReference pageRef = Page.VolunteersJobListingFS;
         pageRef.getParameters().put('campaignId', cmpIdGrandparent);
         Test.setCurrentPage(pageRef); 
         VOL_CTRL_VolunteersJobListingFS ctrl = new VOL_CTRL_VolunteersJobListingFS();
-        system.assertEquals(1, ctrl.listVolunteerJobs.size()); 
+		system.assertEquals(1, ctrl.listVolunteerJobs.size()); 
 
-        // verify w/ hierarchy
+		// verify w/ hierarchy
         PageReference pageRef2 = Page.VolunteersJobListingFS;
         pageRef2.getParameters().put('campaignId', cmpIdGrandparent);
         pageRef2.getParameters().put('ShowCampaignHierarchy', '1');
         Test.setCurrentPage(pageRef2); 
         VOL_CTRL_VolunteersJobListingFS ctrl2 = new VOL_CTRL_VolunteersJobListingFS();
-        system.assertEquals(mapCmp.size(), ctrl2.listVolunteerJobs.size()); 
+		system.assertEquals(mapCmp.size(), ctrl2.listVolunteerJobs.size()); 
+    }
+
+    /*******************************************************************************************************
+    * @description test timezone handling for Shifts under LA timezone
+    * @return void
+    */
+    private static testMethod void testTimeZoneHandlingFromLA() {
+        testTimeZoneHandling('America/Los_Angeles');
+    }
+
+    /*******************************************************************************************************
+    * @description test timezone handling for Shifts under Sydney timezone
+    * @return void
+    */
+    private static testMethod void testTimeZoneHandlingFromSydney() {
+        testTimeZoneHandling('Australia/Sydney');
+    }
+
+    /*******************************************************************************************************
+    * @description test timezone handling for Shifts
+    * @param timezone what timezone to run under while creating and querying shifts
+    * @return void
+    */
+    private static void testTimeZoneHandling(String timezone) {
+
+        String uniqueUserName = 'admin' + DateTime.now().getTime() + '@testorg.com';
+        Profile p = [SELECT Id FROM Profile WHERE Name='System Administrator'];
+        User u = new User(Alias = 'admin', Email='admin@testorg.com',
+            EmailEncodingKey='UTF-8', LastName='Testing', LanguageLocaleKey='en_US',
+            LocaleSidKey='en_US', ProfileId = p.Id,
+            TimeZoneSidKey=timezone,
+            UserName=uniqueUserName);
+
+        system.runAs(u) {
+            VOL_SharedCode_TEST.setupTimeZoneTestData();
+
+            PageReference pageRef = Page.VolunteersJobListingFS;
+            Test.setCurrentPage(pageRef);
+
+            //instantiate the controller
+            VOL_CTRL_VolunteersJobListingFS ctrl = new VOL_CTRL_VolunteersJobListingFS();
+            System.AssertEquals(1, ctrl.listVolunteerJobs.size());
+            Volunteer_Job__c job = ctrl.listVolunteerJobs[0];
+            System.assertEquals(48, job.Volunteer_Job_Slots__r.size(), 'we should always get today and tomorrow shifts');
+        }
     }
 
 }

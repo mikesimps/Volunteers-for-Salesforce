@@ -34,47 +34,47 @@
 */
 @isTest
 public class VOL_BATCH_Recurrence_TEST {
-    
-    public static void createRecurringJob() {
-        // set up intial test data
+	
+	public static void createRecurringJob() {
+		// set up intial test data
         Account acc = new Account(name='Individual Test Account');
         insert acc;
         Contact con = new Contact(Lastname='Testy', AccountId=acc.Id);
         insert con;
         Campaign cmp = new Campaign(recordtypeid=VOL_SharedCode.recordtypeIdVolunteersCampaign, 
-            name='Test Campaign', IsActive=true);
+        	name='Test Campaign', IsActive=true);
         insert cmp;
         Volunteer_Job__c job = new Volunteer_Job__c(name='Job1', campaign__c=cmp.Id);
         insert job;
         Job_Recurrence_Schedule__c recurSched = new Job_Recurrence_Schedule__c(
-            Days_of_Week__c = 'Sunday',
-            Desired_Number_of_Volunteers__c = 2,
-            Schedule_Start_Date_Time__c = System.now(),
-            Duration__c = 5.00,
-            Volunteer_Job__c = job.id,
-            Weekly_Occurrence__c = 'Every'
-        );
-        insert recurSched;
-    }
+        	Days_of_Week__c = 'Sunday',
+        	Desired_Number_of_Volunteers__c = 2,
+        	Schedule_Start_Date_Time__c = System.now(),
+        	Duration__c = 5.00,
+        	Volunteer_Job__c = job.id,
+        	Weekly_Occurrence__c = 'Every'
+    	);
+    	insert recurSched;
+	}
 
-    @isTest private static void testSingleBatch() {
-        
-        // set future recurrence to low value for initial JRS insert
-        VOL_SharedCode.VolunteersSettings.Recurring_Job_Future_Months__c = 1;
-        createRecurringJob();
+	@isTest private static void testSingleBatch() {
+	    
+	    // set future recurrence to low value for initial JRS insert
+	    VOL_SharedCode.VolunteersSettings.Recurring_Job_Future_Months__c = 1;
+		createRecurringJob();
         List<Volunteer_Shift__c> shifts = [SELECT Id FROM Volunteer_Shift__c];
         integer cShifts = shifts.size();
         system.assert(cShifts >= 0 && cShifts <= 10);
-        
+		
         // now increase our future recurrence limit to a larger size and run the batch
         VOL_SharedCode.VolunteersSettings.Recurring_Job_Future_Months__c = 2;
-        VOL_BATCH_Recurrence batchRecSched = new VOL_BATCH_Recurrence();
-        Test.startTest();
-        database.executeBatch(batchRecSched);
-        Test.stopTest();
-        shifts = [SELECT Id FROM Volunteer_Shift__c];
-        integer cShiftsNew = shifts.size() - cShifts;
-        system.assert(cShiftsNew >=4 && cShiftsNew <= 5);
-    }
+		VOL_BATCH_Recurrence batchRecSched = new VOL_BATCH_Recurrence();
+		Test.startTest();
+		database.executeBatch(batchRecSched);
+		Test.stopTest();
+		shifts = [SELECT Id FROM Volunteer_Shift__c];
+		integer cShiftsNew = shifts.size() - cShifts;
+		system.assert(cShiftsNew >=4 && cShiftsNew <= 5);
+	}
 
 }

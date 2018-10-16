@@ -29,12 +29,31 @@
 */
 
 @isTest
-public with sharing class VOL_CTRL_PersonalSiteContactLookup_TEST {
+private with sharing class VOL_CTRL_PersonalSiteContactLookup_TEST {
 
     //==================== TEST METHOD(s) ======================================
     
-    @isTest(SeeAllData=true)
-    public static void TestPersonalSiteContactLookup() {
+    @isTest(SeeAllData=true)  // SeeAllData so the CSS file is viewable
+    /*******************************************************************************************************
+    * @description test the visualforce page controller, running as the Sites Guest User, if such as user
+    * exists.  if not, will run under the current user.
+    * @return void
+    ********************************************************************************************************/
+    private static void testPageWithSitesGuestUser() {
+        list<User> listU = [Select Username, UserType, Name, IsActive, Id From User where IsActive = true and UserType = 'Guest' and
+        Name like '%Site Guest User%'];
+        if (listU.size() > 0) {
+            system.debug('Running test as Sites Guest User: ' + listU[0]);
+            system.runAs(listU[0]) {
+                TestPersonalSiteContactLookup();
+            }
+        } else {
+            system.debug('Running test as system.');
+            TestPersonalSiteContactLookup();
+        }
+    }
+
+    private static void TestPersonalSiteContactLookup() {
 
         //point to our VF page
         PageReference p = new PageReference('Page.PersonalSiteContactLookup');
@@ -71,7 +90,7 @@ public with sharing class VOL_CTRL_PersonalSiteContactLookup_TEST {
         insert con;
         
         // test existing contact
-        ctrl.contact.FirstName = 'LookupTestFirstName';
+           ctrl.contact.FirstName = 'LookupTestFirstName';
         ctrl.contact.LastName = 'LookupTestLastName';
         ctrl.contact.Email = 'LookupTestEmail@email.com';
         system.assertEquals(null, ctrl.LookupContact());

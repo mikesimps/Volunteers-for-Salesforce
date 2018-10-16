@@ -29,10 +29,10 @@
 */
 
 @isTest
-public with sharing class VOL_CTRL_VolunteersBulkEnterHours_TEST {
+private with sharing class VOL_CTRL_VolunteersBulkEnterHours_TEST {
     
     //==================== TEST METHOD(s) ======================================
-    public static testmethod void CodeCoverageTests() {
+    private static testmethod void CodeCoverageTests() {
     
         // set up intial test data
         Account acc = new Account(name='Individual Test Account');
@@ -40,7 +40,7 @@ public with sharing class VOL_CTRL_VolunteersBulkEnterHours_TEST {
         Contact con = new Contact(Lastname='Testy', AccountId=acc.Id);
         insert con;
         Campaign cmp = new Campaign(recordtypeid=VOL_SharedCode.recordtypeIdVolunteersCampaign, 
-            name='Test Campaign', IsActive=true);
+        	name='Test Campaign', IsActive=true);
         insert cmp;
         Volunteer_Job__c job = new Volunteer_Job__c(name='Job1', campaign__c=cmp.Id);
         insert job;

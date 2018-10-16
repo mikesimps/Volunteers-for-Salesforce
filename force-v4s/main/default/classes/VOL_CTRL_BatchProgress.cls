@@ -29,7 +29,7 @@
 */
 
 public with sharing class VOL_CTRL_BatchProgress {
-    
+	
     // properties for page
     public boolean batching { get; set; }
     public boolean batchRunning { get; set; }
@@ -57,9 +57,9 @@ public with sharing class VOL_CTRL_BatchProgress {
     }
 
     public PageReference rollup() {
-        
-        VOL_BATCH_Recurrence r = new VOL_BATCH_Recurrence();
-        r.execute(null);
+    	
+    	VOL_BATCH_Recurrence r = new VOL_BATCH_Recurrence();
+    	r.execute(null);
         batchRunning = true;
         return null;                
     }

@@ -31,11 +31,9 @@
  
 <apex:page controller="VOL_CTRL_VolunteersJobListingFS" language="{!strLanguage}" showheader="false" sidebar="false" standardStylesheets="false" cache="false">
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.7/jquery-ui.min.js" type="text/javascript"></script>
-
-<!-- had to put the http: to avoid the site label being added to the url -->
-<apex:stylesheet value="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.7/themes/ui-lightness/jquery-ui.css" /> 
+<apex:includeScript value="{!URLFOR($Resource.jQueryFiles, 'js/jquery-3.2.1.min.js')}"/>
+<apex:includeScript value="{!URLFOR($Resource.jQueryFiles, 'js/jquery-ui-1.12.1.custom.min.js')}"/>
+<apex:stylesheet value="{!URLFOR($Resource.jQueryFiles, 'css/ui-lightness/jquery-ui-1.12.1.custom.min.css')}"/>
 <apex:stylesheet value="{!strURLtoCSSFile}" /> 
 
 <script type="text/javascript">
@@ -47,7 +45,7 @@
 
         // if there are errors, display the signup dialog.
         // we detect this by seeing if Salesforce inserted the error style on any item.        
-        if (j$(".error").size() > 0 || '{!JSENCODE(strSaveResult)}' != '') {
+        if (j$(".error").length > 0 || '{!JSENCODE(strSaveResult)}' != '') {
             j$('#dlgSignUp').dialog('open');
         } else if ('{!JSENCODE(volunteerHoursIdSignUp)}' != '') { // display thank you!
             j$('#dlgThankYou').dialog('open');      
@@ -55,13 +53,33 @@
          
     });
     
-    function OpenSignUpDlg(x, y, JobId, ShiftId, JobName, ShiftName) {
+    function OpenSignUpDlg(JobId, ShiftId, JobName, ShiftName) {
         j$('input[name$=txtJobId]').val(JobId);                         
         j$('input[name$=txtShiftId]').val(ShiftId);                         
         j$('span[id$="txtJobDisplayName"]').text(JobName); 
         j$('span[id$="txtShiftDisplayName"]').text(ShiftName); 
-        j$('#dlgSignUp').dialog("option", "position", [(document.documentElement.offsetWidth /2)-225, y + 20] );          
-        j$('#dlgSignUp').dialog('open'); 
+
+        // The dialog position should be related to the Shift.
+        var signUpButton;
+        if (ShiftId == null) {
+            signUpButton = j$('#' + JobId);
+        }
+        else {
+            signUpButton = j$('#' + ShiftId);
+        }
+        
+        var top = signUpButton.position().top + signUpButton.height() + ((signUpButton.outerHeight() - signUpButton.height()));
+        j$('#dlgSignUp').dialog({
+            position: {
+                my: "center top+" + top,
+                at: "center top",
+                of: document,
+                collision: "fit"
+            }
+        });
+
+        j$('#dlgSignUp').dialog('open');
+
         return false;
     };
     
@@ -154,7 +172,7 @@
         </apex:outputPanel>
         
         <apex:outputPanel id="panelJobOnly" rendered="{!(job.Number_of_Shifts__c == 0 || ShowShifts == false) && job.External_Signup_Url__c == null}" >
-            <input type="button" value="{!$Label.labelButtonSignUp}"  class="cssJobShiftSignup btn" onclick="OpenSignUpDlg(event.clientX, event.clientY, '{!job.Id}', '', '{!JSENCODE(job.Name)}', ''); return false;"/>
+            <input type="button" id="{!job.Id}" value="{!$Label.labelButtonSignUp}"  class="cssJobShiftSignup btn" onclick="OpenSignUpDlg('{!job.Id}', null, '{!JSENCODE(job.Name)}', ''); return false;"/>
         </apex:outputPanel>
         
         <apex:outputPanel id="panelExternalJob" rendered="{!job.External_Signup_Url__c != null && NOT(jobAllShiftsInThePast)}" >
@@ -177,10 +195,10 @@
         <apex:dataTable value="{!job.Volunteer_Job_Slots__r}" var="shift" id="rptShifts" columnClasses="cssJobShiftSignup" rendered="{!ShowShifts}" >
             <apex:column style="text-align:center;" >
                 <apex:outputPanel rendered="{!shift.Number_of_Volunteers_Still_Needed__c != 0 && DATEVALUE(shift.Start_Date_Time__c) >= TODAY() && job.External_Signup_Url__c == null}" >
-                    <a href="SignUp" onclick="
+                    <a  id="{!shift.Id}"  href="SignUp" onclick="
                         var x = '{!JSENCODE(shift.System_Note__c)}';   
                         if (x == '') x = JobShiftDateTimeString('{!shift.Start_Date_Time__c}', '{!shift.Duration__c}');
-                        OpenSignUpDlg(event.clientX, event.clientY, '{!job.Id}', '{!shift.Id}', '{!JSENCODE(job.Name)}', x); 
+                        OpenSignUpDlg('{!job.Id}', '{!shift.Id}', '{!JSENCODE(job.Name)}', x);
                         return false;"
                         >{!$Label.labelLinkSignUp}</a>
                 </apex:outputPanel>
