@@ -29,3 +29,4 @@
 **components/SitePoweredBy.component
 **components/SiteHeader.component
 **permissionsets
+**workflows/Opportunity.workflow
