@@ -5,7 +5,8 @@
         <description>Volunteer Job Signup Notification Email Alert</description>
         <protected>false</protected>
         <recipients>
-            <type>owner</type>
+            <recipient>development@kramden.org</recipient>
+            <type>user</type>
         </recipients>
         <senderType>CurrentUser</senderType>
         <template>Volunteers_Email_Templates/Volunteer_Job_Signup_Notification</template>
@@ -52,6 +53,7 @@
         <operation>Formula</operation>
         <protected>false</protected>
     </fieldUpdates>
+
     <rules>
         <fullName>Volunteer Hours - Set End Date</fullName>
         <actions>
@@ -107,10 +109,6 @@
     </rules>
     <rules>
         <fullName>Volunteer Job Signup</fullName>
-        <actions>
-            <name>Volunteer_Job_Signup_Notification_Email_Alert</name>
-            <type>Alert</type>
-        </actions>
         <actions>
             <name>Volunteer_Job_Signup_Thank_You_Email_Alert</name>
             <type>Alert</type>
