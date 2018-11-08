@@ -322,7 +322,7 @@ public with sharing class VOL_CTRL_SendBulkEmail {
                     //mail.setWhatId(fEmailContactsOnlyOnce ? hr.Volunteer_Job__c : 
                     //  (hr.Volunteer_Shift__c != null ? hr.Volunteer_Shift__c : hr.Volunteer_Job__c));
                     
-                    /* Removed - not sure how this ever worked https://developer.salesforce.com/forums/?id=906F0000000MJpkIAG
+                    // Removed - not sure how this ever worked https://developer.salesforce.com/forums/?id=906F0000000MJpkIAG
                     // ID whatId = null;
                     // if (templateObject == 'Campaign') {
                     //     whatId = hr.Volunteer_Job__r.Campaign__c;
