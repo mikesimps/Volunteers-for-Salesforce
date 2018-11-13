@@ -3,8 +3,8 @@
         {
             "path": "force-v4s",
             "package": "v4s-kramden",
-            "versionName": "Version 0.1",
-            "versionNumber": "0.1.0.NEXT",
+            "versionName": "Version 0.1.1",
+            "versionNumber": "0.1.1.NEXT",
             "default": true
         }
     ],
@@ -13,6 +13,7 @@
     "packageAliases": {
         "v4s-kramden": "0Ho36000000XZARCA4",
         "v4s-kramden@0.1.0-1": "04t36000000wgLXAAY",
-        "v4s-kramden@0.1.0-4": "04t1Q000000wgS0QAI"
+        "v4s-kramden@0.1.0-4": "04t1Q000000wgS0QAI",
+        "v4s-kramden@0.1.1-1": "04t1Q000000wgSAQAY"
     }
 }
