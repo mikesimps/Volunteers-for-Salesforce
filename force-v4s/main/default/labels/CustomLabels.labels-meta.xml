@@ -1143,6 +1143,13 @@ day:      &#39;day&#39;</value>
         <value>Submit</value>
     </labels>
     <labels>
+        <fullName>labelButtonSubmit</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>labelButtonSubmit</shortDescription>
+        <value>Submit</value>
+    </labels>
+    <labels>
         <fullName>labelTemplateObject</fullName>
         <categories>Mass Email Volunteers</categories>
         <language>en_US</language>

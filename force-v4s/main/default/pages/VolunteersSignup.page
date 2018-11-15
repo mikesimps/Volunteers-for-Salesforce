@@ -34,6 +34,7 @@
 
     <apex:form id="frm" styleClass="cssForm" > 
         <apex:panelGrid columns="2" columnClasses="cssLabelsColumn, cssInputFieldsColumn" >
+            <apex:outputLabel >Please note that your First Name, Last Name, AND email address must match exactly to what you have used before otherwise you may receive errors.</apex:outputLabel>
             <apex:outputLabel value="First Name *" for="txtFirstName" ></apex:outputLabel>
             <apex:inputField value="{!contact.FirstName}" id="txtFirstName" required="true" styleClass="cssInputFields" />
             
@@ -67,7 +68,6 @@
             <apex:actionFunction name="DoSave" action="{!Save}" />         
             
             <apex:outputLabel value="{!StrSaveResult}" />                        
-        </apex:panelGrid>
-        <apex:messages style="color:red;" />
+        </apex:panelGrid>    
     </apex:form>
 </apex:page>

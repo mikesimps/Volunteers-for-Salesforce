@@ -125,7 +125,7 @@
           <apex:inputText value="{!contact.Email}" id="Email" styleClass="Email" onfocus="updateHelpText('Email','');" />
         </div><br/>
         
-        <apex:commandButton value="{!$Label.labelButtonSend}" immediate="false" action="{!PreventEmail}" styleclass="btn btn-large" />
+        <apex:commandButton value="{!$Label.labelButtonSubmit}" immediate="false" action="{!PreventEmail}" styleclass="btn btn-large" /> <!-- orginal value was {!$Label.labelButtonSend} -->
         <br/><br/>
         <p><apex:outputText value="{!strResult}" /></p>  
       

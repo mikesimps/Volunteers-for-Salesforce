@@ -51,11 +51,11 @@
             </div>
             <div class="navbar-inner" style="padding:0 20px;">
                 <ul class="nav">
-                    <li class="{!IF(contains($CurrentPage.Name,'PersonalSiteJobListing'), 'active', '')}"><a href="{!$Page.KramdenPersonalSiteJobListing + '?Language=' + Language + '&nMonthsToShow=1'}" >{!$Label.labelPersonalSiteJobListingTitle}</a></li>
-                    <li class="{!IF(contains($CurrentPage.Name,'PersonalSiteJobCalendar'), 'active', '')}"><a href="{!$Page.PersonalSiteJobCalendar + '?Language=' + Language + '&nMonthsToShow=1'}" >{!$Label.labelPersonalSiteJobCalendarTitle}</a></li>
-                    <li class="{!IF(contains($CurrentPage.Name,'PersonalSiteContactInfo'), 'active', '')}"><a href="{!$Page.KramdenPersonalSiteContactInfo + '?Language=' + Language}" >{!$Label.labelPersonalSiteContactInfoTitle}</a></li>
+                    <!-- <li class="{!IF(contains($CurrentPage.Name,'PersonalSiteJobListing'), 'active', '')}"><a href="{!$Page.KramdenPersonalSiteJobListing + '?Language=' + Language + '&nMonthsToShow=1'}" >{!$Label.labelPersonalSiteJobListingTitle}</a></li> -->
+                    <!-- <li class="{!IF(contains($CurrentPage.Name,'PersonalSiteJobCalendar'), 'active', '')}"><a href="{!$Page.PersonalSiteJobCalendar + '?Language=' + Language + '&nMonthsToShow=1'}" >{!$Label.labelPersonalSiteJobCalendarTitle}</a></li> -->
+                    <!-- <li class="{!IF(contains($CurrentPage.Name,'PersonalSiteContactInfo'), 'active', '')}"><a href="{!$Page.KramdenPersonalSiteContactInfo + '?Language=' + Language}" >{!$Label.labelPersonalSiteContactInfoTitle}</a></li> -->
                     <li class="{!IF(contains($CurrentPage.Name,'PersonalSiteReportHours'), 'active', '')}"><a href="{!$Page.PersonalSiteReportHours + '?Language=' + Language}" >{!$Label.labelPersonalSiteReportHoursTitle}</a></li>
-                    <li class=""><a href="{!$Site.CurrentSiteUrl}">Log Out</a></li>
+                    <li class=""><a href="{!$Site.CurrentSiteUrl}">Finish</a></li>
                 </ul>
             </div>
         </div>
