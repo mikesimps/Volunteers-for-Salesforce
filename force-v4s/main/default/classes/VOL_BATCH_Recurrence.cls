@@ -59,6 +59,7 @@ global with sharing class VOL_BATCH_Recurrence implements Database.Batchable<Sob
     	Date dt = system.today();
     	strSoql = 'select Id, Name, Days_of_Week__c, Desired_Number_of_Volunteers__c, Duration__c, Description__c, ' +
     		' Schedule_End_Date__c, Schedule_Start_Date_Time__c, Volunteer_Job__c, Weekly_Occurrence__c ' +
+            ', Max_Days_In_Advance__c' +
     		' from Job_Recurrence_Schedule__c where ' +
     		' Schedule_End_Date__c = null or Schedule_End_Date__c > :dt';
         return Database.getQueryLocator(strSoql);
