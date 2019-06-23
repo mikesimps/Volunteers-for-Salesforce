@@ -40,9 +40,9 @@ package.xml
 # force-app/main/default/objectTranslations/
 
 # Metadata dependant on almost everything
-force-app/main/default/reportTypes/
-force-app/main/default/dashboards/
-force-app/main/default/reports/
+# force-app/main/default/reportTypes/
+# force-app/main/default/dashboards/
+# force-app/main/default/reports/
 
 # Metadata for packages
-force-app/main/default/featureParameters/
+# force-app/main/default/featureParameters/

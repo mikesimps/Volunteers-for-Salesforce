@@ -1,11 +1,12 @@
 {
   "orgName": "V4S",
   "edition": "Enterprise",
-  "features": [],
+  "features": ["Sites"],
   "settings": {
     "orgPreferenceSettings": {
       "s1DesktopEnabled": true,
-      "translation": true
+      "translation": true,
+      "disableParallelApexTesting": true
     }
   }
 }

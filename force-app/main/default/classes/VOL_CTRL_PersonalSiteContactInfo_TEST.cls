@@ -175,6 +175,12 @@ private with sharing class VOL_CTRL_PersonalSiteContactInfo_TEST {
             LocaleSidKey='en_US', ProfileId = p.Id,
             TimeZoneSidKey=timezone,
             UserName=uniqueUserName);
+        insert u;
+
+        PermissionSet v4sPS = [SELECT Id FROM PermissionSet WHERE Name = 'V4S_Employee_Permissions' LIMIT 1];
+        if (v4sPS != null) {
+          insert new PermissionSetAssignment (AssigneeId = u.Id, PermissionSetId = v4sPS.Id);
+        }
 
         system.runAs(u) {
             Id conId = VOL_SharedCode_TEST.setupTimeZoneTestData();
