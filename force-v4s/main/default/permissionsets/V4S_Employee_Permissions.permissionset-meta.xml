@@ -695,4 +695,8 @@
         <tab>Volunteers_Wizard</tab>
         <visibility>Visible</visibility>
     </tabSettings>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ManageCssUsers</name>
+    </userPermissions>
 </PermissionSet>
