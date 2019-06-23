@@ -22,10 +22,10 @@ package.xml
 # force-app/main/default/objects/
 
 # Metadata with simple dependencies
-**fieldSets/
-force-app/main/default/layouts/
-force-app/main/default/applications/
-force-app/main/default/tabs/
+# **fieldSets/
+# force-app/main/default/layouts/
+# force-app/main/default/applications/
+# force-app/main/default/tabs/
 
 # Metadata with complex dev dependencies
 force-app/main/default/pages/
