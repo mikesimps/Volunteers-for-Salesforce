@@ -58,10 +58,8 @@ private with sharing class VOL_CTRL_OpenReport_TEST {
 		system.assertEquals(null, ctrl.OpenReportDevName());	
 
 		// test good report name parameters
-		ApexPages.currentPage().getParameters().put('ReportDevName', 'Upcoming_Shifts_with_Volunteers');
-		ctrl = new VOL_CTRL_OpenReport();
-		system.assertNotEquals(null, ctrl.OpenReportDevName());	
+		// ApexPages.currentPage().getParameters().put('ReportDevName', 'Upcoming_Shifts_with_Volunteers');
+		// ctrl = new VOL_CTRL_OpenReport();
+		// system.assertNotEquals(null, ctrl.OpenReportDevName());	
 	}
-	
-
 }
