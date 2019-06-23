@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <article>Definite</article>
+        <plural>false</plural>
+        <value>שעות התנדבות</value>
+    </caseValues>
+    <caseValues>
+        <article>None</article>
+        <plural>false</plural>
+        <value>שעות התנדבות</value>
+    </caseValues>
+    <caseValues>
+        <article>Definite</article>
+        <plural>true</plural>
+        <value>שעות התנדבות</value>
+    </caseValues>
+    <caseValues>
+        <article>None</article>
+        <plural>true</plural>
+        <value>שעות התנדבות</value>
+    </caseValues>
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>Volunteer Hours Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel><!-- HoursID --></nameFieldLabel>
+    <validationRules>
+        <errorMessage>ציין את שעות העבודה בפועל בעת הגדרת המצב כ&#39;הושלם&#39;.</errorMessage>
+        <name>HoursRequiredOnCompletion</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>ציין ערך מצב.</errorMessage>
+        <name>StatusMustBeSet</name>
+    </validationRules>
+    <webLinks>
+        <label>עריכת פריטים מרובים של שעות התנדבות</label>
+        <name>Mass_Edit_Volunteer_Hours</name>
+    </webLinks>
+</CustomObjectTranslation>

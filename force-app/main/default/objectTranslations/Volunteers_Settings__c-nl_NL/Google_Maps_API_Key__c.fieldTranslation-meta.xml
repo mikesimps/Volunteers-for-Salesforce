@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Als je een Google API Sleutel toevoegt, dan laat de BaanLijstMaken pagina’s een map zien met de Baan Locaties op jou vrijwilligers site.</help>
+    <label>Google Maps API Sleutel</label>
+    <name>Google_Maps_API_Key__c</name>
+</CustomFieldTranslation>

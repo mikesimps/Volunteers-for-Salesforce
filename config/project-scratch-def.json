@@ -1,0 +1,10 @@
+{
+  "orgName": "V4S",
+  "edition": "Enterprise",
+  "features": [],
+  "settings": {
+    "orgPreferenceSettings": {
+      "s1DesktopEnabled": true
+    }
+  }
+}

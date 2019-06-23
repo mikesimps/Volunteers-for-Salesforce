@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>האם דף רישום המתנדבים צריך לנסות להתאים את האדם לאיש קשר קיים (לפי שם פרטי, שם משפחה, דואר אלקטרוני)?</help>
+    <label>הרישום תואם לאנשי קשר קיימים</label>
+    <name>Signup_Matches_Existing_Contacts__c</name>
+</CustomFieldTranslation>

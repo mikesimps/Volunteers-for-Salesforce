@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Wird vom Systemplaner automatisch zur Anzeige des Zeitplans für wiederkehrende Aufträge festgelegt, mit dem diese Schicht verknüpft ist</help>
+    <label>Zeitplan für wiederkehrende Aufträge</label>
+    <name>Job_Recurrence_Schedule__c</name>
+    <relationshipLabel>Freiwilligenschichten</relationshipLabel>
+</CustomFieldTranslation>

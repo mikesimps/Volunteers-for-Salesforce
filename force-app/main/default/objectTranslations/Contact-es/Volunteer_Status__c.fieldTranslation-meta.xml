@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Estado del voluntario</label>
+    <name>Volunteer_Status__c</name>
+    <picklistValues>
+        <masterLabel>Active</masterLabel>
+        <translation>Activo</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Inactive</masterLabel>
+        <translation>Inactivo</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>New Sign Up</masterLabel>
+        <translation>Nuevo Registro</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Prospective</masterLabel>
+        <translation>Prevista</translation>
+    </picklistValues>
+</CustomFieldTranslation>

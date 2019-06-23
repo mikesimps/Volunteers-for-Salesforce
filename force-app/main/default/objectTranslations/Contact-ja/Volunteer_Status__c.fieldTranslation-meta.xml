@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>ボランティアの状況</label>
+    <name>Volunteer_Status__c</name>
+    <picklistValues>
+        <masterLabel>Active</masterLabel>
+        <translation>有効</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Inactive</masterLabel>
+        <translation>無効</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>New Sign Up</masterLabel>
+        <translation>新規サインアップ</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Prospective</masterLabel>
+        <translation>見込み</translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Personal_Site_Requires_URL_Email_Match__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>If selected, the Personal Site link needs to include the Email URL parameter, which V4S uses to match against an email field on the specified Contact.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>If selected, the Personal Site link needs to include the Email URL parameter, which V4S uses to match against an email field on the specified Contact.</inlineHelpText>
+    <label>Personal Site Requires URL Email Match</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

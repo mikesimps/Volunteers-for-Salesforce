@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- How many months into the future should Recurring Job Shifts be scheduled?  If this number is too large, you may run into Salesforce CPU time limits which will prevent the Job Scheduler from running completely.  It is recommended to use 4 months or less. --></help>
+    <label><!-- Recurring Job Future Months --></label>
+    <name>Recurring_Job_Future_Months__c</name>
+</CustomFieldTranslation>

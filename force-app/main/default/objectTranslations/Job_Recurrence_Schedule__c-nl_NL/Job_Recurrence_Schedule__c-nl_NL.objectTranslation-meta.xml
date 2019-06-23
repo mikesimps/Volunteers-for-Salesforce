@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value><!-- Job Recurrence Schedule --></value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value><!-- Job Recurrence Schedule --></value>
+    </caseValues>
+    <gender><!-- Neuter --></gender>
+    <layouts>
+        <layout>Volunteer Job Recurrence Schedule Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel><!-- JRS ID --></nameFieldLabel>
+    <validationRules>
+        <errorMessage>U moet ten minste één waarde opgeven voor Dagen van de Week.</errorMessage>
+        <name>JRS_Days_Of_Week_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>U moet ten minste één waarde opgeven voor Wekelijks Gebeurtenis.</errorMessage>
+        <name>JRS_Weekly_Occurrence_Required</name>
+    </validationRules>
+</CustomObjectTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Par défaut à 1. Augmenter si cette personne amène des personnes supplémentaires que vous ne suivez pas directement dans les contacts, et qui enregisteront pas des Heures de Bénévolat.</help>
+    <label>Nombre de Bénévoles</label>
+    <name>Number_of_Volunteers__c</name>
+</CustomFieldTranslation>

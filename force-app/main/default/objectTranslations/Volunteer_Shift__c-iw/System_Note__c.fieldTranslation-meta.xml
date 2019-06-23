@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>טקסט מידע ממתזמן המערכת.</help>
+    <label>הערת מערכת</label>
+    <name>System_Note__c</name>
+</CustomFieldTranslation>

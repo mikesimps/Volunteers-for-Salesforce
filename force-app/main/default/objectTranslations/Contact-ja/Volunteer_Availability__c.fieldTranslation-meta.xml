@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>ボランティアの対応可能状況</label>
+    <name>Volunteer_Availability__c</name>
+    <picklistValues>
+        <masterLabel>Afternoon</masterLabel>
+        <translation>午後</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Morning</masterLabel>
+        <translation>午前</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Weekdays</masterLabel>
+        <translation>平日</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Weekends</masterLabel>
+        <translation>週末</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Weekly</masterLabel>
+        <translation>毎週</translation>
+    </picklistValues>
+</CustomFieldTranslation>

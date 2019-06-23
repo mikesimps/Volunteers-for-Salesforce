@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Recurring_Job_Future_Months__c</fullName>
+    <defaultValue>4</defaultValue>
+    <description>Determines how many months into the future Recurring Job Shifts are scheduled. Scheduling more than 4 months may cause a Salesforce CPU time limit exceeded error, which would prevent the Job Scheduler from completing.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Determines how many months into the future Recurring Job Shifts are scheduled. Scheduling more than 4 months may cause a Salesforce CPU time limit exceeded error, which would prevent the Job Scheduler from completing.</inlineHelpText>
+    <label>Recurring Job Future Months</label>
+    <precision>3</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Marque este campo si este Trabajo Voluntario debe ser incluido como disponible en la página web de Trabajos Voluntarios..</help>
+    <label>Disponible para la Web</label>
+    <name>Display_on_Website__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>個人マッチングの実行時に照合する個人の名項目がセミコロン区切りで追加されたリスト。たとえば、ニックネーム項目など。これらの項目は、名前空間プレフィックスを含む完全 API 参照名で指定されます。</help>
+    <label>個人マッチング名項目</label>
+    <name>Contact_Match_First_Name_Fields__c</name>
+</CustomFieldTranslation>

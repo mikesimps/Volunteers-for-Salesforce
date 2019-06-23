@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>הגדר כ-1 עבור אדם יחיד.  הגדר מספר גדול יותר אם איש הקשר מייצג קבוצה, ולא תעקוב אחר השעות של כל אחד מהאנשים.</help>
+    <label>מספר מתנדבים</label>
+    <name>Number_of_Volunteers__c</name>
+</CustomFieldTranslation>

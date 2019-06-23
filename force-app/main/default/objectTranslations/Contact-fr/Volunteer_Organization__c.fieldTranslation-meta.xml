@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>L&#39;organisation, la société ou la groupe dans lequel le contact fait du bénévolat</help>
+    <label>Association de bénévoles</label>
+    <name>Volunteer_Organization__c</name>
+</CustomFieldTranslation>

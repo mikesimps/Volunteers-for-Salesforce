@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Google_Maps_API_Key__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>If you enter a Google Maps API Key, V4S includes a map of the Job Location on the Job Listing pages of your Volunteer Site.</inlineHelpText>
+    <label>Google Maps API Key</label>
+    <length>255</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

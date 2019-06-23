@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Hora Voluntaria</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Horas Voluntarias</value>
+    </caseValues>
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Volunteer Hours Layout</layout>
+        <sections>
+            <label>Links personalizados</label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>HoursID</nameFieldLabel>
+    <validationRules>
+        <errorMessage>Por favor especifique las Horas Trabajadas cuando modifique su Estado a Completado</errorMessage>
+        <name>HoursRequiredOnCompletion</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Por favor especifique un valor de Estado</errorMessage>
+        <name>StatusMustBeSet</name>
+    </validationRules>
+    <webLinks>
+        <label>Edición Masiva de las Horas Voluntarias</label>
+        <name>Mass_Edit_Volunteer_Hours</name>
+    </webLinks>
+</CustomObjectTranslation>

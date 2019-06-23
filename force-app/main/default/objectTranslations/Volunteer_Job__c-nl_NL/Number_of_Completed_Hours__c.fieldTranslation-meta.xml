@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Totaal aantal Voltooide Uren. Uren met een ander status zijn niet opgenomen.</help>
+    <label>Aantal Voltooide Uren</label>
+    <name>Number_of_Completed_Hours__c</name>
+</CustomFieldTranslation>

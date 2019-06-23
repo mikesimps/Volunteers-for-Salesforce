@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>סמן אפשרות זו אם איש הקשר אינו מעוניין לקבל תזכורות אוטומטיות בדואר אלקטרוני על המשמרות הקרובות שלו.  משמש בכלל זרימת העבודה &#39;תזכורת על שעות התנדבות בדואר אלקטרוני&#39;.</help>
+    <label>ביטול תזכורת אוטומטית למתנדבים בדוא&quot;ל</label>
+    <name>Volunteer_Auto_Reminder_Email_Opt_Out__c</name>
+</CustomFieldTranslation>

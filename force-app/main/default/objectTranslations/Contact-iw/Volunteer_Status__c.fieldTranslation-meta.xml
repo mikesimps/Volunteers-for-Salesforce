@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>מצב מתנדב</label>
+    <name>Volunteer_Status__c</name>
+    <picklistValues>
+        <masterLabel>Active</masterLabel>
+        <translation>פעיל</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Inactive</masterLabel>
+        <translation>לא פעיל</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>New Sign Up</masterLabel>
+        <translation>הרשמה חדשה</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Prospective</masterLabel>
+        <translation>פוטנציאלי</translation>
+    </picklistValues>
+</CustomFieldTranslation>

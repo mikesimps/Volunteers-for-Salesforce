@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Volunteer_Skills__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Indicates which skills this Lead has. You can filter on skills when you look for volunteers for particular Jobs.</inlineHelpText>
+    <label>Volunteer Skills</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Computer usage</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Manual labor</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Marketing</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Fundraising</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Event Planning</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Landscaping</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>8</visibleLines>
+</CustomField>

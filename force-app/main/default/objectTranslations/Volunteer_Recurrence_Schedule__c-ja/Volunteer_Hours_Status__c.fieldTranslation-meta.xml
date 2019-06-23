@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>新しく作成した時間レコードで指定するボランティア時間の状況値。</help>
+    <label>ボランティア時間の状況</label>
+    <name>Volunteer_Hours_Status__c</name>
+    <picklistValues>
+        <masterLabel>Canceled</masterLabel>
+        <translation>キャンセル</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Completed</masterLabel>
+        <translation>完了</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Confirmed</masterLabel>
+        <translation>確認済み</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Prospect</masterLabel>
+        <translation>未登録ボランティア（数）</translation>
+    </picklistValues>
+</CustomFieldTranslation>

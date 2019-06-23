@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>ציין בשדה זה פרטים נוספים, כגון הוראות הגעה או כתובת URL של מפה, והם ייכללו בתזכורות אוטומטיות שיישלחו בדואר אלקטרוני.</help>
+    <label>פרטי מיקום</label>
+    <name>Location_Information__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Une liste séparée par des &#39;;&#39; de champs prénoms additionnels pour essayer de les relier à un contact existant, comme par exemple un surnom. Notez que ces champs sont déclarés avec leur nom complet de développeur, incluant le &#39;namespace prefix&#39;.</help>
+    <label>Champs de prénom de match de contact</label>
+    <name>Contact_Match_First_Name_Fields__c</name>
+</CustomFieldTranslation>

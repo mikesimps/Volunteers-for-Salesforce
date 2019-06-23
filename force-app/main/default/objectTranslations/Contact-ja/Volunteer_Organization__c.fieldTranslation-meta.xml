@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>個人が代表してボランティアを行う団体、会社、またはグループ。</help>
+    <label>ボランティア団体</label>
+    <name>Volunteer_Organization__c</name>
+</CustomFieldTranslation>

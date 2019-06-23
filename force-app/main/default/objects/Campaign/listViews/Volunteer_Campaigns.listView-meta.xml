@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Volunteer_Campaigns</fullName>
+    <columns>CAMPAIGN.NAME</columns>
+    <columns>CAMPAIGN.START_DATE</columns>
+    <columns>CAMPAIGN.END_DATE</columns>
+    <columns>CAMPAIGN.ACTIVE</columns>
+    <columns>CAMPAIGN.STATUS</columns>
+    <columns>Number_of_Volunteers__c</columns>
+    <columns>Volunteer_Completed_Hours__c</columns>
+    <columns>Volunteer_Jobs__c</columns>
+    <columns>Volunteers_Still_Needed__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CAMPAIGN.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Campaign.Volunteers_Campaign</value>
+    </filters>
+    <label>Volunteer Campaigns</label>
+</ListView>

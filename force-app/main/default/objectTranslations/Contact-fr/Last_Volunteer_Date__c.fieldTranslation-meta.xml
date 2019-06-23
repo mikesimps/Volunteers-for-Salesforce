@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Date de fin des dernières heures de bénévoles</help>
+    <label>Dernière date de bénévolat</label>
+    <name>Last_Volunteer_Date__c</name>
+</CustomFieldTranslation>

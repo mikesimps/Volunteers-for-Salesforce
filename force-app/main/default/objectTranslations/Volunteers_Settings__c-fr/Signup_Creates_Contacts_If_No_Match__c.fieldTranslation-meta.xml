@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Est-ce que l&#39;inscription devrai créer des nouveaux Contacts s&#39;il ny a pas de correspondance trouvé (ou &#39;Inscription correspond Contacts existant&#39; n&#39;est pas coché). Si ce paramètre n&#39;est pas coché, un Piste sera crée.</help>
+    <label>Créer les Contacts sans correspondence</label>
+    <name>Signup_Creates_Contacts_If_No_Match__c</name>
+</CustomFieldTranslation>

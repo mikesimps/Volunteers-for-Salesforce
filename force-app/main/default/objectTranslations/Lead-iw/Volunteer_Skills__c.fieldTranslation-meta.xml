@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>בחר את הכישורים של אדם זה שצריכים לשמש לחיפוש משימות התנדבות.</help>
+    <label>כישורי מתנדב</label>
+    <name>Volunteer_Skills__c</name>
+    <picklistValues>
+        <masterLabel>Computer usage</masterLabel>
+        <translation>שימוש במחשב</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Event Planning</masterLabel>
+        <translation>תכנון אירועים</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fundraising</masterLabel>
+        <translation>גיוס תרומות</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Landscaping</masterLabel>
+        <translation>גינון</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Manual labor</masterLabel>
+        <translation>עבודה פיזית</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Marketing</masterLabel>
+        <translation>שיווק</translation>
+    </picklistValues>
+</CustomFieldTranslation>

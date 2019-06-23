@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- If checked, then the Personal Site requires the Email URL parameter is included and matches an Email field on the specified Contact. --></help>
+    <label><!-- Personal Site Requires URL Email Match --></label>
+    <name>Personal_Site_Requires_URL_Email_Match__c</name>
+</CustomFieldTranslation>

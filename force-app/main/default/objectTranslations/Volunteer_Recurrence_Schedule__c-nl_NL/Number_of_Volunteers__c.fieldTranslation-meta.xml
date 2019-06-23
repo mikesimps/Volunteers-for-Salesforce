@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Stel in op 1 voor een individu. Stel een hoger nummer in als de contactpersoon een groep representeert, en je niet elk individu zijn uren vastlegt.</help>
+    <label>Aantal Vrijwilligers</label>
+    <name>Number_of_Volunteers__c</name>
+</CustomFieldTranslation>

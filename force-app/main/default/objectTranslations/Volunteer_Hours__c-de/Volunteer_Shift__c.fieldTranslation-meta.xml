@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Freiwilligenschicht</label>
+    <lookupFilter>
+        <informationalMessage>Sie können nur eine Schicht wählen, die zum aktuellen Auftrag gehört.</informationalMessage>
+    </lookupFilter>
+    <name>Volunteer_Shift__c</name>
+    <relationshipLabel>Freiwilligenstunden</relationshipLabel>
+</CustomFieldTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Voor extra informatie in, zoals routebeschrijvingen of een URL naar een kaart, in dit veld, en het wordt toegevoegd in automatische e-mail herinneringen.</help>
+    <label>Locatie Informatie</label>
+    <name>Location_Information__c</name>
+</CustomFieldTranslation>

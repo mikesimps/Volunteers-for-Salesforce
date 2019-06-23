@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Tot hoeveel maanden in de toekomst zou de doorlopende baan ingepland moeten worden?</help>
+    <label>Terugkerende Baan Komende Maanden</label>
+    <name>Recurring_Job_Future_Months__c</name>
+</CustomFieldTranslation>

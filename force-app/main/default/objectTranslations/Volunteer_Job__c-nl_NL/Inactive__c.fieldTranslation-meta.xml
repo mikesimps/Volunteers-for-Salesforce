@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Vink aan als deze Vrijwilligersbaan niet actief meer is, en dan zal deze niet langer ingebrepen zijn in het Vrijwilligersuren Rapport Site pagina’s.</help>
+    <label>Inactief</label>
+    <name>Inactive__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>First_Volunteer_Date__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>The date of the first Volunteer Hours record for this Contact with a status of Completed (read only).</inlineHelpText>
+    <label>First Volunteer Date</label>
+    <summarizedField>Volunteer_Hours__c.Start_Date__c</summarizedField>
+    <summaryFilterItems>
+        <field>Volunteer_Hours__c.Status__c</field>
+        <operation>equals</operation>
+        <value>Completed</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Volunteer_Hours__c.Contact__c</summaryForeignKey>
+    <summaryOperation>min</summaryOperation>
+    <type>Summary</type>
+</CustomField>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Specificeert welke regel gevolgd wordt wanneer er wordt geprobeerd om Contacten te matchen met bestaande Contactpersonen van de Vrijwilligers Sites pagina’s. Puntkomma gescheiden tekenreeks die een of meer van de velden Voor/Achternaam en E-mail bevatten</help>
+    <label>Contactpersoon Matching Regel</label>
+    <name>Contact_Matching_Rule__c</name>
+</CustomFieldTranslation>

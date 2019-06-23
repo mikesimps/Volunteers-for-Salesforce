@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- If you include a Google Maps API Key, the JobListing pages will display a map on your volunteers site for the Job Location. --></help>
+    <label><!-- Google Maps API Key --></label>
+    <name>Google_Maps_API_Key__c</name>
+</CustomFieldTranslation>

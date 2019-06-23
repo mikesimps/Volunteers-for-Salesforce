@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>サインアップ中に新しい個人を作成するときに使用する団体の名前。Nonprofit Starter Pack の 1 対 1 モデルを使用している場合、この設定は空白のままにします。バケットモデルを使用している場合、団体の名前 (通常は「個人」) を設定します。</help>
+    <label>作成時のサインアップバケット団体</label>
+    <name>Signup_Bucket_Account_On_Create__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Volunteer_Status__c</fullName>
+    <externalId>false</externalId>
+    <label>Volunteer Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Inactive</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>New Sign Up</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Prospective</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

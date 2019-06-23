@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Valor del Estado de las Horas Voluntarias a fin de especificar el Registros de Horas creadas recientemente</help>
+    <label>Estado de las Horas Voluntarias</label>
+    <name>Volunteer_Hours_Status__c</name>
+    <picklistValues>
+        <masterLabel>Canceled</masterLabel>
+        <translation>Cancelado</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Completed</masterLabel>
+        <translation>Completado</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Confirmed</masterLabel>
+        <translation>Confirmado</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Prospect</masterLabel>
+        <translation>Prevista</translation>
+    </picklistValues>
+</CustomFieldTranslation>

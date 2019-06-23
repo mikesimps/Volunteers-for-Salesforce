@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Gibt an, welche Regel befolgt werden soll, wenn versucht wird, Kontakte mit Kontakten auf Seiten der Freiwilligenschicht-Sites abzugleichen Durch Semikolon getrennte Zeichenfolge mit einem oder mehreren Feldern &quot;Vorname&quot;, &quot;Nachname&quot; und &quot;E-Mail&quot;</help>
+    <label>Kontakt-Abgleichsregel</label>
+    <name>Contact_Matching_Rule__c</name>
+</CustomFieldTranslation>

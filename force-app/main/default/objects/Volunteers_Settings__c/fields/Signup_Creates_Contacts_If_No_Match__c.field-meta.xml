@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Signup_Creates_Contacts_If_No_Match__c</fullName>
+    <defaultValue>false</defaultValue>
+    <externalId>false</externalId>
+    <inlineHelpText>When selected, the Volunteer Signup form creates a new Contact record, if Signup Matches Existing Contacts is selected and no existing Contact is found. Otherwise, the form creates a Lead.</inlineHelpText>
+    <label>Signup Creates Contacts If No Match</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

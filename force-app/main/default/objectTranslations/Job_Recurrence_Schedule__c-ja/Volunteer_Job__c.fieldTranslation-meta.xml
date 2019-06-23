@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>この定期的なスケジュールの対象となる仕事。</help>
+    <label>ボランティアの仕事</label>
+    <name>Volunteer_Job__c</name>
+    <relationshipLabel>仕事の定期的なスケジュール</relationshipLabel>
+</CustomFieldTranslation>

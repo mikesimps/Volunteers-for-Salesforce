@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Notities van de vrijwilliger. Let op dat het web aanmeldingsformulier wordt toegevoegd aan de opmerkingen van de vrijwilliger op dit veld.</help>
+    <label>Vrijwilligers Notities</label>
+    <name>Volunteer_Notes__c</name>
+</CustomFieldTranslation>

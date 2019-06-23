@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Volunteer_Availability__c</fullName>
+    <externalId>false</externalId>
+    <label>Volunteer Availability</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Weekdays</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Weekends</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Morning</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Afternoon</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Weekly</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>8</visibleLines>
+</CustomField>

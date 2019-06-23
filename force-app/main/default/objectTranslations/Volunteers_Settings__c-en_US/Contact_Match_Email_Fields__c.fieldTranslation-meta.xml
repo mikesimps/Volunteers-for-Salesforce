@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- A semicolon separated list of additional Contact email fields to try to match against when doing Contact matching. Note that the fields are specified by their full Developer name, including namespace prefix. NPSP email fields are automatically checked. --></help>
+    <label><!-- Contact Match Email Fields --></label>
+    <name>Contact_Match_Email_Fields__c</name>
+</CustomFieldTranslation>

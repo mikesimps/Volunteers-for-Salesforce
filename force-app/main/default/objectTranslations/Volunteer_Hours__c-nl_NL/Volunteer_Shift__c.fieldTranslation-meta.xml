@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Vrijwilligersdienst</label>
+    <lookupFilter>
+        <informationalMessage>Je kunt alleen een Dienst kiezen die bij de huidige Baan hoort.</informationalMessage>
+    </lookupFilter>
+    <name>Volunteer_Shift__c</name>
+    <relationshipLabel>Vrijwilligers Uren</relationshipLabel>
+</CustomFieldTranslation>

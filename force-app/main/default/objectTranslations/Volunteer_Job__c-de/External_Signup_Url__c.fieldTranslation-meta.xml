@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Wenn angegeben, werden Benutzer, die auf der VolunteersJobListingFS-Seite auf den Link &quot;Anmelden&quot; klicken, auf diese Seite umgeleitet.  So können Sie Aufträge ausschreiben, für die eine Registrierung auf einer anderen Website erforderlich ist.</help>
+    <label>Externer Anmelde-URL</label>
+    <name>External_Signup_Url__c</name>
+</CustomFieldTranslation>

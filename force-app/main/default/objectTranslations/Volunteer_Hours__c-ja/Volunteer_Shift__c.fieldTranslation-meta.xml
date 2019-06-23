@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>ボランティアシフト</label>
+    <lookupFilter>
+        <informationalMessage>現在のジョブに属するシフトのみを選択できます。</informationalMessage>
+    </lookupFilter>
+    <name>Volunteer_Shift__c</name>
+    <relationshipLabel>ボランティア時間</relationshipLabel>
+</CustomFieldTranslation>

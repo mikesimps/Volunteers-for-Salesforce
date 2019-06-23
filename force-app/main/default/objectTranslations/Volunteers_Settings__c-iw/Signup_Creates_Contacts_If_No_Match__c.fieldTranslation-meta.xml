@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>האם טופס רישום המתנדבים צריך ליצור רשומות אנשי קשר חדשות, אם לא נמצאו אנשי קשר קיימים (או כאשר האפשרות &#39;הרישום תואם לאנשי קשר קיימים&#39; אינה מסומנת)?  אם הגדרה זו אינה מסומנת, היא תיצור הפניות כאשר לא יימצאו התאמות.</help>
+    <label>הרשמה יוצרת אנשי קשר אם אין התאמה</label>
+    <name>Signup_Creates_Contacts_If_No_Match__c</name>
+</CustomFieldTranslation>

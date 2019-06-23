@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Check if this Contact does not want to receive automatic reminder emails about their upcoming shifts.  Used in the &quot;Volunteer Hours Reminder Email&quot; workflow rule. --></help>
+    <label><!-- Volunteer Auto-Reminder Email Opt Out --></label>
+    <name>Volunteer_Auto_Reminder_Email_Opt_Out__c</name>
+</CustomFieldTranslation>

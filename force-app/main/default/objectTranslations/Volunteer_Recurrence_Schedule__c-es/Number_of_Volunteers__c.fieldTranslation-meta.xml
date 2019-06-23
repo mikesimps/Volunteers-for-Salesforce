@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Se establece en 1 para un individuo. Se establece en un número mayor si el contacto representa un grupo , y no será el seguimiento de horas de cada individuo.</help>
+    <label>Número de Voluntarios</label>
+    <name>Number_of_Volunteers__c</name>
+</CustomFieldTranslation>

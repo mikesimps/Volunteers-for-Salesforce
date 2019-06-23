@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Puntkomma gescheiden lijst van extra Contact e-mail velden die gebruikt worden bij het contact matchen. Let op, de velden gespecifieerd zijn d.m.v. hun volledige Developer naam, inclusief “namespace prefix”. NPSP e-mail velden worden automatisch gecheckt</help>
+    <label>Contactpesoon Match E-mail Velden</label>
+    <name>Contact_Match_Email_Fields__c</name>
+</CustomFieldTranslation>

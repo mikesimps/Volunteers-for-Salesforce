@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Number_of_Completed_Hours__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Total number of Volunteer Hours with a Status of Completed. Hours with other status values aren&#39;t included.</inlineHelpText>
+    <label>Number of Completed Hours</label>
+    <summarizedField>Volunteer_Hours__c.Total_Hours_Worked__c</summarizedField>
+    <summaryFilterItems>
+        <field>Volunteer_Hours__c.Status__c</field>
+        <operation>equals</operation>
+        <value>Completed</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Volunteer_Hours__c.Volunteer_Job__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

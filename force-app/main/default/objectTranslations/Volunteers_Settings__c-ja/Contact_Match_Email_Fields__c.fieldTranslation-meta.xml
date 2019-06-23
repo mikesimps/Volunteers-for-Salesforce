@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>個人マッチングの実行時に照合する個人のメール項目がセミコロン区切りで追加されたリスト。これらの項目は、名前空間プレフィックスを含む完全 API 参照名で指定されます。NPSP メール項目は自動的に確認されます。</help>
+    <label>個人マッチングメール項目</label>
+    <name>Contact_Match_Email_Fields__c</name>
+</CustomFieldTranslation>

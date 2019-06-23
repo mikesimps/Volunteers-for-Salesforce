@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>אם צוינה כתובת, הדף VolunteersJobListingFS יפנה אל אתר זה כאשר המשתמש ילחץ על קישור ההרשמה בדף.  כך תוכל לפרסם משימות שניתן להירשם אליהן בדף אינטרנט אחר.</help>
+    <label>כתובת URL חיצונית להרשמה</label>
+    <name>External_Signup_Url__c</name>
+</CustomFieldTranslation>

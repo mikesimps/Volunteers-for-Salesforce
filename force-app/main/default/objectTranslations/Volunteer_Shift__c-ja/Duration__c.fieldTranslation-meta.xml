@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>シフトの所要時間は?</help>
+    <label>所要時間 (時間)</label>
+    <name>Duration__c</name>
+</CustomFieldTranslation>

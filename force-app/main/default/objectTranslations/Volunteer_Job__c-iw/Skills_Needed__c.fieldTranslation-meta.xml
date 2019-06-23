@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>הכישורים שיידרשו למתנדבים כדי לבצע משימה זו</help>
+    <label>כישורים נחוצים</label>
+    <name>Skills_Needed__c</name>
+    <picklistValues>
+        <masterLabel>Computer usage</masterLabel>
+        <translation>שימוש במחשב</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Event Planning</masterLabel>
+        <translation>תכנון אירועים</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fundraising</masterLabel>
+        <translation>גיוס תרומות</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Landscaping</masterLabel>
+        <translation>גינון</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Manual Labor</masterLabel>
+        <translation>עבודה פיזית</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Marketing</masterLabel>
+        <translation>שיווק</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>basic accounting</masterLabel>
+        <translation>הנהלת חשבונות בסיסית</translation>
+    </picklistValues>
+</CustomFieldTranslation>

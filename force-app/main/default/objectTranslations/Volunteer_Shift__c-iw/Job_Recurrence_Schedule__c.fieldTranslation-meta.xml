@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>מוגדר באופן אוטומטי על-ידי מתזמן המערכת להציג את לוח הזמנים של המשימה החוזרת שאליו משויכת משמרת זו.</help>
+    <label>לוח זמנים של משימה חוזרת</label>
+    <name>Job_Recurrence_Schedule__c</name>
+    <relationshipLabel>משמרות התנדבות</relationshipLabel>
+</CustomFieldTranslation>

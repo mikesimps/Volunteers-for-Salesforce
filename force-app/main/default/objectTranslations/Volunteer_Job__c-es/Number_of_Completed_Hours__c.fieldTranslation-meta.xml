@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Número total de horas completas. No se incluyen las horas con otros valores de estado.</help>
+    <label>Número de Horas Completadas</label>
+    <name>Number_of_Completed_Hours__c</name>
+</CustomFieldTranslation>

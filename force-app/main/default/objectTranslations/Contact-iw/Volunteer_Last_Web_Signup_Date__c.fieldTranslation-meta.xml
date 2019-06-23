@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>תאריך רישום המתנדב האחרון באינטרנט.   משמש להפעלת זרימת עבודה עבור הודעות מידע ותודה בדואר אלקטרוני.</help>
+    <label>תאריך רישום מתנדב אחרון באינטרנט</label>
+    <name>Volunteer_Last_Web_Signup_Date__c</name>
+</CustomFieldTranslation>

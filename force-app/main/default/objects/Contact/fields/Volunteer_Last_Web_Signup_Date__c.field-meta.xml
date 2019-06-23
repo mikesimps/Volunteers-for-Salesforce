@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Volunteer_Last_Web_Signup_Date__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>The date of this Contact&#39;s most recent online volunteer signup. This field is automatically populated from the web signup form. Used to trigger workflow for notification and thank you emails.</inlineHelpText>
+    <label>Volunteer Last Web Signup Date</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Date</type>
+</CustomField>

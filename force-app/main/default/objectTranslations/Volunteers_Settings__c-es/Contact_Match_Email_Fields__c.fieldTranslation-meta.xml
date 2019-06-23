@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Lista de campos de correos electrónicos de contactos adicionales separados por punto y coma para realizar una comparación cuando se realice la combinación de contactos.</help>
+    <label>Contacto Partido Email Campos</label>
+    <name>Contact_Match_Email_Fields__c</name>
+</CustomFieldTranslation>

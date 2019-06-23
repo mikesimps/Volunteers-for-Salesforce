@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <article>Definite</article>
+        <plural>false</plural>
+        <value>משימת התנדבות</value>
+    </caseValues>
+    <caseValues>
+        <article>None</article>
+        <plural>false</plural>
+        <value>משימת התנדבות</value>
+    </caseValues>
+    <caseValues>
+        <article>Definite</article>
+        <plural>true</plural>
+        <value>משימת התנדבות</value>
+    </caseValues>
+    <caseValues>
+        <article>None</article>
+        <plural>true</plural>
+        <value>משימת התנדבות</value>
+    </caseValues>
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>Volunteer Job Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Description --></label>
+            <section>Description</section>
+        </sections>
+        <sections>
+            <label>מיקום</label>
+            <section>Location</section>
+        </sections>
+        <sections>
+            <label><!-- Location Information --></label>
+            <section>Location Information</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel><!-- Volunteer Job Name --></nameFieldLabel>
+    <webLinks>
+        <label>מצא מתנדבים</label>
+        <name>Find_Volunteers</name>
+    </webLinks>
+    <webLinks>
+        <label>רשימת מתנדבים</label>
+        <name>JobRoster</name>
+    </webLinks>
+    <webLinks>
+        <label>יומן משמרות</label>
+        <name>Job_Shift_Calendar</name>
+    </webLinks>
+    <webLinks>
+        <label>(לא בשימוש)</label>
+        <name>Mass_Edit_Volunteer_Hours</name>
+    </webLinks>
+    <webLinks>
+        <label>דואר אלקטרוני המוני למתנדבים</label>
+        <name>Mass_Email_Volunteers</name>
+    </webLinks>
+</CustomObjectTranslation>

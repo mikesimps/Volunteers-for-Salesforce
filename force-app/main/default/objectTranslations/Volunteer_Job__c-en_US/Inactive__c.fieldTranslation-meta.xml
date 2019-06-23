@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Check if this Volunteer Job is no longer active, and it won&apos;t be included in the Volunteers Report Hours Sites page. --></help>
+    <label><!-- Inactive --></label>
+    <name>Inactive__c</name>
+</CustomFieldTranslation>

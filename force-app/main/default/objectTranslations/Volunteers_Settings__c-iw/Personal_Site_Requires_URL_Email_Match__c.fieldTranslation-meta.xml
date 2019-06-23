@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>אם אפשרות זו מסומנת, האתר האישי מחייב לציין את פרמטר כתובת ה-URL של דואר אלקטרוני וכן את התאמתו לשדה דואר אלקטרוני באיש הקשר שצוין.</help>
+    <label>האתר הפרטי מחייב התאמת URL של דוא&quot;ל</label>
+    <name>Personal_Site_Requires_URL_Email_Match__c</name>
+</CustomFieldTranslation>

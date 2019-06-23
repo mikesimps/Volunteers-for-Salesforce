@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Der Anzeigename der organisationsweiten E-Mail-Adresse, die in E-Mails von der Seite der &quot;Sites zum Nachschlagen von Kontakten auf der persönlichen Site&quot; verwendet wird</help>
+    <label>Name d. org.weiten E-Mail f. pers. Site</label>
+    <name>Personal_Site_Org_Wide_Email_Name__c</name>
+</CustomFieldTranslation>

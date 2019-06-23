@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Text that will get copied to the Volunteer Hours Comment field for all Hours created by this Volunteer Recurrence Schedule. --></help>
+    <label><!-- Comments --></label>
+    <name>Comments__c</name>
+</CustomFieldTranslation>

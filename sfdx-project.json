@@ -1,10 +1,11 @@
 {
   "packageDirectories": [
     {
-      "path": "src",
+      "path": "force-app",
       "default": true
     }
   ],
-  "namespace": "GW_Volunteers",
-  "sourceApiVersion": "40.0"
+  "namespace": "",
+  "sfdcLoginUrl": "https://login.salesforce.com",
+  "sourceApiVersion": "46.0"
 }

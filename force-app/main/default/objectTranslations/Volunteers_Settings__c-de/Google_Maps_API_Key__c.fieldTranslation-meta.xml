@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Wenn Sie einen Google Maps API-Schlüssel hinzufügen, wird auf den Seiten mit den Auftragslisten eine Karte auf Ihrer Freiwilligen-Site mit dem Auftrags-Standort angezeigt.</help>
+    <label>Google Maps API-Schlüssel</label>
+    <name>Google_Maps_API_Key__c</name>
+</CustomFieldTranslation>

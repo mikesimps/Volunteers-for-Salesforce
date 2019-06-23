@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Status --></label>
+    <name>Status__c</name>
+    <picklistValues>
+        <masterLabel>Canceled</masterLabel>
+        <translation>Abgebrochen</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Completed</masterLabel>
+        <translation>Abgeleistet</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Confirmed</masterLabel>
+        <translation>Bestätigt</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No-Show</masterLabel>
+        <translation>Nicht erschienen</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Prospect</masterLabel>
+        <translation>Potenzieller Kunde</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Web Sign Up</masterLabel>
+        <translation>Webanmeldung</translation>
+    </picklistValues>
+</CustomFieldTranslation>

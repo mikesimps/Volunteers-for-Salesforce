@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Notes from the volunteer.  Note that the web signup form appends the volunteers comments to this field. --></help>
+    <label><!-- Volunteer Notes --></label>
+    <name>Volunteer_Notes__c</name>
+</CustomFieldTranslation>

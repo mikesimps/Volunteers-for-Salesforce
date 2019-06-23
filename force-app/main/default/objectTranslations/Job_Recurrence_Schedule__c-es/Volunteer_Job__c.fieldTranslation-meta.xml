@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Trabajo para el cual se creó este Horario Recurrente</help>
+    <label>Trabajo Voluntario</label>
+    <name>Volunteer_Job__c</name>
+    <relationshipLabel>Horario Recurrente del Trabajo</relationshipLabel>
+</CustomFieldTranslation>

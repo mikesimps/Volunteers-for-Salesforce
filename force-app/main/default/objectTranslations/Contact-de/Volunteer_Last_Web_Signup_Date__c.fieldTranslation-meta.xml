@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Das Datum der letzten Anmeldung eines Freiwilligen im Web  Wird zum Auslösen des Workflows für Benachrichtigungen und Danke-E-Mails verwendet</help>
+    <label>Letztes Freiwilligen-Webanmeldedatum</label>
+    <name>Volunteer_Last_Web_Signup_Date__c</name>
+</CustomFieldTranslation>

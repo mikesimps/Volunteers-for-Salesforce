@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contact_Matching_Rule__c</fullName>
+    <defaultValue>&quot;Firstname;Lastname;Email&quot;</defaultValue>
+    <description>Determines which fields (FirstName, LastName, and/or Email) V4S uses when matching Contacts against existing Contacts on Volunteers Sites pages. Use a semicolon-separated list, for example: FirstName;Email. Specify fields by their API Name.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Determines which fields (FirstName, LastName, and/or Email) V4S uses when matching Contacts against existing Contacts on Volunteers Sites pages. Use a semicolon-separated list, for example: FirstName;Email. Specify fields by their API Name.</inlineHelpText>
+    <label>Contact Matching Rule</label>
+    <length>255</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

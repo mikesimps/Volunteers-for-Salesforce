@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Le nombre total de bénévoles dont le statut des heures = complété ou confirmé.</help>
+    <label>Nombre de bénévoles</label>
+    <name>Number_of_Volunteers__c</name>
+</CustomFieldTranslation>

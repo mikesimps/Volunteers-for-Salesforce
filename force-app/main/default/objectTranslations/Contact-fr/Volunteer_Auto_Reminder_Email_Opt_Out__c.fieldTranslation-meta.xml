@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Cochée si le contact ne veut pas recevoir de rappels automatiques sur ses prochaines plages horaires.  Utilisé dans la règle de flux &#39;volunteer hours reminder email&#39;.</help>
+    <label>L&#39;email bénévolat d&#39;auto choisissent</label>
+    <name>Volunteer_Auto_Reminder_Email_Opt_Out__c</name>
+</CustomFieldTranslation>

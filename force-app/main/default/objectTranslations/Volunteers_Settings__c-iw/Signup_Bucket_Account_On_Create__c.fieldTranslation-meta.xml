@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>שם החשבון שישמש בעת יצירה של אנשי קשר חדשים במהלך ההרשמה.  אם אתה משתמש במודל &#39;אחד לאחד&#39; של ערכת ההתחלה למלכ&quot;רים (NPSP), השאר הגדרה זו ריקה.  אם אתה משתמש במודל Bucket, הגדר כשם החשבון; לרוב &#39;אישי&#39;.</help>
+    <label>חשבון Bucket של הרשמה ביצירה</label>
+    <name>Signup_Bucket_Account_On_Create__c</name>
+</CustomFieldTranslation>

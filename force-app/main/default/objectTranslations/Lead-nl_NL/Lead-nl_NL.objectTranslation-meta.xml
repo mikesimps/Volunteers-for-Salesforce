@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <workflowTasks>
+        <description>Een automatische e-mail is verzonden naar de lead om hem of haar te bedanken voor het inschrijven als vrijwilliger.</description>
+        <name>Volunteer_Signup_Thank_You_Sent_Lead</name>
+        <subject>Vrijwilliger Inschrijving Bedankt Verzonden - Lead</subject>
+    </workflowTasks>
+</CustomObjectTranslation>

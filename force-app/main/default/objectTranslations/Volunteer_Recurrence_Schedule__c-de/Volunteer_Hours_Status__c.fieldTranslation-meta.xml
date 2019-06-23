@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Der Wert für den Status der Freiwilligenstunden, der für neu erstellte Stunden-Datensätze angegeben wird</help>
+    <label>Status der Freiwilligenstunden</label>
+    <name>Volunteer_Hours_Status__c</name>
+    <picklistValues>
+        <masterLabel>Canceled</masterLabel>
+        <translation>Abgebrochen</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Completed</masterLabel>
+        <translation>Abgeleistet</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Confirmed</masterLabel>
+        <translation>Bestätigt</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Prospect</masterLabel>
+        <translation>Potenzieller Kunde</translation>
+    </picklistValues>
+</CustomFieldTranslation>

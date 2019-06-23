@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>תאריך ההתחלה של שעות ההתנדבות הראשונות</help>
+    <label>תאריך התנדבות ראשון</label>
+    <name>First_Volunteer_Date__c</name>
+</CustomFieldTranslation>

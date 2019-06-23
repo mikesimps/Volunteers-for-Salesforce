@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>CAMPO DEL SISTEMA. NO EDITAR. Número total de Voluntarios con Horas en Estatus = Completadas o Confirmadas</help>
+    <label>Voluntarios Totales</label>
+    <name>Total_Volunteers__c</name>
+</CustomFieldTranslation>

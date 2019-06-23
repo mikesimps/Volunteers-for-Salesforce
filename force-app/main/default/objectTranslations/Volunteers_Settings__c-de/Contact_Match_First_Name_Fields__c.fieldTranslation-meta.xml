@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Durch Semikolon getrennte Liste der zusätzlichen Kontakt-Vornamenfelder, beim Kontaktabgleich zu berücksichtigen. Beispiel: ein Kurznamen-Feld. Die Felder werden durch ihren vollständigen Entwicklernamen einschließlich Namenspräfix angegeben.</help>
+    <label>Vornamensfelder für den Kontaktabgleich</label>
+    <name>Contact_Match_First_Name_Fields__c</name>
+</CustomFieldTranslation>

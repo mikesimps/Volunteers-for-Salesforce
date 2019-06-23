@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Habilidades que el voluntario debe tener para realizar este trabajo</help>
+    <label>Habilidades necesarias</label>
+    <name>Skills_Needed__c</name>
+    <picklistValues>
+        <masterLabel>Computer usage</masterLabel>
+        <translation>Concimientos en Informatica</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Event Planning</masterLabel>
+        <translation>Planificación de Eventos</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fundraising</masterLabel>
+        <translation>Desarrollo de Fondos</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Landscaping</masterLabel>
+        <translation>Paisajismo</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Manual Labor</masterLabel>
+        <translation>Trabajo Manual</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Marketing</masterLabel>
+        <translation><!-- Marketing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>basic accounting</masterLabel>
+        <translation>Contabilidad Básica</translation>
+    </picklistValues>
+</CustomFieldTranslation>

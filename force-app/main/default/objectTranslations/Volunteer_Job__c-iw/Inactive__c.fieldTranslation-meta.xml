@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>סמן אם משימת התנדבות זו אינה פעילה עוד, והיא לא תיכלל בדף של דוח שעות ההתנדבות ב&#39;אתרים&#39;.</help>
+    <label>לא פעיל</label>
+    <name>Inactive__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Jornada Voluntaria</label>
+    <lookupFilter>
+        <informationalMessage>Solo se puede escoger una jornada que pertenezca al trabajo actual</informationalMessage>
+    </lookupFilter>
+    <name>Volunteer_Shift__c</name>
+    <relationshipLabel>Horas Voluntarias</relationshipLabel>
+</CustomFieldTranslation>

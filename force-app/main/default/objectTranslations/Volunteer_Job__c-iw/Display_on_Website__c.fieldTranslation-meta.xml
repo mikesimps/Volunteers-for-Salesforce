@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>סמן שדה זה אם משימת ההתנדבות צריכה להופיע בדף של משימות התנדבות זמינות ב&#39;אתרים&#39;.</help>
+    <label>הצג באתר</label>
+    <name>Display_on_Website__c</name>
+</CustomFieldTranslation>

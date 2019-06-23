@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>必要なボランティア人数</label>
+    <name>Desired_Number_of_Volunteers__c</name>
+</CustomFieldTranslation>

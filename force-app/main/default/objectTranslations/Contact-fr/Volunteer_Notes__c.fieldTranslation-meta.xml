@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Remarques de la bénévole. Notez que l&#39;inscription à la Web ajoute les commentaires des bénévoles dans ce domaine.</help>
+    <label>Remarques de la Bénévole</label>
+    <name>Volunteer_Notes__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Falls Freiwilligen-Anmeldung neue Kontaktdatensätze erstellt, wenn kein vorh. Kontakt (oder wenn &quot;Anmeldung gleicht vorhandene Kontakte ab&quot; nicht aktiviert). Wenn Einstellung nicht aktiviert, werden Leads erstellt, falls keine Übereinstimmungen gefunden.</help>
+    <label>Anmeld. erst. Kont., falls k. Übereinst.</label>
+    <name>Signup_Creates_Contacts_If_No_Match__c</name>
+</CustomFieldTranslation>

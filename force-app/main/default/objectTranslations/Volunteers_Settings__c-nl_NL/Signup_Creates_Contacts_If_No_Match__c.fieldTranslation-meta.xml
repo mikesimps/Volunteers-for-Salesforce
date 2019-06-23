@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Zou de Vrijwilliger Aanmelding nieuw contact records moeten aanmaken, als geen bestaande contactpersoon is gevonden. Als deze instelling niet is aangevinkt, maakt het Leads aan wanneer geen matches zijn gevonden.</help>
+    <label>Aanmelden Maak Contact indien geen match</label>
+    <name>Signup_Creates_Contacts_If_No_Match__c</name>
+</CustomFieldTranslation>

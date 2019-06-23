@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Indien aangevinkt, zal de Persoonlijke Site een E-mail URL parameter bijgevoegd moeten hebben en matcht een E-mail veld op de gespecificeerde contactpersoon</help>
+    <label>Persoonlijke Site Vergt URL E-mail Match</label>
+    <name>Personal_Site_Requires_URL_Email_Match__c</name>
+</CustomFieldTranslation>

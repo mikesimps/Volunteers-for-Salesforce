@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>הערות של המתנדב.  שים לב שהרישום באינטרנט מוסיף את הערות המתנדב לשדה זה.</help>
+    <label>הערות מתנדב</label>
+    <name>Volunteer_Notes__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>En el caso de que la página de Registro de Voluntarios intente hace coincidir a la persona con un contacto existente (por Nombre, Apellido, Correo electrónico)</help>
+    <label>Registro de coincidencias con contactos</label>
+    <name>Signup_Matches_Existing_Contacts__c</name>
+</CustomFieldTranslation>

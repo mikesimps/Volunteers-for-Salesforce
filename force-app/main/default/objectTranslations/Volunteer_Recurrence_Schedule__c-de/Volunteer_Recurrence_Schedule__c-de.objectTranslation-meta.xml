@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>Freiwillige Wiederholungsintervall</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>Zeitpläne für wiederkehrende Freiwillige</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value>Freiwillige Wiederholungsintervall</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <value>Zeitpläne für wiederkehrende Freiwillige</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value>Freiwillige Wiederholungsintervall</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <value>Zeitpläne für wiederkehrende Freiwillige</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value>Freiwillige Wiederholungsintervall</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <value>Zeitpläne für wiederkehrende Freiwillige</value>
+    </caseValues>
+    <gender>Neuter</gender>
+    <layouts>
+        <layout>Volunteer Recurrence Schedule Layout</layout>
+        <sections>
+            <label>Benutzerdefinierte Links</label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel><!-- VRS ID --></nameFieldLabel>
+    <validationRules>
+        <errorMessage>Sie müssen mindestens einen Wert für Wochentage angeben.</errorMessage>
+        <name>VRS_Days_of_Week_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Sie müssen mindestens einen Wert für wöchentliches Vorkommen angeben.</errorMessage>
+        <name>VRS_Weekly_Occurrence_Required</name>
+    </validationRules>
+</CustomObjectTranslation>

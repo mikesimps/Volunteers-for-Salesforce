@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Volunteer Shift</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Volunteer Shifts</value>
+    </caseValues>
+    <layouts>
+        <layout>Volunteer Shift Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- System Fields - DO NOT EDIT --></label>
+            <section>System Fields - DO NOT EDIT</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <webLinks>
+        <label><!-- Find_Volunteers --></label>
+        <name>Find_Volunteers</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Mass_Email_Volunteers --></label>
+        <name>Mass_Email_Volunteers</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Roster --></label>
+        <name>Roster</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Shift_Calendar --></label>
+        <name>Shift_Calendar</name>
+    </webLinks>
+</CustomObjectTranslation>

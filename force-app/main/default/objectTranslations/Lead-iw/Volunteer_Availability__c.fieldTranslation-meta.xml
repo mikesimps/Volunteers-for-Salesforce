@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>זמינות מתנדב</label>
+    <name>Volunteer_Availability__c</name>
+    <picklistValues>
+        <masterLabel>Afternoon</masterLabel>
+        <translation>אחה&quot;צ</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Morning</masterLabel>
+        <translation>בוקר</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Weekdays</masterLabel>
+        <translation>ימי חול</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Weekends</masterLabel>
+        <translation>סופי שבוע</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Weekly</masterLabel>
+        <translation>שבועית</translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Marque esta casilla si este Trabajo Voluntario ya no está activo. No se lo incluirá en la página web de Informes de Horas de Voluntariado.</help>
+    <label>Inactivo</label>
+    <name>Inactive__c</name>
+</CustomFieldTranslation>

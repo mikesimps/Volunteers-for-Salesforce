@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Name d. Accounts z. Erstellung neuer Kontakte bei d. Anmeldung. Einstellungsfeld leer lassen, wenn Sie d. NPSP-Eins-zu-Eins-Modell verwenden. Legen Sie hierfür d. Namen des Accounts fest, wenn Sie das Bucket-Modell verwenden (normalerweise&quot;Einzelperson&quot;).</help>
+    <label>Bucket-Account für Erst. bei Anmeldung</label>
+    <name>Signup_Bucket_Account_On_Create__c</name>
+</CustomFieldTranslation>

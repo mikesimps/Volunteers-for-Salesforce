@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Si coché, le site du personnel impose d’inclure un paramètre d’URL « E-mail » qui doit correspondre au champ d’e-mail du contact spécifié.</help>
+    <label>Site pers. requiert vérif. email par URL</label>
+    <name>Personal_Site_Requires_URL_Email_Match__c</name>
+</CustomFieldTranslation>

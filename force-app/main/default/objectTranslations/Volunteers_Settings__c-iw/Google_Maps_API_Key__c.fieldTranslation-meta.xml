@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>אם תכלול מפתח API של &#39;מפות Google&#39; דפי JobListing יכילו הפניה אל מפה של מיקום המשימה באתר המתנדבים שלך.</help>
+    <label>מפתח API של מפות Google</label>
+    <name>Google_Maps_API_Key__c</name>
+</CustomFieldTranslation>

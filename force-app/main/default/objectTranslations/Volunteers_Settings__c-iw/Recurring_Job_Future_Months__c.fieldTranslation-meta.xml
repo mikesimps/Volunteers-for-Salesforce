@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>כמה חודשים קדימה יש לתכנן את לוח הזמנים של המשימה החוזרת?</help>
+    <label>חודשי משימה חוזרת בעתיד</label>
+    <name>Recurring_Job_Future_Months__c</name>
+</CustomFieldTranslation>

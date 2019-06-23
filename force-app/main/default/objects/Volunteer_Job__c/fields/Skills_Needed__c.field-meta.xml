@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Skills_Needed__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>The skills the volunteer should have to do this Job.</inlineHelpText>
+    <label>Skills Needed</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Computer usage</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Manual Labor</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Marketing</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Fundraising</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Event Planning</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Landscaping</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>basic accounting</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>10</visibleLines>
+</CustomField>

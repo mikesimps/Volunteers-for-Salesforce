@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- the skills the volunteer should have to do this job --></help>
+    <label><!-- Skills Needed --></label>
+    <name>Skills_Needed__c</name>
+    <picklistValues>
+        <masterLabel>Computer usage</masterLabel>
+        <translation><!-- Computer usage --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Event Planning</masterLabel>
+        <translation><!-- Event Planning --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fundraising</masterLabel>
+        <translation><!-- Fundraising --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Landscaping</masterLabel>
+        <translation><!-- Landscaping --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Manual Labor</masterLabel>
+        <translation><!-- Manual Labor --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Marketing</masterLabel>
+        <translation><!-- Marketing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>basic accounting</masterLabel>
+        <translation><!-- basic accounting --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

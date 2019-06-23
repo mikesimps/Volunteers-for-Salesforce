@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>מצב</label>
+    <name>Status__c</name>
+    <picklistValues>
+        <masterLabel>Canceled</masterLabel>
+        <translation>בוטל</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Completed</masterLabel>
+        <translation>הושלם</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Confirmed</masterLabel>
+        <translation>אושר</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No-Show</masterLabel>
+        <translation>היעדרות</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Prospect</masterLabel>
+        <translation>פוטנציאלי</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Web Sign Up</masterLabel>
+        <translation>הרשמה באינטרנט</translation>
+    </picklistValues>
+</CustomFieldTranslation>

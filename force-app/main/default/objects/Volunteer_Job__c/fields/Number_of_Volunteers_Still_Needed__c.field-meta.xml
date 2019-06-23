@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Number_of_Volunteers_Still_Needed__c</fullName>
+    <externalId>false</externalId>
+    <label># of Volunteers Still Needed</label>
+    <summarizedField>Volunteer_Shift__c.Number_of_Volunteers_Still_Needed__c</summarizedField>
+    <summaryForeignKey>Volunteer_Shift__c.Volunteer_Job__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

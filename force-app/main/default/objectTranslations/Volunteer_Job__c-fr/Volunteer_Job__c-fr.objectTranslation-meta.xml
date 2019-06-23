@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Postes de Bénévoles</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Postes de Bénévoles</value>
+    </caseValues>
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>Volunteer Job Layout</layout>
+        <sections>
+            <label>Liens personnalisés</label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label>Descriptif</label>
+            <section>Description</section>
+        </sections>
+        <sections>
+            <label>Lieu</label>
+            <section>Location</section>
+        </sections>
+        <sections>
+            <label>Information sur le lieu</label>
+            <section>Location Information</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Nom de Poste</nameFieldLabel>
+    <startsWith>Consonant</startsWith>
+    <webLinks>
+        <label>Découverte de Bénévoles</label>
+        <name>Find_Volunteers</name>
+    </webLinks>
+    <webLinks>
+        <label>Liste de Bénévoles</label>
+        <name>JobRoster</name>
+    </webLinks>
+    <webLinks>
+        <label>Calendrier des Quarts de Travail</label>
+        <name>Job_Shift_Calendar</name>
+    </webLinks>
+    <webLinks>
+        <label>(non utilisé)</label>
+        <name>Mass_Edit_Volunteer_Hours</name>
+    </webLinks>
+    <webLinks>
+        <label>Envoi Email aux Bénévoles en masse</label>
+        <name>Mass_Email_Volunteers</name>
+    </webLinks>
+</CustomObjectTranslation>

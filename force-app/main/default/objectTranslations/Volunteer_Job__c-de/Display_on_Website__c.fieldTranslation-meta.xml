@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Aktivieren Sie dieses Feld, wenn dieser Freiwilligenauftrag auf der Seite &quot;Sites mit verfügbaren Freiwilligenaufträgen&quot; erscheinen soll.</help>
+    <label>Anzeige auf Website</label>
+    <name>Display_on_Website__c</name>
+</CustomFieldTranslation>

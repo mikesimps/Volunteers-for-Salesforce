@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Automatisch ingesteld door de systeem planner om het Herhalingsschema te zien waarmee deze shift is geassocieerd.</help>
+    <label>Baan Herhalingsschema</label>
+    <name>Job_Recurrence_Schedule__c</name>
+    <relationshipLabel>Vrijwilligersdiensten</relationshipLabel>
+</CustomFieldTranslation>

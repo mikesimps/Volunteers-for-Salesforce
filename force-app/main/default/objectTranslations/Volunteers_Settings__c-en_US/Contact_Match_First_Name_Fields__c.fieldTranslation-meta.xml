@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- A semicolon separated list of additional Contact first name fields to try to match against when doing Contact matching. E.g., a nickname field.  Note that the fields are specified by their full Developer name, including namespace prefix. --></help>
+    <label><!-- Contact Match First Name Fields --></label>
+    <name>Contact_Match_First_Name_Fields__c</name>
+</CustomFieldTranslation>
