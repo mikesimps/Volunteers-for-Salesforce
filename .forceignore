@@ -12,14 +12,14 @@ package.xml
 **/__tests__/**
 **src/
 # Metadata with no dependencies
-force-app/main/default/labels/
-force-app/main/default/staticresources/
-force-app/main/default/documents/
-force-app/main/default/email/
-force-app/main/default/letterhead/
+# force-app/main/default/labels/
+# force-app/main/default/staticresources/
+# force-app/main/default/documents/
+# force-app/main/default/email/
+# force-app/main/default/letterhead/
 
 # Metadata for Objects
-force-app/main/default/objects/
+# force-app/main/default/objects/
 
 # Metadata with simple dependencies
 **fieldSets/
