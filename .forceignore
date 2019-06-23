@@ -11,3 +11,38 @@ package.xml
 # LWC Jest
 **/__tests__/**
 **src/
+# Metadata with no dependencies
+force-app/main/default/labels/
+force-app/main/default/staticresources/
+force-app/main/default/documents/
+force-app/main/default/email/
+force-app/main/default/letterhead/
+
+# Metadata for Objects
+force-app/main/default/objects/
+
+# Metadata with simple dependencies
+**fieldSets/
+force-app/main/default/layouts/
+force-app/main/default/applications/
+force-app/main/default/tabs/
+
+# Metadata with complex dev dependencies
+force-app/main/default/pages/
+force-app/main/default/classes/
+force-app/main/default/triggers/
+force-app/main/default/components/
+force-app/main/default/workflows/
+force-app/main/default/lwc
+
+# Metadata with feature dependency
+force-app/main/default/translations/
+force-app/main/default/objectTranslations/
+
+# Metadata dependant on almost everything
+force-app/main/default/reportTypes/
+force-app/main/default/dashboards/
+force-app/main/default/reports/
+
+# Metadata for packages
+force-app/main/default/featureParameters/
