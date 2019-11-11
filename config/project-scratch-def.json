@@ -3,10 +3,14 @@
     "edition": "Enterprise",
     "features": ["Sites","PersonAccounts"],
     "settings": {
-        "orgPreferenceSettings": {
-            "s1DesktopEnabled": true,
-            "chatterEnabled": true,
-            "disableParallelApexTesting": true
+        "lightningExperienceSettings": {
+            "enableS1DesktopEnabled": true
+        },
+        "chatterSettings": {
+            "enableChatter": true
+        },
+        "apexSettings": {
+            "enableDisableParallelApexTesting": true
         }
     }
 }
