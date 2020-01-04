@@ -38,6 +38,11 @@ global with sharing class VOL_BATCH_Recurrence implements Database.Batchable<Sob
 
 	private string strSoql { get; set; }
 
+    @InvocableMethod(label='Run Volunteer Batch Recurrence' description='Runs the recurrence jobs for volunteer and job schedules')
+    global static void CallVOLBatch() {
+        Database.executeBatch(new VOL_BATCH_Recurrence());
+    }
+
     /*******************************************************************************************************
 	* @description This constructor is needed to allow this class to be schedulable.
 	*/
