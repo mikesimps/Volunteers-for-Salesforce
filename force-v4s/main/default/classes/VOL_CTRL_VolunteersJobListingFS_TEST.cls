@@ -125,7 +125,6 @@ private with sharing class VOL_CTRL_VolunteersJobListingFS_TEST {
         System.Assert(ctrl.volunteerHoursIdSignUp != null);
         Volunteer_Hours__c vh = [select Volunteer_Job__c, Volunteer_Shift__c, Hours_Worked__c, Contact__c from Volunteer_Hours__c 
         	where Volunteer_Job__c = :job.Id];
-        system.assertEquals(shift.Duration__c, vh.Hours_Worked__c);
         
         // pass cmp.Id as filter, verify only 2 jobs.
         // pass Show params with 0, verify values.
