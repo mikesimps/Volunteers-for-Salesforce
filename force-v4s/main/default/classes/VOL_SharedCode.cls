@@ -28,7 +28,7 @@
     POSSIBILITY OF SUCH DAMAGE.
 */
 
-global with sharing class VOL_SharedCode { 
+global class VOL_SharedCode { 
 
     // the list of Campaigns that have Volunteer Jobs
     global list<SelectOption> listSOCampaignsWithJobs {

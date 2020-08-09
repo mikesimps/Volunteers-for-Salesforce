@@ -34,7 +34,7 @@
  * @description Tests for UTIL_Describe
  */
 @isTest
-    private with sharing class UTIL_Describe_TEST {
+    private class UTIL_Describe_TEST {
     /*******************************************************************************************************
      * @description Tests namespace fixup conditionally depending on whether a namespace is present
      *******************************************************************************************************/

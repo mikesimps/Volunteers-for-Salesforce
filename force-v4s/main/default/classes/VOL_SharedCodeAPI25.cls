@@ -28,7 +28,7 @@
     POSSIBILITY OF SUCH DAMAGE.
 */
 
-public with sharing class VOL_SharedCodeAPI25 {
+public class VOL_SharedCodeAPI25 {
 
     // global utility to load up an existing object and copy it to the provided object
     // this code moved to VOL_SharedCodeAPI25 to keep it running with api 25

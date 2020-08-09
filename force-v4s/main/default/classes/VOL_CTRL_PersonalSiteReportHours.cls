@@ -28,7 +28,7 @@
     POSSIBILITY OF SUCH DAMAGE.
 */
 
-global with sharing class VOL_CTRL_PersonalSiteReportHours {
+global class VOL_CTRL_PersonalSiteReportHours {
 
     // constructor
     global VOL_CTRL_PersonalSiteReportHours() {

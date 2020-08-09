@@ -36,7 +36,7 @@
  * any permission is missing that is required.
  */
 
- public with sharing class UTIL_Describe {
+ public class UTIL_Describe {
     
     public UTIL_Describe() {
         

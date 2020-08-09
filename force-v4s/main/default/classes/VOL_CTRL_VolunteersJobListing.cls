@@ -28,7 +28,7 @@
     POSSIBILITY OF SUCH DAMAGE.
 */
 
-global virtual with sharing class VOL_CTRL_VolunteersJobListing {
+global virtual class VOL_CTRL_VolunteersJobListing {
 
     // page parameters that can get passed into the page to control its behavior.
     global ID campaignIdFilter { get; set; }

@@ -29,7 +29,7 @@
 */
 
 @isTest
-public with sharing class VOL_SharedCode_TEST {
+public class VOL_SharedCode_TEST {
 
 
     //==================== TEST METHOD(s) ======================================

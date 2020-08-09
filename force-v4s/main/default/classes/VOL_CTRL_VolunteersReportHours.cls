@@ -28,7 +28,7 @@
     POSSIBILITY OF SUCH DAMAGE.
 */
 
-global virtual with sharing class VOL_CTRL_VolunteersReportHours {
+global virtual class VOL_CTRL_VolunteersReportHours {
   
     private VOL_SharedCode volSharedCode; 
      

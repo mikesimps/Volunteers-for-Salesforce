@@ -29,7 +29,7 @@
 */
 
 @isTest
-private with sharing class VOL_CTRL_PersonalSiteContactInfo_TEST {
+private class VOL_CTRL_PersonalSiteContactInfo_TEST {
 
     //******************************************************************************************************
     // Test Code

@@ -29,7 +29,7 @@
 */
 
 @isTest
-private with sharing class VOL_CTRL_VolunteersJobListingFS_TEST {
+private class VOL_CTRL_VolunteersJobListingFS_TEST {
 
     //==================== TEST METHOD(s) ======================================
 
