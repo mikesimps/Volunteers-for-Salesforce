@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingGuestRules>
+        <fullName>Volunteer_Internal_User</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Volunteer Internal User</label>
+        <sharedTo>
+            <guestUser>Kramden_Volunteers_Internal</guestUser>
+        </sharedTo>
+        <criteriaItems>
+            <field>Type</field>
+            <operation>equals</operation>
+            <value>Individual,Other,Household</value>
+        </criteriaItems>
+    </sharingGuestRules>
+    <sharingGuestRules>
+        <fullName>Volunteer_External_User</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Volunteer External User</label>
+        <sharedTo>
+            <guestUser>Kramden_Volunteers_External</guestUser>
+        </sharedTo>
+        <criteriaItems>
+            <field>Type</field>
+            <operation>equals</operation>
+            <value>Individual,Other,Household</value>
+        </criteriaItems>
+    </sharingGuestRules>
+</SharingRules>

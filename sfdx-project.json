@@ -3,13 +3,13 @@
         {
             "path": "force-v4s",
             "package": "v4s-kramden",
-            "versionName": "Version 0.1.4",
-            "versionNumber": "0.1.4.NEXT",
+            "versionName": "Version 0.2.0",
+            "versionNumber": "0.2.0.NEXT",
             "default": true
         }
     ],
     "namespace": "",
-    "sourceApiVersion": "43.0",
+    "sourceApiVersion": "49.0",
     "packageAliases": {
         "v4s-kramden": "0Ho36000000XZARCA4",
         "v4s-kramden@0.1.0-1": "04t36000000wgLXAAY",
