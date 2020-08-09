@@ -30,3 +30,6 @@
 **components/SiteHeader.component
 
 **workflows/Opportunity.workflow
+**/jsconfig.json
+
+**/.eslintrc.json
