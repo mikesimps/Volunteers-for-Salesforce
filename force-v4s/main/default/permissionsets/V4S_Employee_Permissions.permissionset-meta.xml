@@ -4,10 +4,6 @@
         <application>Groundwire_Volunteers</application>
         <visible>true</visible>
     </applicationVisibilities>
-    <applicationVisibilities>
-        <application>Groundwire_Volunteers_Lightning</application>
-        <visible>true</visible>
-    </applicationVisibilities>
     <description>Permissions granted to the internal employees of the non-profit</description>
     <fieldPermissions>
         <editable>false</editable>
