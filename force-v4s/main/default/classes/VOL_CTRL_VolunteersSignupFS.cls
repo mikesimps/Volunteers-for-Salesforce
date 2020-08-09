@@ -28,7 +28,7 @@
     POSSIBILITY OF SUCH DAMAGE.
 */
 
-global virtual with sharing class VOL_CTRL_VolunteersSignupFS {
+global virtual  class VOL_CTRL_VolunteersSignupFS {
      
     // constructor
     global VOL_CTRL_VolunteersSignupFS() {

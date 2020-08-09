@@ -28,7 +28,7 @@
     POSSIBILITY OF SUCH DAMAGE.
 */
 
-public with sharing class VOL_CTRL_SendBulkEmail {
+ public class VOL_CTRL_SendBulkEmail {
 
     public String subject { get; set; }
     public String message { get; set; }

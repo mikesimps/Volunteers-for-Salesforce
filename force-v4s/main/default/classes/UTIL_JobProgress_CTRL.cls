@@ -33,7 +33,7 @@
 * @group Utilities
 * @description The controller for the VF progress indicator component  
 */
-public with sharing class UTIL_JobProgress_CTRL {
+ public class UTIL_JobProgress_CTRL {
  
     public List<BatchJob> batchJobs;
     public UTIL_JobProgress_CTRL.BatchJob bj {get{

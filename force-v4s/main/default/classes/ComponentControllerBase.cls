@@ -28,7 +28,7 @@
     POSSIBILITY OF SUCH DAMAGE.
 */
 
-public with sharing virtual class ComponentControllerBase {
+ public virtual class ComponentControllerBase {
 	
 	public PageControllerBase pageController {  
   		get; 

@@ -32,7 +32,7 @@
 * @date 11/1/2012
 * @description Main class for managing Volunteer Job Recurrence Schedules (JRS). 
 ********************************************************************************************************/
-public with sharing class VOL_JRS {
+ public class VOL_JRS {
 
     //******************************************************************************************************
     // for the specified JRS's, delete all shifts that have no hours, and detach Shifts that have hours.

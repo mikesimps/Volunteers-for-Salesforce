@@ -32,7 +32,7 @@
 * @date 12/1/2012
 * @description controller class for the New and Update Volunteer Recurrence Schedules visualforce page. 
 ********************************************************************************************************/
-public with sharing class VOL_CTRL_NewAndEditVRS {
+ public class VOL_CTRL_NewAndEditVRS {
 
     public Volunteer_Recurrence_Schedule__c vrs { get; set; }
     public ID jrsId { get; set; }

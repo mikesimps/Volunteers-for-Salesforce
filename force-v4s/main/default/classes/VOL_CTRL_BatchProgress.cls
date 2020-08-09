@@ -28,7 +28,7 @@
     POSSIBILITY OF SUCH DAMAGE.
 */
 
-public with sharing class VOL_CTRL_BatchProgress {
+ public class VOL_CTRL_BatchProgress {
 	
     // properties for page
     public boolean batching { get; set; }

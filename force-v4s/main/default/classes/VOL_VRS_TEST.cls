@@ -29,7 +29,7 @@
 */
 
 @isTest
-private with sharing class VOL_VRS_TEST {
+private  class VOL_VRS_TEST {
 
     //******************************************************************************************************
     // Test Volunteer Recurrence Schedules

@@ -32,7 +32,7 @@
 * @date 11/1/2012
 * @description Main class for managing Volunteer Recurrence Schedules (VRS). 
 ********************************************************************************************************/
-public with sharing class VOL_VRS {
+ public class VOL_VRS {
 
 
     //******************************************************************************************************

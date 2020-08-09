@@ -28,7 +28,7 @@
     POSSIBILITY OF SUCH DAMAGE.
 */
 
-global with sharing class VOL_CTRL_PersonalSiteTemplate {
+global  class VOL_CTRL_PersonalSiteTemplate {
 
 	global VOL_CTRL_PersonalSiteTemplate() {
     	Language = 'en-us'; 

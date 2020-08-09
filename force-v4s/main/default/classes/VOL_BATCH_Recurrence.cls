@@ -34,7 +34,7 @@
 * and process them to add shifts into the future. 
 ********************************************************************************************************/
 
-global with sharing class VOL_BATCH_Recurrence implements Database.Batchable<Sobject>, Schedulable {
+global  class VOL_BATCH_Recurrence implements Database.Batchable<Sobject>, Schedulable {
 
 	private string strSoql { get; set; }
 

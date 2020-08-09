@@ -32,7 +32,7 @@
 * @date 11/17/2011
 * @description Page Controller class for the Volunteers Wizard visualforce page.  
 ********************************************************************************************************/
-public with sharing class VOL_CTRL_VolunteersCampaignWizard {
+ public class VOL_CTRL_VolunteersCampaignWizard {
 
     // the new campaign we will create
     public Campaign cmpVols { 

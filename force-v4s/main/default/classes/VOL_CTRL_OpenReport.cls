@@ -32,7 +32,7 @@
 * @date 7/1/2011
 * @description Page Controller class for the Open Report visualforce page. 
 ********************************************************************************************************/
-public with sharing class VOL_CTRL_OpenReport {
+ public class VOL_CTRL_OpenReport {
     
     //---------------------------------------------------------------------------------------------
     // Main routine that gets invoked as a page action to redirect to open the specified report.

@@ -29,7 +29,7 @@
 */
 
 @isTest
-private with sharing class VOL_CTRL_VolunteersFind_TEST {
+private  class VOL_CTRL_VolunteersFind_TEST {
 
 	//------------------------------------------------------------------------------------------
 	// Test Code

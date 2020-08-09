@@ -28,7 +28,7 @@
     POSSIBILITY OF SUCH DAMAGE.
 */
 
-global abstract with sharing class PageControllerBase {
+global abstract  class PageControllerBase {
 	
   	private ComponentControllerBase componentController;
 	

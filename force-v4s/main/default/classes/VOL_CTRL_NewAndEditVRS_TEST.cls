@@ -29,7 +29,7 @@
 */
 
 @isTest
-private with sharing class VOL_CTRL_NewAndEditVRS_TEST {
+private  class VOL_CTRL_NewAndEditVRS_TEST {
 
     //******************************************************************************************************
     // Test Methods

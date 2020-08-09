@@ -29,7 +29,7 @@
 */
 
 @isTest
-private with sharing class VOL_CTRL_JobCalendar_TEST {
+private  class VOL_CTRL_JobCalendar_TEST {
 
     //==================== TEST METHOD(s) ======================================
     private static testmethod void TestJobCalendar() {

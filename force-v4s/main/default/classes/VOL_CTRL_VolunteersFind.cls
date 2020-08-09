@@ -28,7 +28,7 @@
     POSSIBILITY OF SUCH DAMAGE.
 */
 
-public with sharing class VOL_CTRL_VolunteersFind extends PageControllerBase {
+ public class VOL_CTRL_VolunteersFind extends PageControllerBase {
     
     
     // constructor

@@ -28,7 +28,7 @@
     POSSIBILITY OF SUCH DAMAGE.
 */
 
-public with sharing class VOL_StateCountryPicklists {
+ public class VOL_StateCountryPicklists {
      
 
     /*******************************************************************************************************

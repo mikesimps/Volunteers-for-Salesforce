@@ -28,7 +28,7 @@
     POSSIBILITY OF SUCH DAMAGE.
 */
 
-global with sharing class VOL_CTRL_PersonalSiteContactInfo {
+global  class VOL_CTRL_PersonalSiteContactInfo {
     
     global VOL_CTRL_PersonalSiteContactInfo() {
 

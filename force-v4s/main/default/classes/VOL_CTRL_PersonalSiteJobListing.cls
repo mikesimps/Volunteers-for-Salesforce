@@ -28,7 +28,7 @@
     POSSIBILITY OF SUCH DAMAGE.
 */
 
-global with sharing class VOL_CTRL_PersonalSiteJobListing {
+global  class VOL_CTRL_PersonalSiteJobListing {
 
     // constructor
     global VOL_CTRL_PersonalSiteJobListing() {

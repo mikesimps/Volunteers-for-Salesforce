@@ -28,7 +28,7 @@
     POSSIBILITY OF SUCH DAMAGE.
 */
 
-public with sharing class SoqlListView extends ComponentControllerBase {
+ public class SoqlListView extends ComponentControllerBase {
 
 	// the set controller allows us to do paging in our pageTable
     public ApexPages.StandardSetController setCon {
@@ -180,7 +180,7 @@ public with sharing class SoqlListView extends ComponentControllerBase {
 	//==================================================================================
 	// SoqlListViewObject - a simple class to wrap each object, so the list view can 
 	// maintain its own checked status for each item.
-	public with sharing class SLVObj {
+	 public class SLVObj {
 	
 		public SLVObj(SObject objExisting) {
 			sobj = objExisting;

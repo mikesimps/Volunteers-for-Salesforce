@@ -29,7 +29,7 @@
 */
 
 @isTest
-private with sharing class VOL_CTRL_VolunteersBulkEnterHours_TEST {
+private  class VOL_CTRL_VolunteersBulkEnterHours_TEST {
     
     //==================== TEST METHOD(s) ======================================
     private static testmethod void CodeCoverageTests() {

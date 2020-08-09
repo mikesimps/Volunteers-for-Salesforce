@@ -28,7 +28,7 @@
     POSSIBILITY OF SUCH DAMAGE.
 */
 
-global virtual with sharing class VOL_CTRL_VolunteersBulkEnterHours {
+global virtual  class VOL_CTRL_VolunteersBulkEnterHours {
 
     global integer cEmptyVolunteerHourRecords {
         get {

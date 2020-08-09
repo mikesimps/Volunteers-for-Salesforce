@@ -33,7 +33,7 @@
 * @description Page Controller class for the Job Calendar visualforce page.  Provides Javascript remoting
 * method for getting Job Shift data. 
 ********************************************************************************************************/
-global with sharing class VOL_CTRL_JobCalendar {
+global  class VOL_CTRL_JobCalendar {
 
     // constructor
     global VOL_CTRL_JobCalendar() {

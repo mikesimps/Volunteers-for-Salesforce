@@ -29,7 +29,7 @@
 */
 
 @isTest
-private with sharing class VOL_CTRL_BatchProgress_TEST {
+private  class VOL_CTRL_BatchProgress_TEST {
 
     //--------------------TEST METHOD------------------------
     private static testMethod void batchStatusBarTest(){

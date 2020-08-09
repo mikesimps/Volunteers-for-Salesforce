@@ -29,7 +29,7 @@
 */
 
 @isTest
-private with sharing class VOL_CTRL_SendBulkEmail_TEST {
+private  class VOL_CTRL_SendBulkEmail_TEST {
     
     //==================== TEST METHOD(s) ======================================
     private static testmethod void TestJobAndShift() {
