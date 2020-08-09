@@ -8,4 +8,4 @@ Steps to new version of unlocked package
 4) Install package to sandbox
     sfdx force:package:install -u <sandbox alias> -w 5 -r --package v4s-kramden@newversion#
 5) Promote package as ready for production
-    sfdx force:package:promote -p v4s-kramden
+    sfdx force:package:version:promote -v <dev hub alias> -p <package version id> 
