@@ -28,6 +28,7 @@
 **components/SiteLogin.component
 **components/SitePoweredBy.component
 **components/SiteHeader.component
+**applications/Groundwire_Volunteers_Lightning.app-meta.xml
 
 **workflows/Opportunity.workflow
 **/jsconfig.json
