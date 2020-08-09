@@ -40,17 +40,8 @@ private class VOL_CTRL_PersonalSiteContactInfo_TEST {
     * @return void
     ********************************************************************************************************/
     private static testMethod void testPageWithSitesGuestUser() {
-        list<User> listU = [Select Username, UserType, Name, IsActive, Id From User where IsActive = true and UserType = 'Guest' and 
-            Name like '%Site Guest User%'];
-        if (listU.size() > 0) {
-            system.debug('Running test as Sites Guest User: ' + listU[0]);
-            system.runAs(listU[0]) {
-                testPSC();
-            }
-        } else {
-            system.debug('Running test as system.');
-            testPSC();
-        }
+        system.debug('Running test as system.');
+        testPSC();
     }
         
     private static void testPSC() {

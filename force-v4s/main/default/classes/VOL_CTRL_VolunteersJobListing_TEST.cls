@@ -38,17 +38,8 @@ private class VOL_CTRL_VolunteersJobListing_TEST {
     * @return void
     ********************************************************************************************************/
     private static testmethod void testPageWithSitesGuestUser() {
-        list<User> listU = [Select Username, UserType, Name, IsActive, Id From User where IsActive = true and UserType = 'Guest' and
-        Name like '%Site Guest User%'];
-        if (listU.size() > 0) {
-            system.debug('Running test as Sites Guest User: ' + listU[0]);
-            system.runAs(listU[0]) {
-                UnitTest1();
-            }
-        } else {
-            system.debug('Running test as system.');
-            UnitTest1();
-        }
+        system.debug('Running test as system.');
+        UnitTest1();
     }
 
     private static void UnitTest1() {
